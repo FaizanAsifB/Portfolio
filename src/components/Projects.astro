@@ -5,7 +5,7 @@ const projects = [
     description:  "Game based on the classic name place animal thing game",
     imgUrl:"/images/projects/name-place.png",
     tools: ["JavaScript", "CSS", "HTML"],
-    url:"https://geega-game.netlify.app"
+    url:"https://geega-game.netlify.app/"
   
   },
     {
@@ -13,7 +13,7 @@ const projects = [
       description:  "Personal budget app",
       imgUrl:"/images/projects/budget.png",
       tools: ["JavaScript", "CSS", "HTML"],
-      url:"https://geega-budget.netlify.app"
+      url:"https://geega-budget.netlify.app/"
     
     },
   {
@@ -21,7 +21,7 @@ const projects = [
     description:  "Recipe searching webapp",
     imgUrl:"/images/projects/forkify.png",
     tools: ["JavaScript", "CSS", "HTML"],
-    url:"https://geega-forkify.netlify.app"
+    url:"https://geega-forkify.netlify.app/"
   
   },
 {
@@ -29,14 +29,14 @@ const projects = [
   description:  "An app that shows the weather",
   imgUrl:"/images/projects/weather.png",
   tools: ["JavaScript", "CSS", "HTML"],
-  url:"https://geega-weather.netlify.app"
+  url:"https://geega-weather.netlify.app/"
 },
 {
   title: "space tourism website",
   description:  "An website for a space tourism company",
   imgUrl:"/images/projects/space.png",
   tools: ["JavaScript", "CSS", "HTML"],
-  url:"https://geega-space.netlify.app"
+  url:"https://geega-space-tourism.netlify.app/"
 
 },
 ]
@@ -48,7 +48,7 @@ const projects = [
         <ul class="">
           {projects.map(project => (
             <li>
-              <a href="http://"><img
+              <a href={project.url} target="_blank"><img
                 src={project.imgUrl}
                 alt={`preview image of ${project.title}`}
                 class="h-24"
