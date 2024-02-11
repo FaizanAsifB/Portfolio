@@ -1,22 +1,55 @@
     ---
-const projects = [{
-  title: "title",
-  description:  "",
-}]
+const projects = [
+  {
+    title: "name place animal thing game",
+    description:  "Game based on the classic name place animal thing game",
+    url:"/images/projects/name-place.png",
+    tools: ["JavaScript", "CSS", "HTML"]
+  
+  },
+    {
+      title: "budget app",
+      description:  "Personal budget app",
+      url:"/images/projects/budget.png",
+      tools: ["JavaScript", "CSS", "HTML"]
+    
+    },
+  {
+    title: "forkify",
+    description:  "Recipe searching webapp",
+    url:"/images/projects/forkify.png",
+    tools: ["JavaScript", "CSS", "HTML"]
+  
+  },
+{
+  title: "weather app",
+  description:  "An app that shows the weather",
+  url:"/images/projects/weather.png",
+  tools: ["JavaScript", "CSS", "HTML"]
+},
+{
+  title: "space tourism website",
+  description:  "An website for a space tourism company",
+  url:"/images/projects/space.png",
+  tools: ["JavaScript", "CSS", "HTML"]
+
+},
+]
     ---
     
-    <section>
+    <section class="bg-secondary">
       <div class="container">
-        <h2>Skills</h2>
-        <ul class="grid grid-cols-4 py-16 mx-32 text-center rounded-lg gap-y-8 justify-items-center bg-secondary">
+        <h2>Projects</h2>
+        <ul class="">
           {projects.map(project => (
             <li>
               <img
-                src={`/images/logos/${project.title.toLowerCase()}.png`}
+                src={project.url}
                 alt={`preview image of ${project.title}`}
                 class="h-24"
               />
-              {project.title}
+              <p>{project.title}</p>
+              <p>{project.tools.map(tool => <span>{tool}</span>)}</p>
             </li>
           ))}
         </ul>
