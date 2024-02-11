@@ -3,35 +3,40 @@ const projects = [
   {
     title: "name place animal thing game",
     description:  "Game based on the classic name place animal thing game",
-    url:"/images/projects/name-place.png",
-    tools: ["JavaScript", "CSS", "HTML"]
+    imgUrl:"/images/projects/name-place.png",
+    tools: ["JavaScript", "CSS", "HTML"],
+    url:"https://geega-game.netlify.app"
   
   },
     {
       title: "budget app",
       description:  "Personal budget app",
-      url:"/images/projects/budget.png",
-      tools: ["JavaScript", "CSS", "HTML"]
+      imgUrl:"/images/projects/budget.png",
+      tools: ["JavaScript", "CSS", "HTML"],
+      url:"https://geega-budget.netlify.app"
     
     },
   {
     title: "forkify",
     description:  "Recipe searching webapp",
-    url:"/images/projects/forkify.png",
-    tools: ["JavaScript", "CSS", "HTML"]
+    imgUrl:"/images/projects/forkify.png",
+    tools: ["JavaScript", "CSS", "HTML"],
+    url:"https://geega-forkify.netlify.app"
   
   },
 {
   title: "weather app",
   description:  "An app that shows the weather",
-  url:"/images/projects/weather.png",
-  tools: ["JavaScript", "CSS", "HTML"]
+  imgUrl:"/images/projects/weather.png",
+  tools: ["JavaScript", "CSS", "HTML"],
+  url:"https://geega-weather.netlify.app"
 },
 {
   title: "space tourism website",
   description:  "An website for a space tourism company",
-  url:"/images/projects/space.png",
-  tools: ["JavaScript", "CSS", "HTML"]
+  imgUrl:"/images/projects/space.png",
+  tools: ["JavaScript", "CSS", "HTML"],
+  url:"https://geega-space.netlify.app"
 
 },
 ]
@@ -43,11 +48,11 @@ const projects = [
         <ul class="">
           {projects.map(project => (
             <li>
-              <img
-                src={project.url}
+              <a href="http://"><img
+                src={project.imgUrl}
                 alt={`preview image of ${project.title}`}
                 class="h-24"
-              />
+              /></a>
               <p>{project.title}</p>
               <p>{project.tools.map(tool => <span>{tool}</span>)}</p>
             </li>
