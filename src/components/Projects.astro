@@ -1,1 +1,24 @@
-<div>Projects</div>
+    ---
+const projects = [{
+  title: "title",
+  description:  "",
+}]
+    ---
+    
+    <section>
+      <div class="container">
+        <h2>Skills</h2>
+        <ul class="grid grid-cols-4 py-16 mx-32 text-center rounded-lg gap-y-8 justify-items-center bg-secondary">
+          {projects.map(project => (
+            <li>
+              <img
+                src={`/images/logos/${project.title.toLowerCase()}.png`}
+                alt={`preview image of ${project.title}`}
+                class="h-24"
+              />
+              {project.title}
+            </li>
+          ))}
+        </ul>
+      </div>
+    </section>
