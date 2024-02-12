@@ -39,7 +39,7 @@ const projects = [
 },
 {
   title: "space tourism website",
-  description:  "An website for a space tourism company",
+  description:  "A website for a space tourism company",
   imgUrl:"/images/projects/space.png",
   tools: ["JavaScript", "CSS", "HTML"],
   sourceCodeUrl:"https://github.com/FaizanAsifB/frontend-mentor-space-tourism.git",
@@ -54,7 +54,7 @@ const projects = [
         <h2>Projects</h2>
         <ul class="space-y-8">
           {projects.map(project => (
-            <li class="flex even:flex-row-reverse  bg-[#1c212e] rounded-lg">
+            <li class="flex even:flex-row-reverse  bg-secondary rounded-lg">
               <a href={project.url} target="_blank" class="w-[850px] h-[400px]">
                 <img
                 src={project.imgUrl}
@@ -62,10 +62,9 @@ const projects = [
                 class=" object-contain w-full h-full rounded-xl shadow-md"
                 />
               </a>
-              <div class="text-center flex-1">
-                <h3 class="capitalize ">{project.title}</h3>
-                <p>This is my game! If you noob you lose. If you pro you win.
-                </p>
+              <div class="text-center flex-1 ">
+                <h3 class="capitalize mt-12">{project.title}</h3>
+                <p>{project.description}</p>
                 <p>{project.tools.map(tool => <span>{tool}</span>)}</p>
                 <Button asChild variant={"link"}><a href="http://github.com" target="_blank">Source Code</a></Button>
                 <Button asChild variant={"link"}><a href="project.url" target="_blank">Live App</a></Button>
