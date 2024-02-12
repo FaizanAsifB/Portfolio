@@ -1,10 +1,13 @@
     ---
+import { Button } from "./ui/button"
+
 const projects = [
   {
     title: "name place animal thing game",
     description:  "Game based on the classic name place animal thing game",
     imgUrl:"/images/projects/name-place.png",
     tools: ["JavaScript", "CSS", "HTML"],
+    sourceCodeUrl:"https://github.com/FaizanAsifB/name-place-animal-game.git",
     url:"https://geega-game.netlify.app/"
   
   },
@@ -13,6 +16,7 @@ const projects = [
       description:  "Personal budget app",
       imgUrl:"/images/projects/budget.png",
       tools: ["JavaScript", "CSS", "HTML"],
+      sourceCodeUrl:"https://github.com/FaizanAsifB/forkify-course-app.git",
       url:"https://geega-budget.netlify.app/"
     
     },
@@ -21,6 +25,7 @@ const projects = [
     description:  "Recipe searching webapp",
     imgUrl:"/images/projects/forkify.png",
     tools: ["JavaScript", "CSS", "HTML"],
+    sourceCodeUrl:"https://github.com/FaizanAsifB/forkify-course-app.git",
     url:"https://geega-forkify.netlify.app/"
   
   },
@@ -29,6 +34,7 @@ const projects = [
   description:  "An app that shows the weather",
   imgUrl:"/images/projects/weather.png",
   tools: ["JavaScript", "CSS", "HTML"],
+  sourceCodeUrl:"https://github.com/FaizanAsifB/weather-app.git",
   url:"https://geega-weather.netlify.app/"
 },
 {
@@ -36,25 +42,32 @@ const projects = [
   description:  "An website for a space tourism company",
   imgUrl:"/images/projects/space.png",
   tools: ["JavaScript", "CSS", "HTML"],
+  sourceCodeUrl:"https://github.com/FaizanAsifB/frontend-mentor-space-tourism.git",
   url:"https://geega-space-tourism.netlify.app/"
 
 },
 ]
     ---
     
-    <section class="bg-secondary" id="projects">
+    <section class="" id="projects">
       <div class="container">
         <h2>Projects</h2>
-        <ul class="">
+        <ul>
           {projects.map(project => (
-            <li>
-              <a href={project.url} target="_blank"><img
+            <li class="flex even:flex-row-reverse border-red-500 border-2">
+              <a href={project.url} target="_blank" class="border-2 border-lime-500 w-[850px] h-[400px]">
+                <img
                 src={project.imgUrl}
                 alt={`preview image of ${project.title}`}
-                class="h-24"
+                class=" object-contain w-full h-full rounded-lg"
               /></a>
-              <p>{project.title}</p>
-              <p>{project.tools.map(tool => <span>{tool}</span>)}</p>
+                <div class="text-center flex-1 border-2 border-blue-500">
+                  <h3 class="capitalize ">{project.title}</h3>
+                  <p>This is my game! If you noob you lose. If you pro you win.</p>
+                  <p>{project.tools.map(tool => <span>{tool}</span>)}</p>
+                  <Button asChild variant={"link"}><a href="http://github.com" target="_blank">Source Code</a></Button>
+                  <Button asChild variant={"link"}><a href="project.url" target="_blank">Live App</a></Button>
+                  </div>
             </li>
           ))}
         </ul>
