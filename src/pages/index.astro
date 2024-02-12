@@ -8,7 +8,7 @@ import Contact from '@/components/Contact.astro'
 import Navigation from '@/components/Navigation.astro'
 import Footer from '@/components/Footer.astro'
 ---
-
+<!-- [&>section:not(:first-child)]:bg-secondary -->
 <html lang="en" class="dark scroll-smooth">
 	<head>
 		<meta charset="utf-8" />
@@ -19,7 +19,7 @@ import Footer from '@/components/Footer.astro'
 	</head>
 	<body>
 		<Navigation />
-		<main>
+		<main class="">
 			<Hero/>
 			<About />
 			<Skills />

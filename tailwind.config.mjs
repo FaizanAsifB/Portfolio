@@ -52,7 +52,10 @@ export default {
         md: 'calc(var(--radius) - 2px)',
         sm: 'calc(var(--radius) - 4px)',
       },
-      padding: { section: 'var(--section-padding)' },
+      padding: {
+        'section-t': 'var(--section-padding-t)',
+        'section-b': 'var(--section-padding-b)',
+      },
       keyframes: {
         'accordion-down': {
           from: { height: '0' },

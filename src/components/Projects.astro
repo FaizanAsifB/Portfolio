@@ -3,7 +3,7 @@ import { Button } from "./ui/button"
 
 const projects = [
   {
-    title: "name place animal thing game",
+    title: "name place animal thing",
     description:  "Game based on the classic name place animal thing game",
     imgUrl:"/images/projects/name-place.png",
     tools: ["JavaScript", "CSS", "HTML"],
@@ -50,24 +50,26 @@ const projects = [
     ---
     
     <section class="" id="projects">
-      <div class="container">
+      <div class="container space-y-16">
         <h2>Projects</h2>
-        <ul>
+        <ul class="space-y-8">
           {projects.map(project => (
-            <li class="flex even:flex-row-reverse border-red-500 border-2">
-              <a href={project.url} target="_blank" class="border-2 border-lime-500 w-[850px] h-[400px]">
+            <li class="flex even:flex-row-reverse  bg-[#1c212e] rounded-lg">
+              <a href={project.url} target="_blank" class="w-[850px] h-[400px]">
                 <img
                 src={project.imgUrl}
                 alt={`preview image of ${project.title}`}
-                class=" object-contain w-full h-full rounded-lg"
-              /></a>
-                <div class="text-center flex-1 border-2 border-blue-500">
-                  <h3 class="capitalize ">{project.title}</h3>
-                  <p>This is my game! If you noob you lose. If you pro you win.</p>
-                  <p>{project.tools.map(tool => <span>{tool}</span>)}</p>
-                  <Button asChild variant={"link"}><a href="http://github.com" target="_blank">Source Code</a></Button>
-                  <Button asChild variant={"link"}><a href="project.url" target="_blank">Live App</a></Button>
-                  </div>
+                class=" object-contain w-full h-full rounded-xl shadow-md"
+                />
+              </a>
+              <div class="text-center flex-1">
+                <h3 class="capitalize ">{project.title}</h3>
+                <p>This is my game! If you noob you lose. If you pro you win.
+                </p>
+                <p>{project.tools.map(tool => <span>{tool}</span>)}</p>
+                <Button asChild variant={"link"}><a href="http://github.com" target="_blank">Source Code</a></Button>
+                <Button asChild variant={"link"}><a href="project.url" target="_blank">Live App</a></Button>
+              </div>
             </li>
           ))}
         </ul>

@@ -22,7 +22,8 @@
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
 
-    --accent: 210 40% 96.1%;
+    /* --accent: 210 40% 96.1%; */
+    --accent: 2.4 96.2% 58.6%;
     --accent-foreground: 222.2 47.4% 11.2%;
 
     --destructive: 0 84.2% 60.2%;
@@ -34,7 +35,8 @@
 
     --radius: 0.5rem;
 
-    --section-padding: 7.5rem;
+    --section-padding-t: 6rem;
+    --section-padding-b: 7rem;
   }
 
   .dark {
@@ -78,8 +80,8 @@
   }
 
   section:not(:first-child) {
-    @apply py-section;
-    /* @apply first:py-0; */
+    @apply pt-section-t;
+    @apply pb-section-b;
   }
 
   h2 {
