@@ -1,7 +1,7 @@
 ---
 import "@/styles/globals.css";
 import Hero from "@/components/Hero.astro";
-import About from "@/components/About.astro";
+import About from "@/components/About";
 import Skills from "@/components/Skills.astro";
 import Projects from "@/components/Projects.astro";
 import Contact from "@/components/Contact.astro";
@@ -23,15 +23,16 @@ import Footer from "@/components/Footer.astro";
   </head>
   <body>
     <Navigation />
-    <main class="[&>section:nth-child(even)]:bg-secondary">
+    <section class="[&>section:nth-child(even)]:bg-secondary">
       <Hero />
-      <About />
-      <Skills />
-      <Projects />
-      <Contact />
-    </main>
-    <Footer />
+      <About client:visible />
+    </section>
+
+    <Skills />
+    <Projects />
+    <Contact />
   </body>
+  <Footer />
 </html>
 
 <script is:inline>

@@ -47,7 +47,7 @@ const projects = [
 ];
 ---
 
-<section class="" id="projects">
+<section id="projects">
   <div class="container space-y-16">
     <h2>Projects</h2>
     <ul class="space-y-24">
@@ -56,6 +56,7 @@ const projects = [
           <li class="flex even:flex-row-reverse rounded-lg gap-16 ">
             <a href={project.url} target="_blank" class="w-[45%] h-[350px]">
               <img
+                loading="lazy"
                 src={project.imgUrl}
                 alt={`preview image of ${project.title}`}
                 class="object-cover h-full w-full rounded-lg brightness-90"
