@@ -24,10 +24,13 @@ const navLinks = [
   },
 ]
 ---
-
-    <header class="w-full shadow-sm bg-background/90 fixed top-0">
+  --accent: 2.4 96.2% 58.6%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+  --accent: 2.4 96.2% 58.6%;
+    --accent-foreground: 210 40% 98%;
+    <header class="w-full shadow-sm bg-background fixed top-0">
       <div class="container flex items-center justify-between text-2xl ">
-        <p class="text-[#ca2e55] font-semibold">&lt;<span class="text-accent">FA </span>/&gt;</p>
+        <p class="text-[#ca2e55] font-semibold">&lt;<span class="text-[#f13528]">FA </span>/&gt;</p>
         <nav class="flex gap-8">
           <ul class="flex gap-8 p-6">
             {navLinks.map(link => (
