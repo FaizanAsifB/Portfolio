@@ -10,6 +10,9 @@
     --card: 0 0% 100%;
     --card-foreground: 222.2 84% 4.9%;
 
+    --badge: 0 14.6% 17.5%;
+    --badge-foreground: 1.8 61.3% 56.5%;
+
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
@@ -35,7 +38,7 @@
 
     --radius: 0.5rem;
 
-    --section-padding-t: 6rem;
+    --section-padding-t: 5rem;
     --section-padding-b: 7rem;
   }
 
@@ -47,10 +50,13 @@
     --card: 222.2 84% 4.9%;
     --card-foreground: 210 40% 98%;
 
+    --badge: 0 14.6% 17.5%;
+    --badge-foreground: 1.8 61.3% 56.5%;
+
     --popover: 222.2 84% 4.9%;
     --popover-foreground: 210 40% 98%;
 
-    --primary: 210 40% 98%;
+    --primary: 4 71.5% 49.6%;
     --primary-foreground: 222.2 47.4% 11.2%;
 
     /* --secondary: 217.2 32.6% 17.5%; */
@@ -87,7 +93,7 @@
   }
 
   h2 {
-    @apply text-4xl font-semibold tracking-tight text-center uppercase scroll-m-20 first:mt-0 mb-8;
+    @apply text-4xl font-semibold tracking-tight text-center uppercase scroll-m-20 first:mt-0 mb-10;
   }
   h3 {
     @apply text-3xl font-semibold tracking-tight scroll-m-20;
