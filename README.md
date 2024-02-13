@@ -4,6 +4,10 @@
 npm create astro@latest -- --template minimal
 ```
 
+https://www.behance.net/asset/289445/Free-PSD-file
+https://www.behance.net/gallery/144641409/Personal-Portfolio-Web-Design?tracking_source=search_projects|developer+portfolio&l=2
+https://dribbble.com/shots/22929956-Qurifolio-Personal-Portfolio-Landing-Page
+
 [![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/minimal)
 [![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/minimal)
 [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/minimal/devcontainer.json)
