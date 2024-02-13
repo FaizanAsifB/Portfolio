@@ -16,7 +16,7 @@
     --popover: 0 0% 100%;
     --popover-foreground: 0 0% 3.9%;
 
-    --primary: 0 72.2% 50.6%;
+    --primary: 3.9 87.8% 55.1%;
     --primary-foreground: 0 85.7% 97.3%;
 
     --secondary: 0 0% 96.1%;
@@ -33,7 +33,7 @@
 
     --border: 0 0% 89.8%;
     --input: 0 0% 89.8%;
-    --ring: 0 72.2% 50.6%;
+    --ring: 3.9 87.8% 55.1%;
     --radius: 0.5rem;
 
     --section-padding-t: 5rem;
@@ -53,7 +53,7 @@
     --popover: 0 0% 3.9%;
     --popover-foreground: 0 0% 98%;
 
-    --primary: 0 72.2% 50.6%;
+    --primary: 3.9 87.8% 55.1%;
     --primary-foreground: 0 85.7% 97.3%;
 
     --secondary: 0 0% 14.9%;
@@ -70,7 +70,7 @@
 
     --border: 0 0% 14.9%;
     --input: 0 0% 14.9%;
-    --ring: 0 72.2% 50.6%;
+    --ring: 3.9 87.8% 55.1%;
   }
 }
 
@@ -88,7 +88,7 @@
   }
 
   h2 {
-    @apply text-4xl font-semibold tracking-tight text-center uppercase scroll-m-20 first:mt-0 mb-10;
+    @apply text-4xl font-semibold tracking-tight text-center uppercase scroll-m-20 first:mt-0 mb-10 text-primary;
   }
   h3 {
     @apply text-3xl font-semibold tracking-tight scroll-m-20;

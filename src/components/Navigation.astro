@@ -24,20 +24,17 @@ const navLinks = [
   },
 ]
 ---
-  --accent: 2.4 96.2% 58.6%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-  --accent: 2.4 96.2% 58.6%;
-    --accent-foreground: 210 40% 98%;
-    <header class="w-full shadow-sm bg-background fixed top-0">
+
+    <header class="w-full shadow-sm bg-background/90 fixed top-0 z-10">
       <div class="container flex items-center justify-between text-2xl ">
-        <p class="text-[#ca2e55] font-semibold">&lt;<span class="text-[#f13528]">FA </span>/&gt;</p>
+        <p class="text-[#ca2e55] font-semibold">&lt;<span class="text-primary">FA </span>/&gt;</p>
         <nav class="flex gap-8">
           <ul class="flex gap-8 p-6">
             {navLinks.map(link => (
               <li>
                 <a
                   href={link.href}
-                  class="relative py-1 before:transition-transform before:duration-300 before:absolute before:w-full before:h-1 before:rounded-sm before:bottom-0 before:left:0 before:origin-right before:scale-x-0 before:bg-accent hover:before:origin-left hover:before:scale-x-100"
+              class="relative before:transition-transform before:duration-300 before:absolute before:w-full before:h-1 before:rounded-sm before:-bottom-1 before:left:0 before:origin-right before:scale-x-0 before:bg-primary hover:before:origin-left hover:before:scale-x-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background  rounded-lg "
                 >
                   {link.title}
                 </a>
