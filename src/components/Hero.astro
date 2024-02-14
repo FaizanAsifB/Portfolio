@@ -24,9 +24,15 @@ const socials = [
 ];
 ---
 
-<section id="hero">
-  <div class="container grid min-h-screen grid-cols-2 items-center">
-    <div>
+<section id="hero" class="">
+  <div
+    class="container grid min-h-screen grid-cols-2 items-center dark:bg-grid-white/[0.03] bg-grid-black/[0.03] relative"
+  >
+    <div
+      class="absolute pointer-events-none inset-0 flex items-center justify-center bg-background [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"
+    >
+    </div>
+    <div class="z-20">
       <h1 class="text-6xl font-bold tracking-tight scroll-m-20 lg:text-5xl">
         Hello, I'm <br />
         <span class="text-primary text-6xl">Faizan Asif</span>

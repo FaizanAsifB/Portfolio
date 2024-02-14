@@ -23,14 +23,16 @@ import Footer from "@/components/Footer.astro";
   </head>
   <body>
     <Navigation />
-    <section class="[&>section:nth-child(even)]:bg-secondary">
+    <main class="[&>section:nth-child(even)]:bg-secondary">
       <Hero />
-      <About client:visible />
-    </section>
+      <section>
+        <About client:visible />
+      </section>
 
-    <Skills />
-    <Projects />
-    <Contact />
+      <Skills />
+      <Projects />
+      <Contact />
+    </main>
   </body>
   <Footer />
 </html>

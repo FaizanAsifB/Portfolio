@@ -5,7 +5,7 @@ const About = () => {
   return (
     <div className="container">
       <motion.h2
-        initial={{ opacity: 0, y: -200 }}
+        initial={{ opacity: 0, y: -100 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
         // viewport={{ once: true }}
@@ -15,7 +15,7 @@ const About = () => {
       </motion.h2>
       <motion.div
         className="flex gap-6"
-        initial={{ opacity: 0, x: -200 }}
+        initial={{ opacity: 0, x: -400 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.5 }}
       >
@@ -29,7 +29,7 @@ const About = () => {
         <article>
           <motion.p
             className="max-w-[60ch] flex-1"
-            initial={{ opacity: 0, x: 400 }}
+            initial={{ opacity: 0, x: 600 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
           >
