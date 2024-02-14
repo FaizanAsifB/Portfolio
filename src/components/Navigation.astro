@@ -1,47 +1,51 @@
 ---
-import ThemeSwitch from "@/components/ui/ThemeSwitch.tsx"
+import ThemeSwitch from "@/components/ui/ThemeSwitch.tsx";
 
 const navLinks = [
   {
-    title: 'Home',
-    href: '#hero',
+    title: "Home",
+    href: "#hero",
   },
   {
-    title: 'About',
-    href: '#about',
+    title: "About",
+    href: "#about",
   },
   {
-    title: 'Skills',
-    href: '#skills',
+    title: "Skills",
+    href: "#skills",
   },
   {
-    title: 'Projects',
-    href: '#projects',
+    title: "Projects",
+    href: "#projects",
   },
   {
-    title: 'Contact',
-    href: '#contact',
+    title: "Contact",
+    href: "#contact",
   },
-]
+];
 ---
 
-    <header class="w-full shadow-sm bg-background/90 fixed top-0 z-10">
-      <div class="container flex items-center justify-between text-2xl ">
-        <p class="text-[#ca2e55] font-semibold">&lt;<span class="text-primary">FA </span>/&gt;</p>
-        <nav class="flex gap-8">
-          <ul class="flex gap-8 p-6">
-            {navLinks.map(link => (
-              <li>
-                <a
-                  href={link.href}
-              class="relative before:transition-transform before:duration-300 before:absolute before:w-full before:h-1 before:rounded-sm before:-bottom-1 before:left:0 before:origin-right before:scale-x-0 before:bg-primary hover:before:origin-left hover:before:scale-x-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background  rounded-lg "
-                >
-                  {link.title}
-                </a>
-              </li>
-            ))}
-          </ul>
-          <ThemeSwitch client:load/>
-        </nav>
-      </div>
-    </header>
+<header class="w-full shadow-sm bg-background/90 fixed top-0 z-10 py-6">
+  <div class="container flex items-center justify-between text-2xl">
+    <p class="text-[#ca2e55] font-semibold">
+      &lt;<span class="text-primary">FA </span>/&gt;
+    </p>
+    <nav class="flex gap-8 items-center">
+      <ul class="flex gap-8">
+        {
+          navLinks.map((link) => (
+            <li>
+              <a
+                href={link.href}
+                class="relative before:transition-transform before:duration-300 before:absolute before:w-full before:h-1 before:rounded-sm before:-bottom-1 before:left:0 before:origin-right before:scale-x-0 before:bg-primary hover:before:origin-left hover:before:scale-x-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background  rounded-lg "
+              >
+                {link.title}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+      <ThemeSwitch client:load />
+    </nav>
+  </div>
+</header>
