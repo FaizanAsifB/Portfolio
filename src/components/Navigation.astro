@@ -37,7 +37,7 @@ const navLinks = [
             <li>
               <a
                 href={link.href}
-                class="relative before:transition-transform before:duration-300 before:absolute before:w-full before:h-1 before:rounded-sm before:-bottom-1 before:left:0 before:origin-right before:scale-x-0 before:bg-primary hover:before:origin-left hover:before:scale-x-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background  rounded-lg "
+                class="relative before:transition-transform before:duration-300 before:absolute before:w-full before:h-1 before:rounded-sm before:-bottom-1 before:left:0 before:origin-right before:scale-x-0 before:bg-primary hover:before:origin-left hover:before:scale-x-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background rounded-lg "
               >
                 {link.title}
               </a>
@@ -49,3 +49,24 @@ const navLinks = [
     </nav>
   </div>
 </header>
+
+<script>
+  const navLinkEls = document.querySelectorAll(
+    "nav>ul>li>a",
+  ) as NodeListOf<HTMLAnchorElement>;
+  const sectionEls = document.querySelectorAll("section");
+
+  window.onscroll = () => {
+    sectionEls.forEach((sectionEl) => {
+      if (
+        window.scrollY >= sectionEl.offsetTop - 200 &&
+        window.scrollY < sectionEl.offsetHeight + sectionEl.offsetTop
+      )
+        navLinkEls.forEach((navLinkEl) => {
+          navLinkEl.classList.remove("active");
+          if (navLinkEl.href.includes(sectionEl.id))
+            navLinkEl.classList.add("active");
+        });
+    });
+  };
+</script>

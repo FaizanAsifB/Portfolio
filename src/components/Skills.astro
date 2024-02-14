@@ -1,36 +1,39 @@
 ---
+import { inView } from "framer-motion/dom";
 const skills = [
- 'HTML5',  
- 'CSS',  
- 'JavaScript',  
- 'React',  
- 'Astro',  
- 'TypeScript',  
- 'Sass',  
- 'Tailwind',  
- 'Firebase',  
- 'SQL',  
- 'Git',  
- 'Git Hub',
- "MUI",
- 'VS Code'
-]
+  "HTML5",
+  "CSS",
+  "JavaScript",
+  "React",
+  "Astro",
+  "TypeScript",
+  "Sass",
+  "Tailwind",
+  "Firebase",
+  "SQL",
+  "Git",
+  "Git Hub",
+  "MUI",
+  "VS Code",
+];
 ---
-    <section id="skills">
-      <div class="container">
-        <h2>Skills</h2>
-        <ul class="mx-32 text-center rounded-lg flex flex-wrap gap-x-12 gap-y-16 ">
-          {skills.map(skill => (
-            <li>
-              <img
-                src={`/images/logos/${skill.toLowerCase()}.svg`}
-                alt={`logo of ${skill}`}
-                class="w-24 h-24"
-              />
-              {skill}
-            </li>
-          ))}
-        </ul>
-      </div>
-    </section>
 
+<section id="skills">
+  <div class="container">
+    <h2>Skills</h2>
+    <ul class="mx-32 text-center rounded-lg flex flex-wrap gap-x-12 gap-y-16">
+      {
+        skills.map((skill) => (
+          <li>
+            <img
+              src={`/images/logos/${skill.toLowerCase()}.svg`}
+              alt={`logo of ${skill}`}
+              class="w-24 h-24"
+            />
+            {skill}
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</section>
