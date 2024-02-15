@@ -102,9 +102,3 @@
     @apply leading-7 [&:not(:first-child)]:mt-6;
   }
 }
-
-@layer components {
-  .active {
-    @apply before:origin-left before:scale-x-100;
-  }
-}
