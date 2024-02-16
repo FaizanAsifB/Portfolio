@@ -86,6 +86,10 @@ export default {
   },
   plugins: [
     require("tailwindcss-animate"),
+    require("tailwind-scrollbar")({
+      nocompatible: true,
+      preferredStrategy: "pseudoelements",
+    }),
     function ({ matchUtilities, theme }) {
       matchUtilities(
         {

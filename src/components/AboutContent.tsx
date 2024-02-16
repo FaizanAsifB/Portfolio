@@ -6,7 +6,7 @@ const AboutContent = () => {
   const isInView = useInView(ref);
 
   return (
-    <div class="container">
+    <div className="container">
       <h2
         ref={ref}
         style={{

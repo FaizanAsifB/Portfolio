@@ -54,7 +54,7 @@ const projects = [
     <ul class="space-y-24">
       {
         projects.map((project) => (
-          <li class="flex even:flex-row-reverse rounded-lg gap-16">
+          <li class="flex even:flex-row-reverse rounded-lg gap-8 bg-background">
             <a href={project.url} target="_blank" class="w-[45%] h-[350px]">
               <img
                 loading="lazy"
@@ -63,7 +63,7 @@ const projects = [
                 class="object-cover h-full w-full rounded-lg brightness-90"
               />
             </a>
-            <div class="flex-1 flex flex-col justify-center space-y-6">
+            <div class="flex-1 flex flex-col justify-center space-y-6 px-8">
               <h3 class="capitalize">{project.title}</h3>
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Et
