@@ -1,7 +1,7 @@
-import { zodResolver } from '@hookform/resolvers/zod'
-import { useForm } from 'react-hook-form'
-import { z } from 'zod'
-import { Button } from '../ui/button'
+import { zodResolver } from "@hookform/resolvers/zod";
+import { useForm } from "react-hook-form";
+import { z } from "zod";
+import { Button } from "../ui/button";
 import {
   Form,
   FormControl,
@@ -9,9 +9,9 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from '../ui/form'
-import { Input } from '../ui/input'
-import { Textarea } from '../ui/textarea'
+} from "../ui/form";
+import { Input } from "../ui/input";
+import { Textarea } from "../ui/textarea";
 
 const formSchema = z.object({
   name: z.string().min(2).max(50),
@@ -19,27 +19,26 @@ const formSchema = z.object({
   message: z
     .string()
     .min(10, {
-      message: 'Message must be at least 10 characters.',
+      message: "Message must be at least 10 characters.",
     })
     .max(250, {
-      message: 'Message must not be longer than 250 characters.',
+      message: "Message must not be longer than 250 characters.",
     }),
-})
+});
 
 const ContactForm = () => {
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
-      name: '',
-      email: '',
-      message: '',
+      name: "",
+      email: "",
+      message: "",
     },
-  })
+  });
 
   function onSubmit(values: z.infer<typeof formSchema>) {
     // Do something with the form values.
-    // ✅ This will be type-safe and validated.
-    console.log(values)
+    console.log(values);
   }
 
   return (
@@ -90,6 +89,6 @@ const ContactForm = () => {
         <Button type="submit">Submit</Button>
       </form>
     </Form>
-  )
-}
-export default ContactForm
+  );
+};
+export default ContactForm;

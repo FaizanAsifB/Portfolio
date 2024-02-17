@@ -26,10 +26,7 @@ const socials = [
 ];
 ---
 
-<section
-  id="hero"
-  class="bg-[url('/images/bg-orange.jpg')] bg-cover bg-no-repeat"
->
+<section id="hero" class="bg-[url('/images/bg-img.jpg')] bg-cover bg-no-repeat">
   <!-- dark:bg-grid-white/[0.03] bg-grid-black/[0.03] -->
   <div class="container grid min-h-screen grid-cols-2 items-center relative">
     <!-- <div
@@ -41,20 +38,18 @@ const socials = [
         Hello, I'm <br />
         <span class="text-primary text-6xl">Faizan Asif</span>
       </h1>
-      <p class="text-xl max-w-[55ch]">
-        Frontend Web Developer dedicated to building responsive and streamlined
-        Websites and Web Applications that enhance overall user experience
+      <p class="text-muted-foreground">Frontend Web Developer | Stockholm</p>
+      <p class="text-xl max-w-[65ch]">
+        Dedicated to building responsive and streamlined websites and web
+        applications that enhance overall user experience
         and&nbsp;functionality.
       </p>
       <ul class="flex items-center gap-8 my-8">
         {
           socials.map((social) => (
-            <li>
+            <li class="hover:animate-bounce hover:text-primary">
               <a href={social.url}>
-                <i
-                  class={social.icon + " fa-2xl hover:text-primary"}
-                  title={social.title}
-                />
+                <i class={social.icon + " fa-2xl  "} title={social.title} />
               </a>
             </li>
           ))
