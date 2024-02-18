@@ -1,29 +1,7 @@
 ---
 import { Button, buttonVariants } from "@/components/ui/button.tsx";
 import ScrollArrow from "@/components/ui/ScrollArrow.astro";
-
-const socials = [
-  {
-    title: "github",
-    url: "https://github.com/FaizanAsifB",
-    icon: "fa-brands fa-github",
-  },
-  {
-    title: "linkedin",
-    url: "https://linkedin.com/",
-    icon: "fa-brands fa-linkedin",
-  },
-  {
-    title: "email",
-    url: "https://email.com/",
-    icon: "fa-solid fa-envelope",
-  },
-  {
-    title: "discord",
-    url: "https://discord.com/",
-    icon: "fa-brands fa-discord",
-  },
-];
+import Socials from "@/components/Socials.astro";
 ---
 
 <section id="hero" class="bg-[url('/images/bg-img.jpg')] bg-cover bg-no-repeat">
@@ -44,17 +22,7 @@ const socials = [
         applications that enhance overall user experience
         and&nbsp;functionality.
       </p>
-      <ul class="flex items-center gap-8 my-8">
-        {
-          socials.map((social) => (
-            <li class="hover:animate-bounce hover:text-primary">
-              <a href={social.url}>
-                <i class={social.icon + " fa-2xl  "} title={social.title} />
-              </a>
-            </li>
-          ))
-        }
-      </ul>
+      <Socials />
       <Button>
         <svg
           xmlns="http://www.w3.org/2000/svg"

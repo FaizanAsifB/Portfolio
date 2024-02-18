@@ -45,8 +45,9 @@ const ContactForm = () => {
     <Form {...form}>
       <form
         onSubmit={form.handleSubmit(onSubmit)}
-        className="space-y-8 w-3/4 mx-auto"
+        className="space-y-8 w-3/4 mx-auto "
       >
+        <h4>Message Me</h4>
         <FormField
           control={form.control}
           name="name"

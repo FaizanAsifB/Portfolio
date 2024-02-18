@@ -1,0 +1,39 @@
+---
+const socials = [
+  {
+    title: "github",
+    url: "https://github.com/FaizanAsifB",
+    icon: "fa-brands fa-github",
+  },
+  {
+    title: "linkedin",
+    url: "https://linkedin.com/",
+    icon: "fa-brands fa-linkedin",
+  },
+  {
+    title: "email",
+    url: "https://email.com/",
+    icon: "fa-solid fa-envelope",
+  },
+  {
+    title: "discord",
+    url: "https://discord.com/",
+    icon: "fa-brands fa-discord",
+  },
+];
+---
+
+<ul class="flex items-center gap-8 my-8">
+  {
+    socials.map((social) => (
+      <li class="group">
+        <a
+          href={social.url}
+          class="inline-block group-hover:animate-bounce  group-hover:text-primary"
+        >
+          <i class={social.icon + " fa-2xl"} title={social.title} />
+        </a>
+      </li>
+    ))
+  }
+</ul>

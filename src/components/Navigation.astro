@@ -78,8 +78,7 @@ const navLinks = [
       headerEl.dataset.scrolled = "false";
   };
 
-  window.onscroll = () => {
-    intersectedHero();
+  const intersectedSections = () => {
     if (
       window.scrollY >= heroTop - headerBot &&
       headerEl.dataset.scrolled === "false"
@@ -97,5 +96,16 @@ const navLinks = [
             navLinkEl.dataset.scrolled = "true";
         });
     });
+  };
+
+  const handleIntersections = () => {
+    intersectedHero();
+    intersectedSections();
+  };
+
+  (() => handleIntersections())();
+
+  window.onscroll = () => {
+    handleIntersections();
   };
 </script>
