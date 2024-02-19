@@ -51,10 +51,10 @@
     --card: 0 0% 10.2%;
     --card-foreground: 0 0% 98%;
 
-    /* --badge: 0 14.6% 17.5%;
-  --badge-foreground: 1.8 61.3% 56.5%; */
-    --badge: 34.3 34.1% 16.1%;
-    --badge-foreground: 29.2 76.9% 49.2%;
+    --badge: 0 14.6% 17.5%;
+    --badge-foreground: 1.8 61.3% 56.5%;
+    /* --badge: 34.3 34.1% 16.1%;
+    --badge-foreground: 29.2 76.9% 49.2%; */
 
     --popover: 0 0% 10.2%;
     --popover-foreground: 0 0% 98%;
