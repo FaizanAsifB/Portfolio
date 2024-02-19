@@ -43,19 +43,17 @@ const ContactForm = () => {
 
   return (
     <Form {...form}>
-      <form
-        onSubmit={form.handleSubmit(onSubmit)}
-        className="space-y-8 w-3/4 mx-auto "
-      >
-        <h4>Message Me</h4>
+      <form onSubmit={form.handleSubmit(onSubmit)} className="max-w-[500px]">
         <FormField
           control={form.control}
           name="name"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Name</FormLabel>
               <FormControl>
-                <Input placeholder="Your Name" {...field} />
+                <div className="relative mt-10">
+                  <Input placeholder="Name" {...field} />
+                  <FormLabel>Name</FormLabel>
+                </div>
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -66,9 +64,11 @@ const ContactForm = () => {
           name="email"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Email</FormLabel>
               <FormControl>
-                <Input placeholder="Enter Your Email" {...field} />
+                <div className="relative mt-10">
+                  <Input placeholder="Email" {...field} />
+                  <FormLabel>Email</FormLabel>
+                </div>
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -79,15 +79,23 @@ const ContactForm = () => {
           name="message"
           render={({ field }) => (
             <FormItem className="w-full">
-              <FormLabel>Message</FormLabel>
               <FormControl>
-                <Textarea placeholder="Enter Your Message" {...field} />
+                <div className="relative mt-10">
+                  <Textarea placeholder="Message" {...field} />
+                  <FormLabel className="top-0 peer-focus:top-0">
+                    Message
+                  </FormLabel>
+                </div>
               </FormControl>
               <FormMessage />
             </FormItem>
           )}
         />
-        <Button type="submit">Submit</Button>
+        <div className="w-full grid place-items-center my-8">
+          <Button className="" type="submit">
+            Submit
+          </Button>
+        </div>
       </form>
     </Form>
   );
