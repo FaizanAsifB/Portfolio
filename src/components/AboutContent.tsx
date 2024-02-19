@@ -20,7 +20,7 @@ const AboutContent = () => {
         // transition={{ duration: 0.5 }}
         // // viewport={{ once: true }}
       >
-        About
+        About Me
       </h2>
       <div
         className="flex gap-6"
