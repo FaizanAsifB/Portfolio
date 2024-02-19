@@ -4,7 +4,7 @@ import ScrollArrow from "@/components/ui/ScrollArrow.astro";
 import Socials from "@/components/Socials.astro";
 ---
 
-<section id="hero" class="bg-[url('/images/bg-img.jpg')] bg-cover bg-no-repeat">
+<section id="hero" class="bg-background bg-cover bg-no-repeat">
   <!-- dark:bg-grid-white/[0.03] bg-grid-black/[0.03] -->
   <div class="container grid min-h-screen grid-cols-2 items-center relative">
     <!-- <div
@@ -43,6 +43,28 @@ import Socials from "@/components/Socials.astro";
             y2="3"></line></svg
         >
         Download CV</Button
+      >
+
+      <a href="#contact" class={buttonVariants({ variant: "default" })}>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="lucide lucide-download mr-1"
+          ><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline
+            points="7 10 12 15 17 10"></polyline><line
+            x1="12"
+            x2="12"
+            y1="15"
+            y2="3"></line></svg
+        >
+        Contact Me</a
       >
     </div>
     <div class="w-[400px]">
