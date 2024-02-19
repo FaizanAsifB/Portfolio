@@ -1,7 +1,6 @@
 ---
 import { Badge } from "@/components/ui/badge";
 import { buttonVariants } from "@/components/ui/button";
-import { Separator } from "@/components/ui/separator";
 
 const projects = [
   {
@@ -54,8 +53,12 @@ const projects = [
     <ul class="space-y-24">
       {
         projects.map((project) => (
-          <li class="flex even:flex-row-reverse rounded-lg gap-8 bg-background">
-            <a href={project.url} target="_blank" class="w-[45%] h-[350px]">
+          <li class="flex even:flex-row-reverse bg-background odd:shadow-[inset_6px_0_0_hsl(var(--primary))] even:shadow-[inset_-6px_0_0_hsl(var(--primary))]">
+            <a
+              href={project.url}
+              target="_blank"
+              class="w-[45%] h-[350px] m-16"
+            >
               <img
                 loading="lazy"
                 src={project.imgUrl}
@@ -63,7 +66,7 @@ const projects = [
                 class="object-cover h-full w-full rounded-lg brightness-90"
               />
             </a>
-            <div class="flex-1 flex flex-col justify-center space-y-6 px-8">
+            <div class="flex-1 flex flex-col justify-center space-y-8 px-8">
               <h3 class="capitalize">{project.title}</h3>
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Et
@@ -80,7 +83,7 @@ const projects = [
                 <a
                   href={project.url}
                   target="_blank"
-                  class={buttonVariants({ variant: "outline" })}
+                  class={buttonVariants({ variant: "default" })}
                 >
                   <span class="text-base"> View Website </span>
                   <svg
@@ -108,7 +111,7 @@ const projects = [
                   href={project.sourceCodeUrl}
                   target="_blank"
                   class={buttonVariants({
-                    variant: "default",
+                    variant: "outline",
                   })}
                 >
                   <svg
@@ -122,7 +125,7 @@ const projects = [
                       fill-rule="evenodd"
                       clip-rule="evenodd"
                       d="M7.976 0A7.977 7.977 0 000 7.976c0 3.522 2.3 6.507 5.431 7.584.392.049.538-.196.538-.392v-1.37c-2.201.49-2.69-1.076-2.69-1.076-.343-.93-.881-1.175-.881-1.175-.734-.489.048-.489.048-.489.783.049 1.224.832 1.224.832.734 1.223 1.859.88 2.3.685.048-.538.293-.88.489-1.076-1.762-.196-3.621-.881-3.621-3.964 0-.88.293-1.566.832-2.153-.05-.147-.343-.978.098-2.055 0 0 .685-.196 2.201.832.636-.196 1.322-.245 2.007-.245s1.37.098 2.006.245c1.517-1.027 2.202-.832 2.202-.832.44 1.077.146 1.908.097 2.104a3.16 3.16 0 01.832 2.153c0 3.083-1.86 3.719-3.62 3.915.293.244.538.733.538 1.467v2.202c0 .196.146.44.538.392A7.984 7.984 0 0016 7.976C15.951 3.572 12.38 0 7.976 0z"
-                      fill="#ffffff"
+                      fill="currentColor"
                     />
                   </svg>
                   <span class="text-base">Source Code</span>
