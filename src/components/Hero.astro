@@ -2,6 +2,7 @@
 import { buttonVariants } from "@/components/ui/button.tsx";
 import ScrollArrow from "@/components/ui/ScrollArrow.astro";
 import Socials from "@/components/Socials.astro";
+import Typewriter from "typewriter-effect";
 ---
 
 <section id="hero" class="bg-background bg-cover bg-no-repeat">
@@ -16,7 +17,23 @@ import Socials from "@/components/Socials.astro";
         Hello, I'm <br />
         <span class="text-primary text-6xl">Faizan Asif</span>
       </h1>
-      <p class="text-muted-foreground">Frontend Web Developer | Stockholm</p>
+      <div class="text-xl" aria-hidden="true">
+        <Typewriter
+          client:load
+          options={{
+            strings: [
+              "Frontend Developer",
+              "Programming enthusiast",
+              "Gamer",
+              "Father",
+              "Food Lover",
+            ],
+            autoStart: true,
+            loop: true,
+          }}
+        />
+      </div>
+      <!-- <p class="text-muted-foreground">Frontend Web Developer | Stockholm</p> -->
       <p class="text-xl max-w-[65ch]">
         Dedicated to building responsive and streamlined websites and web
         applications that enhance overall user experience
