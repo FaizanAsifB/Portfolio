@@ -39,7 +39,7 @@ const AboutContent = () => {
           />
         </div>
         <article
-          className="max-w-[60ch] flex-1 text-lg tracking-wider"
+          className="max-w-[60ch] flex-1 text-xl tracking-wide"
           style={{
             opacity: isInView ? "1" : "0",
             transform: isInView ? "none" : "translateX(600px)",

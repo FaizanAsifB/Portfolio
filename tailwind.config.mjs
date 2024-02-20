@@ -2,7 +2,7 @@
 
 const svgToDataUri = require("mini-svg-data-uri");
 
-const colors = require("tailwindcss/colors");
+const defaultTheme = require("tailwindcss/defaultTheme");
 const {
   default: flattenColorPalette,
 } = require("tailwindcss/lib/util/flattenColorPalette");
@@ -63,6 +63,11 @@ export default {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
+      },
+      fontFamily: {
+        poppins: ["Poppins", ...defaultTheme.fontFamily.sans],
+        mada: ["Mada", ...defaultTheme.fontFamily.sans],
+        crimsonText: ["CrimsonText", ...defaultTheme.fontFamily.sans],
       },
       padding: {
         "section-t": "var(--section-padding-t)",

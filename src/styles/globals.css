@@ -79,6 +79,9 @@
   * {
     @apply border-border;
   }
+  html {
+    @apply font-mada;
+  }
 
   body {
     @apply bg-background text-foreground;
@@ -89,8 +92,17 @@
     @apply pb-section-b;
   }
 
+  h1,
   h2 {
-    @apply text-4xl font-bold tracking-tight text-center uppercase scroll-m-20 first:mt-0 mb-16 text-primary;
+    @apply font-poppins;
+  }
+
+  h3,
+  h4 {
+    @apply font-crimsonText;
+  }
+  h2 {
+    @apply text-4xl font-semibold tracking-tight text-center uppercase scroll-m-20 first:mt-0 mb-16 text-primary;
   }
   h3 {
     @apply text-3xl font-semibold tracking-tight scroll-m-20;
@@ -101,4 +113,93 @@
   p {
     @apply leading-7 [&:not(:first-child)]:mt-6;
   }
+}
+
+@font-face {
+  font-family: "Poppins";
+  font-weight: 400;
+  font-style: normal;
+  src:
+    local(""),
+    url("/fonts/poppins/Poppins-Regular.woff2") format("woff2"),
+    url("/fonts/poppins/Poppins-Regular.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "Poppins";
+  font-weight: 500;
+  font-style: normal;
+  src:
+    local(""),
+    url("/fonts/poppins/Poppins-Medium.woff2") format("woff2"),
+    url("/fonts/poppins/Poppins-Medium.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "Poppins";
+  font-weight: 600;
+  font-style: normal;
+  src:
+    local(""),
+    url("/fonts/poppins/Poppins-SemiBold.woff2") format("woff2"),
+    url("/fonts/poppins/Poppins-SemiBold.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "Poppins";
+  font-weight: 700;
+  font-style: normal;
+  src:
+    local(""),
+    url("/fonts/poppins/Poppins-Bold.woff2") format("woff2"),
+    url("/fonts/poppins/Poppins-Bold.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "Poppins";
+  font-weight: 800;
+  font-style: normal;
+  src:
+    local(""),
+    url("/fonts/poppins/Poppins-ExtraBold.woff2") format("woff2"),
+    url("/fonts/poppins/Poppins-ExtraBold.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "Poppins";
+  font-weight: 900;
+  font-style: normal;
+  src:
+    local(""),
+    url("/fonts/poppins/Poppins-Black.woff2") format("woff2"),
+    url("/fonts/poppins/Poppins-Black.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "Mada";
+  font-weight: 400;
+  font-style: normal;
+  src:
+    local(""),
+    url("/fonts/mada/Mada-Regular.woff2") format("woff2"),
+    url("/fonts/mada/Mada-Regular.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "CrimsonText";
+  font-weight: 400;
+  font-style: normal;
+  src:
+    local(""),
+    url("/fonts/crimson-Text/CrimsonText-Regular.woff2") format("woff2"),
+    url("/fonts/crimson-Text/CrimsonText-Regular.ttf") format("ttf");
+}
+@font-face {
+  font-family: "CrimsonText";
+  font-weight: 600;
+  font-style: normal;
+  src:
+    local(""),
+    url("/fonts/crimson-Text/CrimsonText-SemiBold.woff2") format("woff2"),
+    url("/fonts/crimson-Text/CrimsonText-SemiBold.ttf") format("ttf");
 }
