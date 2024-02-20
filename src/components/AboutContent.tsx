@@ -49,8 +49,7 @@ const AboutContent = () => {
           <p>
             Hey there! I'm Faizan Asif, a self-taught web developer with a
             passion for solving problems and creating immersive digital
-            experiences. Although my journey in web development is just
-            beginning,
+            experiences.
           </p>
           <p>
             During my decade-long career in supply chain management, forecasting

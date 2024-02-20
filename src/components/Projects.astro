@@ -53,7 +53,7 @@ const projects = [
     <ul class="space-y-24">
       {
         projects.map((project) => (
-          <li class="flex even:flex-row-reverse bg-background odd:shadow-[inset_4px_0_0_hsl(var(--primary))] even:shadow-[inset_-4px_0_0_hsl(var(--primary))] p-16 gap-16">
+          <li class="flex even:flex-row-reverse bg-background odd:shadow-[inset_4px_0_0_hsl(var(--primary))] even:shadow-[inset_-4px_0_0_hsl(var(--primary))] p-16 gap-16 shadow-lg">
             <a href={project.url} target="_blank" class="w-[45%] h-[350px]">
               <img
                 loading="lazy"
@@ -72,7 +72,7 @@ const projects = [
               </p>
               <div class="space-x-2">
                 {project.tools.map((tool) => (
-                  <Badge className="bg-[#2d100a] text-[#cb462c]">{tool}</Badge>
+                  <Badge>{tool}</Badge>
                 ))}
               </div>
               <div class="flex items-center gap-4">
