@@ -41,12 +41,11 @@
   }
 
   .dark {
-    --background: 0 0% 10.2%;
-    /* --background: 49.7 67.4% 8.4%; */
-
+    /* --background: 0 0% 10.2%; */
+    --foreground: 22.1 26.8% 86.1%;
+    --background: 224.3 35.4% 12.7%;
+    /* --background: 222.2 84% 4.9%; */
     /* --foreground: 0 0% 98%; */
-    --foreground: 173.3 69.2% 97.5%;
-    --foreground: 0 0% 98%;
 
     --card: 0 0% 10.2%;
     --card-foreground: 0 0% 98%;
@@ -59,11 +58,13 @@
     --popover: 0 0% 10.2%;
     --popover-foreground: 0 0% 98%;
 
-    /* --primary: 3.9 87.8% 55.1%; */
     --primary: 9.9 74.6% 53.7%;
+    /* --primary: 0 54.9% 52.2%; */
     --primary-foreground: 0 85.7% 97.3%;
 
-    --secondary: 0 0% 12.5%;
+    /* --secondary: 0 0% 12.5%; */
+    /* --secondary: 222.9, 19.3%, 21.4%; */
+    --secondary: 217.2 32.6% 17.5%;
 
     --secondary-foreground: 0 0% 98%;
 
