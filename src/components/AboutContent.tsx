@@ -1,6 +1,6 @@
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import { Button } from "./ui/button";
+import { buttonVariants } from "@/components/ui/button.tsx";
 
 const AboutContent = () => {
   const ref = useRef(null);
@@ -13,7 +13,7 @@ const AboutContent = () => {
         style={{
           opacity: isInView ? "1" : "0",
           transform: isInView ? "none" : "translateY(-100px)",
-          transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
+          transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.1s",
         }}
         // whileInView={{ opacity: 1 }}
         // initial={{ opacity: 0, y: -100 }}
@@ -28,7 +28,7 @@ const AboutContent = () => {
         style={{
           opacity: isInView ? "1" : "0",
           transform: isInView ? "none" : "translateX(-400px)",
-          transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
+          transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.1s",
         }}
       >
         <div className="w-[400px] h-[400px] ">
@@ -43,7 +43,7 @@ const AboutContent = () => {
           style={{
             opacity: isInView ? "1" : "0",
             transform: isInView ? "none" : "translateX(600px)",
-            transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
+            transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.1s",
           }}
         >
           <p>
@@ -69,13 +69,17 @@ const AboutContent = () => {
             outdoor adventures, or simply sharing laughter at home, every moment
             is precious. I also enjoy playing video game and board games.
           </p>
-          <p>
+          <p className="mb-8">
             I'm excited to combine my love for learning new technologies with my
             passion for solving problems and continue to grow both personally
             and professionally. Let's collaborate and embark on this journey
             together!
           </p>
-          <Button className="mt-8">
+          <a
+            href="https://www.dropbox.com/scl/fi/lge99usylkol44drd65nt/Faizan-Asif-Butt-Resume.pdf?rlkey=g6xq1lh182g47cejgb0xrieko&dl=0"
+            target="_blank"
+            className={buttonVariants({ variant: "default" })}
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="20"
@@ -93,7 +97,7 @@ const AboutContent = () => {
               <line x1="12" x2="12" y1="15" y2="3"></line>
             </svg>
             Download CV
-          </Button>
+          </a>
         </article>
       </div>
     </div>
