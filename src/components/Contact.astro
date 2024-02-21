@@ -6,7 +6,7 @@ import Socials from "./Socials.astro";
 <section id="contact">
   <div class="container">
     <h2>Contact Me</h2>
-    <div class="grid grid-cols-3">
+    <div class="flex">
       <article>
         <h4>Get in Touch</h4>
         <p class="max-w-[45ch] mb-8">
@@ -66,7 +66,7 @@ import Socials from "./Socials.astro";
         </ul>
         <Socials />
       </article>
-      <article class="col-span-2">
+      <article class="w-full">
         <h4>Message Me</h4>
 
         <ContactForm client:visible />
