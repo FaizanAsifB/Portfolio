@@ -24,6 +24,7 @@ function ThemeSwitch() {
   return (
     // <div className="relative flex items-center gap-1">
     <Switch
+      className="relative z-[9999]"
       checked={theme === "dark"}
       onCheckedChange={() =>
         setTheme(theme === "dark" ? "theme-light" : "dark")

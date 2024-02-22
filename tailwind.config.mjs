@@ -73,6 +73,7 @@ export default {
         "section-t": "var(--section-padding-t)",
         "section-b": "var(--section-padding-b)",
       },
+      screens: { nav: { max: "1023px" } },
       keyframes: {
         "accordion-down": {
           from: { height: "0" },
