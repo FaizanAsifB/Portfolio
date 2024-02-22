@@ -1,5 +1,5 @@
 ---
-import Navigation from "@/components/Navigation.astro";
+import Navigation from "@/components/Navigation";
 ---
 
 <header
@@ -12,7 +12,7 @@ import Navigation from "@/components/Navigation.astro";
     <p class="text-[#ca2e55] font-semibold">
       &lt;<span class="text-primary">FA </span>/&gt;
     </p>
-    <Navigation />
+    <Navigation client:load />
   </div>
 </header>
 
