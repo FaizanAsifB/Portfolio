@@ -12,11 +12,11 @@ import Navigation from "@/components/Navigation";
     <p class="text-[#ca2e55] font-semibold">
       &lt;<span class="text-primary">FA </span>/&gt;
     </p>
-    <Navigation client:load />
+    <Navigation client:only />
   </div>
 </header>
 
-<script>
+<!-- <script>
   const navLinkEls = document.querySelectorAll(
     "nav>ul>li>a",
   ) as NodeListOf<HTMLAnchorElement>;
@@ -63,7 +63,7 @@ import Navigation from "@/components/Navigation";
   window.onscroll = () => {
     handleIntersections();
   };
-</script>
+</script> -->
 
 <style>
   .menu {

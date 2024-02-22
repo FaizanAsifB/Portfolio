@@ -1,6 +1,7 @@
-import { useState, useEffect } from "react";
+import useOnScroll from "@/hooks/useOnScroll";
+import { stagger, useAnimate } from "framer-motion";
+import { useEffect, useState } from "react";
 import ThemeSwitch from "./ui/ThemeSwitch";
-import { useAnimate, stagger } from "framer-motion";
 
 const navLinks = [
   {
@@ -28,6 +29,9 @@ const navLinks = [
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scope, animate] = useAnimate();
+
+  const currentSection = useOnScroll();
+  console.log(currentSection);
 
   useEffect(() => {
     const menuAnimations = isOpen
@@ -65,7 +69,7 @@ const Navigation = () => {
         checked={isOpen}
         onChange={() => setIsOpen(!isOpen)}
         aria-label="Display the menu"
-        className="menu relative z-[9999] lg:hidden peer"
+        className="menu relative z-[9999] lg:hidden"
       />
       <ul
         ref={scope}
