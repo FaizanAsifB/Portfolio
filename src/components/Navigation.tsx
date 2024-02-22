@@ -1,5 +1,6 @@
+import { useState, useEffect } from "react";
 import ThemeSwitch from "./ui/ThemeSwitch";
-import { animate } from "framer-motion/dom";
+import { useAnimate, stagger } from "framer-motion";
 
 const navLinks = [
   {
@@ -25,6 +26,35 @@ const navLinks = [
 ];
 
 const Navigation = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [scope, animate] = useAnimate();
+
+  useEffect(() => {
+    const menuAnimations = isOpen
+      ? [
+          [
+            scope.current,
+            { transform: "translateX(0%)" },
+            { ease: [0.08, 0.65, 0.53, 0.96], duration: 0.6 },
+          ],
+          [
+            "li",
+            { transform: "scale(1)", opacity: 1, filter: "blur(0px)" },
+            { delay: stagger(0.05), at: "-0.1" },
+          ],
+        ]
+      : [
+          [
+            "li",
+            { transform: "scale(0.5)", opacity: 0, filter: "blur(10px)" },
+            { delay: stagger(0.05, { from: "last" }), at: "<" },
+          ],
+          [scope.current, { transform: "translateX(100%)" }, { at: "-0.1" }],
+        ];
+
+    animate(menuAnimations);
+  }, [isOpen]);
+
   return (
     <nav className="flex lg:flex-row-reverse gap-8 items-center">
       <ThemeSwitch />
@@ -32,20 +62,18 @@ const Navigation = () => {
       <input
         type="checkbox"
         role="button"
+        checked={isOpen}
+        onChange={() => setIsOpen(!isOpen)}
         aria-label="Display the menu"
         className="menu relative z-[9999] lg:hidden peer"
       />
       <ul
-        className="flex gap-8 nav:flex-col nav:gap-16 nav:fixed nav:inset-[0_0_0_30%] nav:bg-secondary nav:px-16 nav:py-60 nav:opacity-0 nav:peer-checked:animate-open-nav nav:pointer-events-none nav:peer-checked:pointer-events-auto
-     nav:peer-checked:origin-top origin-top nav:animate-close-nav"
+        ref={scope}
+        className="flex gap-8 nav:flex-col nav:gap-16 nav:fixed nav:inset-[0_0_0_30%] nav:ml-auto nav:bg-background nav:px-16 nav:py-60 nav:translate-x-full "
       >
         {navLinks.map((link, i) => {
-          // const delayClassName = delay[i];
           return (
-            <li
-              className="nav:opacity-0 nav:translate-y-8 nav:animate-slide-up"
-              style={{ animationDelay: `${i * 150 + 350}ms` }}
-            >
+            <li key={link.title}>
               <a
                 href={link.href}
                 data-scrolled="false"
