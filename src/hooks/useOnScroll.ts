@@ -1,16 +1,16 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState } from 'react'
 
 const useOnScroll = () => {
-  const [currentSection, setCurrentSection] = useState<null | string>(null);
+  const [currentSection, setCurrentSection] = useState<null | string>(null)
 
   const navLinkEls = document.querySelectorAll(
-    "nav>ul>li>a",
-  ) as NodeListOf<HTMLAnchorElement>;
-  const sectionEls = document.querySelectorAll("section");
-  const heroEl = document.querySelector("#hero img") as HTMLImageElement;
-  const headerEl = document.querySelector("header") as HTMLElement;
-  const headerBot = headerEl?.offsetHeight;
-  const heroTop = heroEl.offsetTop;
+    'nav>ul>li>a'
+  ) as NodeListOf<HTMLAnchorElement>
+  const sectionEls = document.querySelectorAll('section')
+  const heroEl = document.querySelector('#hero img') as HTMLImageElement
+  const headerEl = document.querySelector('header') as HTMLElement
+  const headerBot = headerEl?.offsetHeight
+  const heroTop = heroEl.offsetTop
 
   const intersectedHero = () => {
     // if (window.scrollY >= heroTop - headerBot && currentSection !== headerEl.id)
@@ -19,15 +19,15 @@ const useOnScroll = () => {
     //   setCurrentSection(null);
     if (
       window.scrollY >= heroTop - headerBot &&
-      headerEl.dataset.scrolled === "false"
+      headerEl.dataset.scrolled === 'false'
     )
-      headerEl.setAttribute("data-scrolled", "true");
+      headerEl.setAttribute('data-scrolled', 'true')
     if (
       window.scrollY <= heroTop - headerBot &&
-      headerEl.dataset.scrolled === "true"
+      headerEl.dataset.scrolled === 'true'
     )
-      headerEl.setAttribute("data-scrolled", "false");
-  };
+      headerEl.setAttribute('data-scrolled', 'false')
+  }
 
   const intersectedSections = () => {
     sectionEls.forEach((sectionEl) => {
@@ -38,26 +38,26 @@ const useOnScroll = () => {
         navLinkEls.forEach((navLinkEl) => {
           // navLinkEl.dataset.scrolled = "false";
           if (navLinkEl.href.includes(sectionEl.id))
-            setCurrentSection(navLinkEl.id);
+            setCurrentSection(navLinkEl.id)
           // navLinkEl.dataset.scrolled = "true";
-        });
-    });
-  };
+        })
+    })
+  }
 
   useEffect(() => {
-    window.addEventListener("scroll", () => {
-      intersectedHero();
-      intersectedSections();
-    });
+    window.addEventListener('scroll', () => {
+      intersectedHero()
+      intersectedSections()
+    })
     return () => {
-      window.removeEventListener("scroll", () => {
-        intersectedHero();
-        intersectedSections();
-      });
-    };
-  }, []);
+      window.removeEventListener('scroll', () => {
+        intersectedHero()
+        intersectedSections()
+      })
+    }
+  }, [])
 
-  return currentSection;
+  return currentSection
 
   // const handleIntersections = () => {
   //   intersectedHero();
@@ -69,6 +69,6 @@ const useOnScroll = () => {
   // window.onscroll = () => {
   //   handleIntersections();
   // };
-};
+}
 
-export default useOnScroll;
+export default useOnScroll

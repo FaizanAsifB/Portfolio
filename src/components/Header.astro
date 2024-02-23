@@ -4,7 +4,7 @@ import Navigation from "@/components/Navigation";
 
 <header
   data-scrolled="false"
-  class="w-full data-[scrolled=true]:shadow bg-transparent fixed top-0 z-50 py-6 data-[scrolled=true]:bg-background/90"
+  class="data-[scrolled=true]:shadow bg-transparent fixed inset-[0_0_auto] z-50 py-6 data-[scrolled=true]:bg-background/90"
 >
   <div
     class="container flex items-center justify-between text-2xl font-semibold"
@@ -12,7 +12,7 @@ import Navigation from "@/components/Navigation";
     <p class="text-[#ca2e55] font-semibold">
       &lt;<span class="text-primary">FA </span>/&gt;
     </p>
-    <Navigation client:only />
+    <Navigation client:only="react" />
   </div>
 </header>
 
