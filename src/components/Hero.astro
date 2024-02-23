@@ -1,70 +1,73 @@
 ---
-import { buttonVariants } from "@/components/ui/button.tsx";
-import ScrollArrow from "@/components/ui/ScrollArrow.astro";
-import Socials from "@/components/Socials.astro";
-import Typewriter from "typewriter-effect";
+import { buttonVariants } from '@/components/ui/button.tsx'
+import ScrollArrow from '@/components/ui/ScrollArrow.astro'
+import Socials from '@/components/Socials.astro'
+import Typewriter from 'typewriter-effect'
 ---
 
-<section id="hero" class="bg-background bg-cover bg-no-repeat">
+<section id='hero' class=''>
   <!-- dark:bg-grid-white/[0.03] bg-grid-black/[0.03] -->
-  <div class="container grid min-h-screen grid-cols-2 items-center relative">
+  <div
+    class='container min-h-screen relative flex flex-col justify-center items-center gap-8'
+  >
     <!-- <div
       class="absolute pointer-events-none inset-0 flex items-center justify-center bg-background [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"
     </div>
     > -->
-    <div class="z-20">
-      <h1 class="text-6xl font-bold tracking-tight scroll-m-20 lg:text-5xl">
+    <div class='w-[200px]'>
+      <img
+        src='https://plus.unsplash.com/premium_photo-1706896001583-08b5ba33e3be?q=80&w=2676&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+        alt='Faizan Asif'
+      />
+    </div>
+    <article>
+      <h1 class='text-5xl font-bold tracking-tight scroll-m-20 lg:text-6xl'>
         Hello, I'm <br />
-        <span class="text-primary text-6xl pt-2 inline-block">Faizan Asif</span>
+        <span class='text-primary pt-2 inline-block'>Faizan Asif</span>
       </h1>
-      <div class="text-2xl text-[#53b6f3] mt-4" aria-hidden="true">
+      <div class='text-2xl text-[#53b6f3] mt-4' aria-hidden='true'>
         <Typewriter
           client:load
           options={{
             strings: [
-              "Frontend Developer",
-              "Programming enthusiast",
-              "Gamer",
-              "Father",
-              "Culinary Adventurer",
+              'Frontend Developer',
+              'Programming enthusiast',
+              'Gamer',
+              'Father',
+              'Culinary Adventurer'
             ],
             autoStart: true,
-            loop: true,
+            loop: true
           }}
         />
       </div>
       <!-- <p class="text-muted-foreground">Frontend Web Developer | Stockholm</p> -->
-      <p class="text-xl max-w-[65ch]">
+      <p class='text-xl max-w-[65ch]'>
         Dedicated to building responsive and streamlined websites and web
         applications that enhance overall user experience
         and&nbsp;functionality.
       </p>
       <Socials />
 
-      <a href="#contact" class={buttonVariants({ variant: "default" })}>
+      <a href='#contact' class={buttonVariants({ variant: 'default' })}>
         <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="20"
-          height="20"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          class="lucide lucide-mail"
-          ><rect width="20" height="16" x="2" y="4" rx="2"></rect><path
-            d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg
+          xmlns='http://www.w3.org/2000/svg'
+          width='20'
+          height='20'
+          viewBox='0 0 24 24'
+          fill='none'
+          stroke='currentColor'
+          stroke-width='2'
+          stroke-linecap='round'
+          stroke-linejoin='round'
+          class='lucide lucide-mail'
+          ><rect width='20' height='16' x='2' y='4' rx='2'></rect><path
+            d='m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7'></path></svg
         >
         Contact Me</a
       >
-    </div>
-    <div class="w-[400px]">
-      <img
-        src="https://plus.unsplash.com/premium_photo-1706896001583-08b5ba33e3be?q=80&w=2676&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-        alt=""
-      />
-    </div>
+    </article>
+
     <ScrollArrow />
   </div>
 </section>
