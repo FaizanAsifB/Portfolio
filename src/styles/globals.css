@@ -78,18 +78,6 @@
   * {
     @apply border-border;
   }
-  html {
-    @apply font-mada;
-  }
-
-  body {
-    @apply bg-background text-foreground;
-  }
-
-  section:not(:first-child) {
-    @apply pt-section-t;
-    @apply pb-section-b;
-  }
 
   h1,
   h2 {
