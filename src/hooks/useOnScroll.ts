@@ -13,10 +13,6 @@ const useOnScroll = () => {
   const heroTop = heroEl.offsetTop
 
   const intersectedHero = () => {
-    // if (window.scrollY >= heroTop - headerBot && currentSection !== headerEl.id)
-    //   setCurrentSection(headerEl.id);
-    // if (window.scrollY <= heroTop - headerBot && currentSection === "header")
-    //   setCurrentSection(null);
     if (
       window.scrollY >= heroTop - headerBot &&
       headerEl.dataset.scrolled === 'false'
@@ -36,15 +32,15 @@ const useOnScroll = () => {
         window.scrollY < sectionEl.offsetHeight + sectionEl.offsetTop
       )
         navLinkEls.forEach((navLinkEl) => {
-          // navLinkEl.dataset.scrolled = "false";
           if (navLinkEl.href.includes(sectionEl.id))
-            setCurrentSection(navLinkEl.id)
-          // navLinkEl.dataset.scrolled = "true";
+            setCurrentSection(sectionEl.id)
         })
     })
   }
 
   useEffect(() => {
+    intersectedHero()
+    intersectedSections()
     window.addEventListener('scroll', () => {
       intersectedHero()
       intersectedSections()
@@ -55,7 +51,7 @@ const useOnScroll = () => {
         intersectedSections()
       })
     }
-  }, [])
+  })
 
   return currentSection
 

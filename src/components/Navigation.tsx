@@ -4,6 +4,7 @@ import { stagger, useAnimate, type AnimationSequence } from 'framer-motion'
 import { useEffect, useRef, useState } from 'react'
 import { useWindowSize } from 'usehooks-ts'
 import ThemeSwitch from './ui/ThemeSwitch'
+import { twMerge } from 'tailwind-merge'
 
 const navLinks = [
   {
@@ -110,8 +111,11 @@ const Navigation = () => {
               <a
                 href={link.href}
                 data-scrolled='false'
-                className='relative before:transition-transform before:duration-300 before:absolute before:w-full  before:rounded-sm before:-bottom-1 before:left:0 before:origin-right before:scale-x-0 before:h-1 before:bg-primary hover:before:origin-left hover:before:h-1 hover:before:scale-x-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background rounded-lg data-[scrolled=true]:before:origin-left 
-                data-[scrolled=true]:before:scale-x-100'
+                className={twMerge(
+                  'relative before:transition-transform before:duration-300 before:absolute before:w-full  before:rounded-sm before:-bottom-1 before:left:0 before:origin-right before:scale-x-0 before:h-1 before:bg-primary hover:before:origin-left hover:before:h-1 hover:before:scale-x-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background rounded-lg data-[scrolled=true]:before:origin-left',
+                  link.href.slice(1) === currentSection &&
+                    'before:origin-left before:scale-x-100'
+                )}
               >
                 {link.title}
               </a>
