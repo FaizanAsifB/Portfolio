@@ -1,51 +1,33 @@
 import { buttonVariants } from '@/components/ui/button.tsx'
-import { useInView } from 'framer-motion'
-import { useRef } from 'react'
+import { useAnimate, useInView } from 'framer-motion'
+import { useEffect, useRef } from 'react'
 
 const AboutContent = () => {
-  const ref = useRef(null)
-  const isInView = useInView(ref, { once: true })
+  const [scope, animate] = useAnimate()
+  const isInView = useInView(scope)
+
+  useEffect(() => {
+    if (isInView) {
+      animate(
+        scope.current,
+        { opacity: 1, transform: 'translateY(0)' },
+        { ease: [0.08, 0.65, 0.53, 0.96], duration: 0.6 }
+      )
+    }
+  }, [isInView])
 
   return (
-    <div className='container'>
-      <h2
-        ref={ref}
-        style={{
-          opacity: isInView ? '1' : '0',
-          transform: isInView ? 'none' : 'translateY(-100px)',
-          transition: 'all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.1s'
-        }}
-        // whileInView={{ opacity: 1 }}
-        // initial={{ opacity: 0, y: -100 }}
-        // animate={{ opacity: 1, y: 0 }}
-        // transition={{ duration: 0.5 }}
-        // // viewport={{ once: true }}
-      >
-        About Me
-      </h2>
-      <div
-        className='lg:flex gap-6'
-        style={{
-          opacity: isInView ? '1' : '0',
-          transform: isInView ? 'none' : 'translateX(-400px)',
-          transition: 'all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.1s'
-        }}
-      >
-        <div className='lg:w-[400px] lg:h-[400px] w-[80%] mx-auto'>
+    <div className='container translate-y-24' ref={scope}>
+      <h2>About Me</h2>
+      <div className='gap-6 lg:flex'>
+        <div className='mx-auto w-[80%] lg:h-[400px] lg:w-[400px]'>
           <img
             src='https://plus.unsplash.com/premium_photo-1706896001583-08b5ba33e3be?q=80&w=2676&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
             alt='Faizan Asif'
-            className='object-contain w-full h-full'
+            className='h-full w-full object-contain'
           />
         </div>
-        <article
-          className='max-w-[65ch] flex-1 tracking-wider nav:mt-8'
-          style={{
-            opacity: isInView ? '1' : '0',
-            transform: isInView ? 'none' : 'translateX(600px)',
-            transition: 'all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.1s'
-          }}
-        >
+        <article className='max-w-[65ch] flex-1 tracking-wider nav:mt-8'>
           <p>
             Hey there! I'm Faizan Asif, a self-taught web developer with a
             passion for solving problems and creating immersive digital
