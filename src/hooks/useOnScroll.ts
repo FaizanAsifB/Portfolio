@@ -10,7 +10,7 @@ const useOnScroll = () => {
   const heroEl = document.querySelector('#hero img') as HTMLImageElement
   const headerEl = document.querySelector('header') as HTMLElement
   const headerBot = headerEl?.offsetHeight
-  const heroTop = heroEl.offsetTop
+  const heroTop = heroEl?.offsetTop
 
   const intersectedHero = () => {
     if (

@@ -1,7 +1,6 @@
 import useOnScroll from '@/hooks/useOnScroll'
-import useMediaQuery from '@mui/material/useMediaQuery'
 import { stagger, useAnimate, type AnimationSequence } from 'framer-motion'
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { twMerge } from 'tailwind-merge'
 import { useWindowSize } from 'usehooks-ts'
 import ThemeSwitch from './ui/ThemeSwitch'
@@ -90,7 +89,7 @@ const Navigation = () => {
   }, [isOpen, width, isDesktop])
 
   return (
-    <nav className='flex lg:flex-row-reverse gap-8 items-center'>
+    <nav className='flex items-center gap-8 lg:flex-row-reverse'>
       <ThemeSwitch />
 
       {/* <input
@@ -120,7 +119,7 @@ const Navigation = () => {
       </button>
       <ul
         ref={scope}
-        className='flex gap-8 nav:flex-col nav:gap-16 nav:fixed nav:inset-[0_0_0_30%] nav:ml-auto nav:bg-primary/10 nav:backdrop-blur-3xl nav:px-16 nav:py-60 nav:translate-x-full nav:opacity-0'
+        className='flex gap-8 nav:fixed nav:inset-[0_0_0_30%] nav:ml-auto nav:translate-x-full nav:flex-col nav:gap-16 nav:bg-primary/10 nav:px-16 nav:py-60 nav:opacity-0 nav:backdrop-blur-3xl'
       >
         {navLinks.map((link, i) => {
           return (
@@ -129,7 +128,7 @@ const Navigation = () => {
                 href={link.href}
                 data-scrolled='false'
                 className={twMerge(
-                  'relative before:transition-transform before:duration-300 before:absolute before:w-full  before:rounded-sm before:-bottom-1 before:left:0 before:origin-right before:scale-x-0 before:h-1 before:bg-primary hover:before:origin-left hover:before:h-1 hover:before:scale-x-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background rounded-lg data-[scrolled=true]:before:origin-left',
+                  'before:left:0 relative rounded-lg before:absolute before:-bottom-1  before:h-1 before:w-full before:origin-right before:scale-x-0 before:rounded-sm before:bg-primary before:transition-transform before:duration-300 data-[scrolled=true]:before:origin-left hover:before:h-1 hover:before:origin-left hover:before:scale-x-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background',
                   link.href.slice(1) === currentSection &&
                     'before:origin-left before:scale-x-100'
                 )}

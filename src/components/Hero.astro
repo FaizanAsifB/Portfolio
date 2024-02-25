@@ -3,6 +3,7 @@ import { buttonVariants } from '@/components/ui/button.tsx'
 import ScrollArrow from '@/components/ui/ScrollArrow.astro'
 import Socials from '@/components/Socials.astro'
 import Typewriter from 'typewriter-effect'
+import Lottie from 'react-lottie-player/dist/LottiePlayerLight'
 ---
 
 <section id='hero'>
@@ -14,10 +15,25 @@ import Typewriter from 'typewriter-effect'
       class="absolute pointer-events-none inset-0 flex items-center justify-center bg-background [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"
     </div>
     > -->
-    <div class='w-[200px] lg:w-[320px]'>
+
+    <!-- <div class='w-[200px] lg:w-[320px]'>
       <img
         src='https://plus.unsplash.com/premium_photo-1706896001583-08b5ba33e3be?q=80&w=2676&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
         alt='Faizan Asif'
+      />
+    </div> -->
+
+    <div class='bg-foreground'>
+      <Lottie
+        client:load
+        play
+        loop
+        path='/images/programmer-animation.json'
+        style={{
+          height: '500px',
+          width: '500px',
+          marginInline: 'auto'
+        }}
       />
     </div>
     <article>
