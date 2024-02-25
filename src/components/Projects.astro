@@ -1,130 +1,134 @@
 ---
-import { Badge } from "@/components/ui/badge";
-import { buttonVariants } from "@/components/ui/button";
+import { Badge } from '@/components/ui/badge'
+import { buttonVariants } from '@/components/ui/button'
 
 const projects = [
   {
-    title: "name place animal thing",
-    description: "Game based on the classic name place animal thing game",
-    imgUrl: "/images/projects/name-place.png",
-    tools: ["HTML", "CSS", "React", "TypeScript", "Firebase", "Tailwind"],
-    sourceCodeUrl: "https://github.com/FaizanAsifB/name-place-animal-game.git",
-    url: "https://geega-game.netlify.app/",
+    title: 'name place animal thing',
+    description: 'Game based on the classic name place animal thing game',
+    imgUrl: '/images/projects/name-place.png',
+    tools: ['HTML', 'CSS', 'React', 'TypeScript', 'Firebase', 'Tailwind'],
+    sourceCodeUrl: 'https://github.com/FaizanAsifB/name-place-animal-game.git',
+    url: 'https://geega-game.netlify.app/'
   },
   {
-    title: "budget app",
-    description: "Personal budget app",
-    imgUrl: "/images/projects/budget.png",
-    tools: ["HTML", "CSS", "JavaScript"],
-    sourceCodeUrl: "https://github.com/FaizanAsifB/forkify-course-app.git",
-    url: "https://geega-budget.netlify.app/",
+    title: 'budget app',
+    description: 'Personal budget app',
+    imgUrl: '/images/projects/budget.png',
+    tools: ['HTML', 'CSS', 'React', 'Tailwind'],
+    sourceCodeUrl: 'https://github.com/FaizanAsifB/forkify-course-app.git',
+    url: 'https://geega-budget.netlify.app/'
   },
   {
-    title: "forkify",
-    description: "Recipe searching webapp",
-    imgUrl: "/images/projects/forkify.png",
-    tools: ["HTML", "CSS", "JavaScript"],
-    sourceCodeUrl: "https://github.com/FaizanAsifB/forkify-course-app.git",
-    url: "https://geega-forkify.netlify.app/",
+    title: 'forkify',
+    description: 'Recipe searching webapp',
+    imgUrl: '/images/projects/forkify.png',
+    tools: ['HTML', 'SASS', 'JavaScript'],
+    sourceCodeUrl: 'https://github.com/FaizanAsifB/forkify-course-app.git',
+    url: 'https://geega-forkify.netlify.app/'
   },
   {
-    title: "weather app",
-    description: "An app that shows the weather",
-    imgUrl: "/images/projects/weather.png",
-    tools: ["HTML", "CSS", "JavaScript"],
-    sourceCodeUrl: "https://github.com/FaizanAsifB/weather-app.git",
-    url: "https://geega-weather.netlify.app/",
+    title: 'weather app',
+    description: 'An app that shows the weather',
+    imgUrl: '/images/projects/weather.png',
+    tools: ['HTML', 'CSS', 'JavaScript'],
+    sourceCodeUrl: 'https://github.com/FaizanAsifB/weather-app.git',
+    url: 'https://geega-weather.netlify.app/'
   },
   {
-    title: "space tourism website",
-    description: "A website for a space tourism company",
-    imgUrl: "/images/projects/space.png",
-    tools: ["HTML", "CSS", "JavaScript"],
+    title: 'space tourism website',
+    description: 'A website for a space tourism company',
+    imgUrl: '/images/projects/space.png',
+    tools: ['HTML', 'SASS', 'JavaScript'],
     sourceCodeUrl:
-      "https://github.com/FaizanAsifB/frontend-mentor-space-tourism.git",
-    url: "https://geega-space-tourism.netlify.app/",
-  },
-];
+      'https://github.com/FaizanAsifB/frontend-mentor-space-tourism.git',
+    url: 'https://geega-space-tourism.netlify.app/'
+  }
+]
 ---
 
-<section id="projects">
-  <div class="container space-y-16">
+<section id='projects'>
+  <div class='container space-y-16'>
     <h2>My Projects</h2>
-    <ul class="space-y-24">
+    <ul class='space-y-20 lg:space-y-24'>
       {
         projects.map((project) => (
-          <li class="flex even:flex-row-reverse bg-background odd:shadow-[inset_4px_0_0_hsl(var(--primary))] even:shadow-[inset_-4px_0_0_hsl(var(--primary))] p-16 gap-16 shadow-lg">
-            <a href={project.url} target="_blank" class="w-[45%] h-[350px]">
+          <li class='gap-16 rounded-lg bg-background shadow-lg even:flex-row-reverse md:flex md:gap-8 md:px-8 md:py-12 lg:p-16 lg:odd:shadow-[inset_4px_0_0_hsl(var(--primary))] lg:even:shadow-[inset_-4px_0_0_hsl(var(--primary))]'>
+            <a
+              href={project.url}
+              target='_blank'
+              class=' mx-auto block w-full max-w-96'
+            >
               <img
-                loading="lazy"
+                loading='lazy'
                 src={project.imgUrl}
                 alt={`preview image of ${project.title}`}
-                class="object-cover h-full w-full rounded-lg brightness-90"
+                class='rounded-t-lg  object-contain brightness-90 lg:rounded-lg'
               />
             </a>
-            <div class="flex-1 flex flex-col justify-center space-y-8 ">
-              <h3 class="capitalize">{project.title}</h3>
+            <div class='flex flex-1 flex-col justify-center space-y-8 px-4 pb-6 md:p-0'>
+              <h3 class='pt-12 capitalize md:pt-0'>{project.title}</h3>
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Et
                 voluptate expedita cum. Incidunt minus totam id nihil quisquam
                 est iste omnis ipsum error, reiciendis reprehenderit velit
                 deleniti, voluptate, modi dolore.
               </p>
-              <div class="space-x-2">
+              <div class=' flex flex-wrap gap-2'>
                 {project.tools.map((tool) => (
                   <Badge>{tool}</Badge>
                 ))}
               </div>
-              <div class="flex items-center gap-4">
+              <div class='flex items-center gap-4 '>
                 <a
                   href={project.url}
-                  target="_blank"
-                  class={buttonVariants({ variant: "default" })}
+                  target='_blank'
+                  class={buttonVariants({ variant: 'default' })}
                 >
-                  <span class="text-base"> View Website </span>
+                  <span class='text-base'> View Website </span>
                   <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="18"
-                    height="18"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    class="lucide lucide-external-link ml-1"
-                    aria-hidden="true"
+                    xmlns='http://www.w3.org/2000/svg'
+                    width='18'
+                    height='18'
+                    viewBox='0 0 24 24'
+                    fill='none'
+                    stroke='currentColor'
+                    stroke-width='2'
+                    stroke-linecap='round'
+                    stroke-linejoin='round'
+                    class='lucide lucide-external-link ml-1'
+                    aria-hidden='true'
                   >
                     <>
-                      <path d="M15 3h6v6" />
-                      <path d="M10 14 21 3" />
-                      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                      <path d='M15 3h6v6' />
+                      <path d='M10 14 21 3' />
+                      <path d='M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6' />
                     </>
                   </svg>
                 </a>
 
                 <a
                   href={project.sourceCodeUrl}
-                  target="_blank"
+                  target='_blank'
                   class={buttonVariants({
-                    variant: "outline",
+                    variant: 'outline'
                   })}
                 >
                   <svg
-                    width="24px"
-                    height="24px"
-                    viewBox="0 0 16 16"
-                    class="mr-2"
-                    xmlns="http://www.w3.org/2000/svg"
+                    width='24px'
+                    height='24px'
+                    viewBox='0 0 16 16'
+                    class='mr-2'
+                    xmlns='http://www.w3.org/2000/svg'
                   >
                     <path
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
-                      d="M7.976 0A7.977 7.977 0 000 7.976c0 3.522 2.3 6.507 5.431 7.584.392.049.538-.196.538-.392v-1.37c-2.201.49-2.69-1.076-2.69-1.076-.343-.93-.881-1.175-.881-1.175-.734-.489.048-.489.048-.489.783.049 1.224.832 1.224.832.734 1.223 1.859.88 2.3.685.048-.538.293-.88.489-1.076-1.762-.196-3.621-.881-3.621-3.964 0-.88.293-1.566.832-2.153-.05-.147-.343-.978.098-2.055 0 0 .685-.196 2.201.832.636-.196 1.322-.245 2.007-.245s1.37.098 2.006.245c1.517-1.027 2.202-.832 2.202-.832.44 1.077.146 1.908.097 2.104a3.16 3.16 0 01.832 2.153c0 3.083-1.86 3.719-3.62 3.915.293.244.538.733.538 1.467v2.202c0 .196.146.44.538.392A7.984 7.984 0 0016 7.976C15.951 3.572 12.38 0 7.976 0z"
-                      fill="currentColor"
+                      fill-rule='evenodd'
+                      clip-rule='evenodd'
+                      d='M7.976 0A7.977 7.977 0 000 7.976c0 3.522 2.3 6.507 5.431 7.584.392.049.538-.196.538-.392v-1.37c-2.201.49-2.69-1.076-2.69-1.076-.343-.93-.881-1.175-.881-1.175-.734-.489.048-.489.048-.489.783.049 1.224.832 1.224.832.734 1.223 1.859.88 2.3.685.048-.538.293-.88.489-1.076-1.762-.196-3.621-.881-3.621-3.964 0-.88.293-1.566.832-2.153-.05-.147-.343-.978.098-2.055 0 0 .685-.196 2.201.832.636-.196 1.322-.245 2.007-.245s1.37.098 2.006.245c1.517-1.027 2.202-.832 2.202-.832.44 1.077.146 1.908.097 2.104a3.16 3.16 0 01.832 2.153c0 3.083-1.86 3.719-3.62 3.915.293.244.538.733.538 1.467v2.202c0 .196.146.44.538.392A7.984 7.984 0 0016 7.976C15.951 3.572 12.38 0 7.976 0z'
+                      fill='currentColor'
                     />
                   </svg>
-                  <span class="text-base">Source Code</span>
+                  <span class='text-base'>Source Code</span>
                 </a>
               </div>
             </div>
