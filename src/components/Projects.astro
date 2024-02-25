@@ -5,7 +5,8 @@ import { buttonVariants } from '@/components/ui/button'
 const projects = [
   {
     title: 'name place animal thing',
-    description: 'Game based on the classic name place animal thing game',
+    description:
+      "An interactive multiplayer game with real-time functionality that operates on a simple premise: each round, a random alphabet is chosen, and players must provide answers for various categories starting with that letter. The game offers two modes, each determining how rounds are concluded. In the first mode, rounds conclude when the timer reaches zero, while in the second mode, the timer resets to 10 seconds upon the first player's submission of their answers. Players earn points based on the uniqueness of their answers, with 10 points awarded for unique responses, 5 points for duplicates, and 0 points for incorrect or missing answers. The game continues through multiple rounds, and the player with the highest score at the end of the final round wins.",
     imgUrl: '/images/projects/name-place.png',
     tools: ['HTML', 'CSS', 'React', 'TypeScript', 'Firebase', 'Tailwind'],
     sourceCodeUrl: 'https://github.com/FaizanAsifB/name-place-animal-game.git',
@@ -13,7 +14,8 @@ const projects = [
   },
   {
     title: 'budget app',
-    description: 'Personal budget app',
+    description:
+      'This application serves as a comprehensive tool for managing personal finances and budgeting effectively. Users have the ability to create and organize different budget categories based on their financial needs and goals. Within each budget category, users can add and track their expenses, allowing for detailed monitoring of spending habits and financial progress. Users can easily view their expenses, along with any set limits or goals for each budget category. This allows users to assess their financial health and track their progress towards staying within their budgetary constraints. ',
     imgUrl: '/images/projects/budget.png',
     tools: ['HTML', 'CSS', 'React', 'Tailwind'],
     sourceCodeUrl: 'https://github.com/FaizanAsifB/forkify-course-app.git',
@@ -72,12 +74,7 @@ const projects = [
             </a>
             <div class='flex flex-1 flex-col justify-center space-y-8 px-4 pb-6 md:p-0'>
               <h3 class='pt-12 capitalize md:pt-0'>{project.title}</h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Et
-                voluptate expedita cum. Incidunt minus totam id nihil quisquam
-                est iste omnis ipsum error, reiciendis reprehenderit velit
-                deleniti, voluptate, modi dolore.
-              </p>
+              <p>{project.description}</p>
               <div class=' flex flex-wrap gap-2'>
                 {project.tools.map((tool) => (
                   <Badge>{tool}</Badge>
