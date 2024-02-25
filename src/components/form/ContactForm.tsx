@@ -1,4 +1,5 @@
 import { zodResolver } from '@hookform/resolvers/zod'
+import { Send } from 'lucide-react'
 import { useForm } from 'react-hook-form'
 import { z } from 'zod'
 import { Button } from '../ui/button'
@@ -12,7 +13,6 @@ import {
 } from '../ui/form'
 import { Input } from '../ui/input'
 import { Textarea } from '../ui/textarea'
-import { Send } from 'lucide-react'
 
 const formSchema = z.object({
   name: z.string().min(2).max(50),
@@ -51,7 +51,7 @@ const ContactForm = () => {
           render={({ field }) => (
             <FormItem>
               <FormControl>
-                <div className='relative mt-10'>
+                <div className='relative mt-6 lg:mt-10'>
                   <Input placeholder='Name' {...field} />
                   <FormLabel>Name</FormLabel>
                 </div>
@@ -66,7 +66,7 @@ const ContactForm = () => {
           render={({ field }) => (
             <FormItem>
               <FormControl>
-                <div className='relative mt-10'>
+                <div className='relative mt-6 lg:mt-10'>
                   <Input placeholder='Email' {...field} />
                   <FormLabel>Email</FormLabel>
                 </div>
@@ -92,7 +92,7 @@ const ContactForm = () => {
             </FormItem>
           )}
         />
-        <div className='w-full grid place-items-center my-8'>
+        <div className='my-8 grid w-full place-items-center'>
           <Button type='submit'>
             <Send size={20} />
             Submit

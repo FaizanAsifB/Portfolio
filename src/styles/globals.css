@@ -36,8 +36,8 @@
     --ring: 3.9 87.8% 55.1%;
     --radius: 0.5rem;
 
-    --section-padding-t: 5rem;
-    --section-padding-b: 7rem;
+    --section-padding-t: 4rem;
+    --section-padding-b: 5rem;
   }
 
   .dark {
@@ -93,16 +93,16 @@
     @apply font-crimsonText;
   }
   h2 {
-    @apply text-4xl font-semibold tracking-tight text-center uppercase scroll-m-20 first:mt-0 mb-16 text-primary;
+    @apply mb-16 scroll-m-20 text-center text-4xl font-semibold uppercase tracking-tight text-primary first:mt-0;
   }
   h3 {
-    @apply text-3xl font-semibold tracking-tight scroll-m-20;
+    @apply scroll-m-20 text-3xl font-semibold tracking-tight;
   }
   h4 {
-    @apply text-2xl font-semibold tracking-tight scroll-m-20;
+    @apply scroll-m-20 text-2xl font-semibold tracking-tight;
   }
   p {
-    @apply leading-7 [&:not(:first-child)]:mt-6 text-lg lg:text-xl;
+    @apply text-lg leading-7 lg:text-xl [&:not(:first-child)]:mt-6;
   }
 }
 

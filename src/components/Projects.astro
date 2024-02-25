@@ -53,7 +53,11 @@ const projects = [
     <ul class='space-y-20 lg:space-y-24'>
       {
         projects.map((project) => (
-          <li class='gap-16 rounded-lg bg-background shadow-lg even:flex-row-reverse md:flex md:gap-8 md:px-8 md:py-12 lg:p-16 lg:odd:shadow-[inset_4px_0_0_hsl(var(--primary))] lg:even:shadow-[inset_-4px_0_0_hsl(var(--primary))]'>
+          <li
+            class='gap-16 rounded-lg bg-background shadow-lg 
+          even:flex-row-reverse
+          md:flex md:gap-8 md:px-8 md:py-12 lg:p-16 lg:odd:shadow-[inset_4px_0_0_hsl(var(--primary))] lg:even:shadow-[inset_-4px_0_0_hsl(var(--primary))]'
+          >
             <a
               href={project.url}
               target='_blank'

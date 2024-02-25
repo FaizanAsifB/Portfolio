@@ -11,7 +11,7 @@ import Footer from '@/components/Footer.astro'
 
 <html
   lang='en'
-  class='scroll-smooth scrollbar-thin scrollbar-thumb-primary scrollbar-track-secondary scrollbar-thumb-rounded-full scrollbar-track-rounded-full font-mada'
+  class='scroll-smooth font-mada scrollbar-thin scrollbar-track-secondary scrollbar-thumb-primary scrollbar-track-rounded-full scrollbar-thumb-rounded-full'
 >
   <head>
     <meta charset='utf-8' />
@@ -26,7 +26,7 @@ import Footer from '@/components/Footer.astro'
   <body class='bg-background text-foreground'>
     <Header />
     <main
-      class='[&_section:nth-child(even)]:bg-secondary [&_section:not(:first-child)]:pt-section-t [&_section:not(:first-child)]:pb-section-b [&_section]:scroll-m-20'
+      class='lg:[--section-padding-b:7rem] lg:[--section-padding-t:5rem] [&_section:not(:first-child)]:pb-section-b [&_section:not(:first-child)]:pt-section-t [&_section:nth-child(even)]:bg-secondary [&_section]:scroll-m-20'
     >
       <Hero />
       <About />
