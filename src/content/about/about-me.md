@@ -5,7 +5,7 @@ title: About:Faizan Asif
 
 Looking for my [CV](https://www.dropbox.com/scl/fi/lge99usylkol44drd65nt/Faizan-Asif-Butt-Resume.pdf?rlkey=g6xq1lh182g47cejgb0xrieko&dl=0)?
 
-## My quick story
+### My quick story
 
 Hey there! I'm Faizan Asif, a self-taught web developer with a
 passion for solving problems and creating immersive digital
@@ -30,10 +30,10 @@ passion for solving problems and continue to grow both personally
 and professionally. Let's collaborate and embark on this journey
 together!
 
-## As a developer
+### As a developer
 
-## As a person
+### As a person
 
-## As a colleague
+### As a colleague
 
 I'm eager to connect and collaborate – reach out!

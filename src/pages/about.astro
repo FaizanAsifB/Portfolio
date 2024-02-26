@@ -2,12 +2,12 @@
 import RootLayout from '../layouts/RootLayout.astro'
 import Prose from '@/components/Prose.astro'
 import { getEntry } from 'astro:content'
-const entry = await getEntry('about', 'about')
+const entry = await getEntry('about', 'about-me')
 const { Content } = await entry.render()
 ---
 
 <RootLayout title={entry.data.title}>
-  <section class='container py-48'>
+  <section class='container py-48' id='about'>
     <Prose>
       <Content />
     </Prose>
