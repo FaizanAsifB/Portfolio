@@ -1,8 +1,15 @@
 ---
-import RootLayout from '@/layouts/RootLayout.astro'
-// import * as aboutContent from '../../content/about/about-me.md'
+import RootLayout from '../layouts/RootLayout.astro'
+import Prose from '@/components/Prose.astro'
+import { getEntry } from 'astro:content'
+const entry = await getEntry('about', 'about')
+const { Content } = await entry.render()
 ---
 
-<RootLayout>
-  <section class='bg-background py-48'>{aboutContent.Content}</section>
+<RootLayout title={entry.data.title}>
+  <section class='container py-48'>
+    <Prose>
+      <Content />
+    </Prose>
+  </section>
 </RootLayout>
