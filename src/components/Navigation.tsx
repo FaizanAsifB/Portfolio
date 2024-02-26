@@ -8,23 +8,23 @@ import ThemeSwitch from './ui/ThemeSwitch'
 const navLinks = [
   {
     title: 'Home',
-    href: '#hero'
+    href: '/#hero'
   },
   {
     title: 'About',
-    href: '#about'
+    href: '/about'
   },
   {
     title: 'Skills',
-    href: '#skills'
+    href: '/#skills'
   },
   {
     title: 'Projects',
-    href: '#projects'
+    href: '/#projects'
   },
   {
     title: 'Contact',
-    href: '#contact'
+    href: '/#contact'
   }
 ]
 
