@@ -1,0 +1,32 @@
+---
+import RootLayout from '../layouts/RootLayout.astro'
+import Prose from '../components/Prose.astro'
+import { getCollection } from 'astro:content'
+import type { CollectionEntry } from 'astro:content'
+interface Props {
+  entry: CollectionEntry<'project'>
+}
+
+export async function getStaticPaths() {
+  const projects = await getCollection('project')
+  return projects.map((entry) => ({
+    params: { slug: entry.slug },
+    props: { entry }
+  }))
+}
+
+const { entry } = Astro.props
+const { Content } = await entry.render()
+---
+
+<RootLayout title={entry.data.title}>
+  <section class='container py-48' id='about'>
+    <Prose>
+      <h1>{entry.data.title}</h1>
+      <div>
+        <img src={entry.data.thumbnail} class='h-[400px]' />
+      </div>
+      <Content />
+    </Prose>
+  </section>
+</RootLayout>
