@@ -8,11 +8,15 @@ import RootLayout from '@/layouts/RootLayout.astro'
 ---
 
 <RootLayout>
-  <Hero />
-  <About />
-  <Skills />
-  <Projects />
-  <Contact />
+  <main
+    class='lg:[--section-padding-b:7rem] lg:[--section-padding-t:5rem] [&_section:not(:first-child)]:pb-section-b [&_section:not(:first-child)]:pt-section-t [&_section:nth-child(even)]:bg-secondary [&_section]:scroll-m-20'
+  >
+    <Hero />
+    <About />
+    <Skills />
+    <Projects />
+    <Contact />
+  </main>
 </RootLayout>
 
 <script is:inline>

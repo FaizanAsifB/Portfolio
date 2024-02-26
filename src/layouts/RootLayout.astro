@@ -2,6 +2,7 @@
 import Header from '../components/Header.astro'
 import Footer from '../components/Footer.astro'
 import '@/styles/globals.css'
+const { title } = Astro.props
 ---
 
 <html
@@ -16,15 +17,11 @@ import '@/styles/globals.css'
     <script
       src='https://kit.fontawesome.com/0b5ea53b5e.js'
       crossorigin='anonymous'></script>
-    <title>Faizan Asif</title>
+    <title>{title}</title>
   </head>
   <body class='bg-background text-foreground'>
     <Header />
-    <main
-      class='lg:[--section-padding-b:7rem] lg:[--section-padding-t:5rem] [&_section:not(:first-child)]:pb-section-b [&_section:not(:first-child)]:pt-section-t [&_section:nth-child(even)]:bg-secondary [&_section]:scroll-m-20'
-    >
-      <slot />
-    </main>
+    <slot />
     <Footer />
   </body>
 </html>
