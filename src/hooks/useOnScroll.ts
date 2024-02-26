@@ -7,10 +7,10 @@ const useOnScroll = () => {
     'nav>ul>li>a'
   ) as NodeListOf<HTMLAnchorElement>
   const sectionEls = document.querySelectorAll('section')
-  const heroEl = document.querySelector('#hero img') as HTMLImageElement
+  const heroImg = document.getElementById('hero-img') as HTMLImageElement
   const headerEl = document.querySelector('header') as HTMLElement
   const headerBot = headerEl?.offsetHeight
-  const heroTop = heroEl?.offsetTop
+  const heroTop = heroImg?.offsetTop
 
   const intersectedHero = () => {
     if (
