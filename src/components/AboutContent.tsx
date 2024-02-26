@@ -79,7 +79,7 @@ const AboutContent = () => {
             </svg>
             Download CV
           </a>
-          <a href='/about'>Read more about me</a>
+          <a href='/about/'>Read more about me</a>
         </article>
       </div>
     </div>
