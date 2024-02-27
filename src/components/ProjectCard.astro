@@ -1,8 +1,12 @@
 ---
 import { Badge } from '@/components/ui/badge'
 import { Button, buttonVariants } from '@/components/ui/button'
+import type { CollectionEntry } from 'astro:content'
+interface Props {
+  project: CollectionEntry<'project'>
+}
 
-const { project, index } = Astro.props
+const { project } = Astro.props
 ---
 
 <!-- lg:odd:shadow-[inset_4px_0_0_hsl(var(--primary))] lg:even:shadow-[inset_-4px_0_0_hsl(var(--primary))] -->
@@ -12,11 +16,11 @@ const { project, index } = Astro.props
            even:flex-row-reverse lg:space-y-0 xl:flex'
 >
   <div class='mx-auto h-[400px] lg:w-[640px]'>
-    <a href={project.url} target='_blank'>
+    <a href={project.data.liveURL} target='_blank'>
       <img
         loading='lazy'
-        src={project.imgUrl}
-        alt={`preview image of ${project.title}`}
+        src={project.data.thumbnail}
+        alt={`preview image of ${project.data.title}`}
         class='h-full w-full rounded-t-lg object-cover brightness-90 lg:rounded-lg'
       />
     </a>
@@ -24,20 +28,17 @@ const { project, index } = Astro.props
   <article
     class='flex flex-1 flex-col justify-center space-y-8 px-4 pb-6 lg:p-0'
   >
-    <h3 class='capitalize'>{project.title}</h3>
-    <div>
-      {
-        project.description.map((paragraph: string) => (
-          <p class='text-[18px]'>{paragraph}</p>
-        ))
-      }
-    </div>
+    <h3 class='capitalize'>{project.data.title}</h3>
+    <p>
+      {project.data.description}
+      <a href={project.slug} class='text-primary underline'>Continue Reading</a>
+    </p>
     <div class='flex flex-wrap gap-2'>
-      {project.tools.map((tool: string) => <Badge>{tool}</Badge>)}
+      {project.data.tools.map((tool: string) => <Badge>{tool}</Badge>)}
     </div>
     <div class='flex items-center gap-4'>
       <a
-        href={project.url}
+        href={project.data.liveURL}
         target='_blank'
         class={buttonVariants({ variant: 'default' })}
       >
@@ -65,7 +66,7 @@ const { project, index } = Astro.props
       </a>
 
       <a
-        href={project.sourceCodeUrl}
+        href={project.data.githubURL}
         target='_blank'
         class={buttonVariants({
           variant: 'outline'

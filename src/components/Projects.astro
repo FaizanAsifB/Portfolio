@@ -1,17 +1,15 @@
 ---
 import ProjectCard from '@/components/ProjectCard.astro'
-import data from '@/data/data.json'
+// import data from '@/data/data.json'
+import { getCollection } from 'astro:content'
+const projectEntries = await getCollection('project')
 ---
 
 <section id='projects'>
   <div class='container space-y-16'>
     <h2>My Projects</h2>
     <ul class='space-y-20 lg:space-y-24'>
-      {
-        data.projects.map((project, i) => (
-          <ProjectCard project={project} index={i} />
-        ))
-      }
+      {projectEntries?.map((project) => <ProjectCard project={project} />)}
     </ul>
   </div>
 </section>

@@ -35,8 +35,6 @@ const Navigation = () => {
   const [isDesktop, setIsDesktop] = useState(width >= 1024)
   const currentSection = useOnScroll()
 
-  console.log(currentSection)
-
   useEffect(() => {
     if (isDesktop && width < 1024) {
       setIsDesktop(false)

@@ -1,9 +1,16 @@
 ---
 title: Name Place Animal Thing
-thumbnail: '../public/images/projects/name-place.png'
-tags: ['HTML', 'CSS', 'React', 'TypeScript', 'Firebase', 'Tailwind']
-github: https://github.com/FaizanAsifB/name-place-animal-game.git"
-binder: 'https://geega-game.netlify.app/'
+description: An interactive multiplayer game with real-time functionality that operates on a simple premise, each round, a random alphabet is chosen, and players must provide answers for various categories starting with that letter.
+thumbnail: /images/projects/name-place.png
+tools:
+  - HTML
+  - CSS
+  - TypeScript
+  - React
+  - Firebase
+  - Tailwind
+githubURL: https://github.com/FaizanAsifB/name-place-animal-game.git
+liveURL: https://geega-game.netlify.app/
 ---
 
 An interactive multiplayer game with real-time functionality that operates on a simple premise, each round, a random alphabet is chosen, and players must provide answers for various categories starting with that letter.
