@@ -2,42 +2,6 @@
 import Navigation from '@/components/Navigation'
 ---
 
-<script>
-  document.addEventListener('astro:page-load', () => {
-    const getThemePreference = () => {
-      if (
-        typeof localStorage !== 'undefined' &&
-        localStorage.getItem('theme')
-      ) {
-        return localStorage.getItem('theme')
-      }
-      return window.matchMedia('(prefers-color-scheme: dark)').matches
-        ? 'dark'
-        : 'light'
-    }
-    const isDark = getThemePreference() === 'dark'
-    document.documentElement.classList[isDark ? 'add' : 'remove']('dark')
-
-    if (typeof localStorage !== 'undefined') {
-      const observer = new MutationObserver(() => {
-        const isDark = document.documentElement.classList.contains('dark')
-        console.log(isDark)
-
-        localStorage.setItem('theme', isDark ? 'dark' : 'light')
-      })
-      observer.observe(document.documentElement, {
-        attributes: true,
-        attributeFilter: ['class']
-      })
-    }
-  })
-  document.addEventListener('astro:after-swap', () => {
-    localStorage.theme === 'dark'
-      ? document.documentElement.classList.add('dark')
-      : document.documentElement.classList.add('light')
-  })
-</script>
-
 <header
   data-scrolled='false'
   class='fixed inset-[0_0_auto] z-50 bg-transparent py-6 data-[scrolled=true]:bg-background/90 data-[scrolled=true]:shadow'
@@ -48,6 +12,7 @@ import Navigation from '@/components/Navigation'
     <p class='font-semibold text-[#ca2e55]'>
       &lt;<span class='text-primary'>FA </span>/&gt;
     </p>
+
     <Navigation client:only='react' />
   </div>
 </header>
