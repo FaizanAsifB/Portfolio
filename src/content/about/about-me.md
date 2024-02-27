@@ -1,6 +1,6 @@
 ---
-# layout: ../../layouts/RootLayout.astro
 title: About:Faizan Asif
+description: Hey there! I'm Faizan Asif, a self-taught web developer with a passion for solving problems and creating immersive digital experiences. a self-taught web developer with a passion for solving problems and creating immersive digital experiences.
 ---
 
 # My Story
