@@ -1,4 +1,5 @@
 ---
+import { Icon } from 'astro-icon/components'
 const socials = [
   {
     title: 'Github',
@@ -30,9 +31,13 @@ const socials = [
         <a
           href={social.url}
           target='_blank'
-          class='fa-2xl inline-block  group-hover:animate-bounce group-hover:text-primary'
+          class='inline-block text-4xl text-foreground group-hover:animate-bounce group-hover:text-primary'
         >
-          <i class={social.icon} title={social.title} />
+          <Icon
+            name={social.title.toLowerCase()}
+            aria-label={`link to ${social.title}`}
+            title={social.title}
+          />
         </a>
       </li>
     ))
