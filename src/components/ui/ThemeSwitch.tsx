@@ -4,13 +4,12 @@ import { Switch } from '@/components/ui/switch'
 import { useEffect, useState } from 'react'
 
 function ThemeSwitch() {
-  const [theme, setTheme] = useState<'theme-light' | 'dark' | 'system'>(
-    localStorage.getItem('theme') || 'system'
+  const [theme, setTheme] = useState<'light' | 'dark' | 'system'>(
+    (localStorage.getItem('theme') as 'light' | 'dark' | null) || 'system'
   )
-  console.log(theme)
   useEffect(() => {
     const isDarkMode = document.documentElement.classList.contains('dark')
-    setTheme(isDarkMode ? 'dark' : 'theme-light')
+    setTheme(isDarkMode ? 'dark' : 'light')
   }, [])
 
   useEffect(() => {
@@ -25,9 +24,7 @@ function ThemeSwitch() {
     <Switch
       className='relative z-[9999]'
       checked={theme === 'dark'}
-      onCheckedChange={() =>
-        setTheme(theme === 'dark' ? 'theme-light' : 'dark')
-      }
+      onCheckedChange={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
     >
       <div className='relative h-4 w-4 rounded-full'>
         <Sun
