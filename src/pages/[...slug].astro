@@ -3,6 +3,9 @@ import BaseLayout from '../layouts/BaseLayout.astro'
 import Prose from '../components/Prose.astro'
 import { getCollection } from 'astro:content'
 import type { CollectionEntry } from 'astro:content'
+import { Badge } from '@/components/ui/badge'
+import { buttonVariants } from '@/components/ui/button'
+import { Icon } from 'astro-icon/components'
 interface Props {
   entry: CollectionEntry<'project'>
 }
@@ -23,10 +26,49 @@ const { Content } = await entry.render()
   <section class='container py-48' id='about'>
     <Prose>
       <h1>{entry.data.title}</h1>
-      <div>
-        <img src={entry.data.thumbnail} class='h-[400px]' />
-      </div>
+      <figure class='mx-auto h-[400px]'>
+        <img
+          src={entry.data.thumbnail}
+          class='h-full w-full object-contain'
+          alt={entry.data.title}
+        />
+        <figcaption class='text-center'>
+          Name Place Animal Thing: An Interactive Multiplayer Game
+        </figcaption>
+      </figure>
+      <div class='p-4'></div>
       <Content />
+      <h3>Tools Used</h3>
+      <ul class='not-prose flex flex-wrap gap-2'>
+        {
+          entry.data.tools.map((tool) => (
+            <li>
+              <Badge className='lg:text-lg'>{tool}</Badge>
+            </li>
+          ))
+        }
+      </ul>
+      <div class='not-prose flex items-center justify-center gap-4 py-24'>
+        <a
+          href={entry.data.liveURL}
+          target='_blank'
+          class={buttonVariants({ variant: 'default' }) + ' flex items-center'}
+        >
+          <span class='text-base'> View Website </span>
+          <Icon name='website' />
+        </a>
+
+        <a
+          href={entry.data.githubURL}
+          target='_blank'
+          class={buttonVariants({
+            variant: 'outline'
+          }) + ' flex items-center'}
+        >
+          <Icon name='github' />
+          <span class='text-base'>Source Code</span>
+        </a>
+      </div>
     </Prose>
   </section>
 </BaseLayout>
