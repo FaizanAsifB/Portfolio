@@ -121,7 +121,7 @@ const Navigation = () => {
         ref={scope}
         className='flex gap-8 nav:fixed nav:inset-[0_0_0_30%] nav:ml-auto nav:translate-x-full nav:flex-col nav:gap-16 nav:bg-primary/10 nav:px-16 nav:py-60 nav:opacity-0 nav:backdrop-blur-3xl'
       >
-        {navLinks.map((link, i) => {
+        {navLinks.map((link) => {
           return (
             <li key={link.title}>
               <a
