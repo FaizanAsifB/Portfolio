@@ -1,7 +1,7 @@
 ---
 title: Forkify
 description: Recipe searching webapp
-thumbnail: '/images/projects/forkify.png'
+thumbnail: 'src/images/projects/forkify.png'
 tools:
   - HTML
   - JavaScript

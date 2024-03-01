@@ -1,7 +1,7 @@
 ---
 title: Weather App
 description: An app that shows the weather
-thumbnail: /images/projects/weather.png
+thumbnail: src/images/projects/weather.png
 tools:
   - HTML
   - CSS

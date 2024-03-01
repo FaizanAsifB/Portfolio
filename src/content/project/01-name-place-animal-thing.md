@@ -1,7 +1,7 @@
 ---
 title: Name Place Animal Thing
 description: An interactive multiplayer game with real-time functionality that operates on a simple premise, each round, a random alphabet is chosen, and players must provide answers for various categories starting with that letter.
-thumbnail: /images/projects/name-place.png
+thumbnail: src/images/projects/name-place.png
 tools:
   - HTML
   - CSS

@@ -1,7 +1,7 @@
 ---
 title: Space tourism website
 description: A website for a space tourism company
-thumbnail: /images/projects/space.png
+thumbnail: src/images/projects/space.png
 tools:
   - HTML
   - Javascript
