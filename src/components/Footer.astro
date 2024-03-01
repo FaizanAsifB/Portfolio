@@ -1,13 +1,14 @@
 ---
-import BackToTop from "./ui/BackToTop.astro";
+import BackToTop from './ui/BackToTop.astro'
+const { topId } = Astro.props
 ---
 
-<footer class="bg-secondary text-center py-8 relative">
+<footer class='relative bg-secondary py-8 text-center'>
   <p>
     &copy;
-    <script type="text/javascript">
-      document.write(new Date().getFullYear());
+    <script type='text/javascript'>
+      document.write(new Date().getFullYear())
     </script> Faizan Asif. All Rights Reserved.
   </p>
-  <BackToTop />
+  <BackToTop topId={topId} />
 </footer>
