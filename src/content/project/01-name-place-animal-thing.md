@@ -23,10 +23,10 @@ The primary goal of this project was to create an interactive multiplayer game t
 
 ## Features
 
-- Real-time multiplayer functionality allows players to compete against each other in a dynamic gaming environment.
-- Two gameplay modes offer flexibility and variety in how rounds are concluded, adding depth and replayability to the gaming experience.
-- Points system rewards players based on the uniqueness of their answers, encouraging creativity and strategic thinking.
-- Multiple rounds ensure continuous gameplay and opportunities for players to improve their scores and compete for the top spot
+- **Real-time Multiplayer Functionality:** Allows players to compete against each other in a dynamic gaming environment.
+- **Two Gameplay Modes:** Choose from two distinct gameplay modes, each offering its own set of challenges and strategies. In Mode 1, rounds conclude when the timer reaches zero, while in Mode 2, the timer resets to 10 seconds upon the first player's submission of their answers, ensuring fast-paced and dynamic gameplay.
+- **Points System:** Players gain points based on the uniqueness of their answers, encouraging creativity and strategic thinking.Receive 10 points for each unique response, 5 points for duplicates, and 0 points for incorrect or missing answers.
+- **Multiple Rounds:**: Ensures continuous gameplay and opportunities for players to improve their scores and compete for the top spot
 
 ## Challenges
 
