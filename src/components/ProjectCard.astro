@@ -30,10 +30,19 @@ const { project } = Astro.props
     class='flex flex-1 flex-col justify-center space-y-8 px-4 pb-6 lg:p-0'
   >
     <h3 class='capitalize'>{project.data.title}</h3>
-    <p>
-      {project.data.description}
-      <a href={project.slug} class='text-primary underline'>Continue Reading</a>
-    </p>
+    <div>
+      <p>
+        {project.data.description}
+      </p>
+      <a
+        href={project.slug}
+        class={buttonVariants({
+          variant: 'link',
+          size: 'auto',
+          className: 'mt-2'
+        })}>Read the case study &rarr;</a
+      >
+    </div>
     <div class='flex flex-wrap gap-2'>
       {project.data.tools.map((tool: string) => <Badge>{tool}</Badge>)}
     </div>

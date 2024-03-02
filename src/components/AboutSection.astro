@@ -24,10 +24,8 @@ console.log(aboutEntry.data.description)
 
         <a
           href='/about'
-          class='before:left:0 group relative rounded-lg before:absolute before:-bottom-0.5 before:h-0.5 before:w-full before:origin-right before:scale-x-0 before:rounded-sm before:bg-primary before:transition-transform before:duration-300 hover:text-primary hover:before:h-0.5 hover:before:origin-left hover:before:scale-x-100 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background'
-          >Continue reading my bio <span
-            class='opacity-0 delay-200 group-hover:opacity-100'>&rarr;</span
-          ></a
+          class={buttonVariants({ variant: 'link', size: 'auto' })}
+          >Continue reading my bio &rarr;</a
         >
       </article>
     </div>

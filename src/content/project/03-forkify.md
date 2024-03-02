@@ -1,6 +1,6 @@
 ---
 title: Forkify
-description: Recipe searching webapp
+description: The Recipe Search WebApp is a simple yet effective tool designed to help users find delicious recipes quickly and easily. With a focus on simplicity and convenience, the application allows users to search for recipes based on ingredients, cuisine types, or dietary preferences.
 thumbnail: 'src/images/projects/forkify.png'
 tools:
   - HTML
