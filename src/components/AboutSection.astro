@@ -17,18 +17,18 @@ console.log(aboutEntry.data.description)
           class='h-full w-full object-contain'
         />
       </div>
-      <article class='max-w-[65ch] flex-1 tracking-wider nav:mt-8'>
+      <article class='max-w-[65ch] flex-1 text-lg tracking-wider nav:mt-8'>
         <p class='mb-8'>
           {aboutEntry.data.description}
         </p>
+
         <a
-          href='https://www.dropbox.com/scl/fi/lge99usylkol44drd65nt/Faizan-Asif-Butt-Resume.pdf?rlkey=g6xq1lh182g47cejgb0xrieko&dl=0'
-          target='_blank'
-          class={buttonVariants({ variant: 'default' })}
+          href='/about'
+          class='before:left:0 group relative rounded-lg before:absolute before:-bottom-0.5 before:h-0.5 before:w-full before:origin-right before:scale-x-0 before:rounded-sm before:bg-primary before:transition-transform before:duration-300 hover:text-primary hover:before:h-0.5 hover:before:origin-left hover:before:scale-x-100 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background'
+          >Continue reading my bio <span
+            class='opacity-0 delay-200 group-hover:opacity-100'>&rarr;</span
+          ></a
         >
-          <Icon name='download' /> Download CV
-          <a href='/about/'>Read more about me</a>
-        </a>
       </article>
     </div>
   </div>
