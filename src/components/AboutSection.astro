@@ -3,7 +3,6 @@ import { getEntry } from 'astro:content'
 import { buttonVariants } from '@/components/ui/button.tsx'
 import { Icon } from 'astro-icon/components'
 const aboutEntry = await getEntry('about', 'about-me')
-console.log(aboutEntry.data.description)
 ---
 
 <section id='about'>

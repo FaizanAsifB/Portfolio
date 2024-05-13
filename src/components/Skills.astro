@@ -1,19 +1,23 @@
 ---
+import { Icon } from "astro-icon/components"
+
 const skills = [
-  'HTML5',
-  'CSS',
-  'JavaScript',
-  'React',
-  'Astro',
-  'TypeScript',
-  'Sass',
-  'Tailwind',
-  'Firebase',
-  'SQL',
-  'Git',
-  'Git Hub',
-  'MUI',
-  'VS Code'
+  // {title:'HTML5',logoName:'html'},
+  {title:'CSS',logoName:'css'},
+  {title:'JavaScript',logoName:'javascript'},
+  {title:'React',logoName:'react'},
+  {title:'Astro',logoName:'astro'},
+  {title:'TypeScript',logoName:'typescript'},
+  {title:'Sass',logoName:'sass'},
+  {title:'Tailwind',logoName:'tailwind'},
+  {title:'Firebase',logoName:'firebase'},
+  {title:'PostgreSQL',logoName:'postgresql'},
+  // {title:'Git',logoName:'git'},
+  {title:'GitHub',logoName:'github'},
+  {title:'MongoDB',logoName:'mongo'},
+  {title:'Node.js',logoName:'node'},
+  {title:'Express.js',logoName:'express'},
+  {title:'Nextjs',logoName:'nextjs'},
 ]
 ---
 
@@ -21,17 +25,13 @@ const skills = [
   <div class='container'>
     <h2>My Skills</h2>
     <ul
-      class='mx-auto flex flex-wrap justify-center gap-10 text-center lg:max-w-[80%] lg:gap-x-12 lg:gap-y-16'
+      class='mx-auto flex flex-wrap justify-center gap-10 text-center lg:max-w-[80%] lg:gap-x-12 lg:gap-y-16 text-foreground'
     >
       {
         skills.map((skill) => (
-          <li>
-            <img
-              src={`/images/logos/${skill.toLowerCase()}.svg`}
-              alt={`logo of ${skill}`}
-              class='size-16 md:size-20 lg:size-24'
-            />
-            {skill}
+          <li >
+            <Icon class='size-16 md:size-20 lg:size-24' title={skill.title} name={`logos/${skill.logoName}`} />
+            {skill.title}
           </li>
         ))
       }
