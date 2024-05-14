@@ -3,15 +3,14 @@ import { Badge } from '@/components/ui/badge'
 import { buttonVariants } from '@/components/ui/button'
 import { Icon } from 'astro-icon/components'
 import type { CollectionEntry } from 'astro:content'
-import ProjectAnimation from './ui/project-animation'
 import { cn } from '@/lib/utils'
+import ProjectAnimation from './animations/project-animation'
 interface Props {
   project: CollectionEntry<'projects'>
   isEven: boolean
 }
 
 const { project, isEven } = Astro.props
-console.log(isEven)
 ---
 
 <!-- lg:odd:shadow-[inset_4px_0_0_hsl(var(--primary))] lg:even:shadow-[inset_-4px_0_0_hsl(var(--primary))] -->

@@ -23,5 +23,5 @@ const projectCollection = defineCollection({
 //    This key should match your collection directory name in "src/content"
 export const collections = {
   about: aboutCollection,
-  project: projectCollection
+  projects: projectCollection
 }

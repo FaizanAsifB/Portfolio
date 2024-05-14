@@ -1,6 +1,6 @@
 ---
 import { Icon } from 'astro-icon/components'
-import SectionAnimation from './ui/section-animation'
+import SectionAnimation from './animations/section-animation'
 
 const skills = [
   // {title:'HTML5',logoName:'html'},
@@ -31,7 +31,7 @@ const skills = [
       >
         {
           skills.map((skill) => (
-            <li>
+            <li class='hover:animate-bounce'>
               <Icon
                 class='size-16 md:size-20 lg:size-24'
                 title={skill.title}
