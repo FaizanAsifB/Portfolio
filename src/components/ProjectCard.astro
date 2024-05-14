@@ -12,9 +12,8 @@ const { project } = Astro.props
 
 <!-- lg:odd:shadow-[inset_4px_0_0_hsl(var(--primary))] lg:even:shadow-[inset_-4px_0_0_hsl(var(--primary))] -->
 <li
-  class=' space-y-12 rounded-lg bg-background
-          shadow-lg
-           even:flex-row-reverse lg:space-y-0 lg:flex'
+  class='gap-8 space-y-12 rounded-lg
+           bg-background shadow-lg even:flex-row-reverse lg:flex lg:space-y-0'
 >
   <div class='mx-auto h-[400px] lg:w-[640px]'>
     <a href={project.data.liveURL} target='_blank'>
@@ -27,7 +26,7 @@ const { project } = Astro.props
     </a>
   </div>
   <article
-    class='flex flex-1 flex-col justify-center space-y-8 px-4 pb-6 lg:px-8'
+    class='flex flex-1 flex-col justify-center space-y-8 px-4 pb-6 lg:p-8'
   >
     <h3 class='capitalize'>{project.data.title}</h3>
     <div>
