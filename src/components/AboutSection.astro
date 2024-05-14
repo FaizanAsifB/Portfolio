@@ -2,31 +2,34 @@
 import { getEntry } from 'astro:content'
 import { buttonVariants } from '@/components/ui/button.tsx'
 import { Icon } from 'astro-icon/components'
+import SectionAnimation from './ui/section-animation'
 const aboutEntry = await getEntry('about', 'about-me')
 ---
 
 <section id='about'>
-  <div class='container'>
-    <h2>About Me</h2>
-    <div class='gap-6 lg:flex'>
-      <div class='mx-auto w-[80%] lg:h-[400px] lg:w-[400px]'>
-        <img
-          src='https://plus.unsplash.com/premium_photo-1706896001583-08b5ba33e3be?q=80&w=2676&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
-          alt='Faizan Asif'
-          class='h-full w-full object-contain'
-        />
-      </div>
-      <article class='max-w-[65ch] flex-1 text-lg tracking-wider nav:mt-8'>
-        <p class='mb-8'>
-          {aboutEntry.data.description}
-        </p>
+  <SectionAnimation client:only='react'>
+    <div class='container'>
+      <h2>About Me</h2>
+      <div class='gap-6 lg:flex'>
+        <div class='mx-auto w-[80%] lg:h-[400px] lg:w-[400px]'>
+          <img
+            src='https://plus.unsplash.com/premium_photo-1706896001583-08b5ba33e3be?q=80&w=2676&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+            alt='Faizan Asif'
+            class='h-full w-full object-contain'
+          />
+        </div>
+        <article class='max-w-[65ch] flex-1 text-lg tracking-wider nav:mt-8'>
+          <p class='mb-8'>
+            {aboutEntry.data.description}
+          </p>
 
-        <a
-          href='/about'
-          class={buttonVariants({ variant: 'link', size: 'auto' })}
-          >Continue reading my bio &rarr;</a
-        >
-      </article>
+          <a
+            href='/about'
+            class={buttonVariants({ variant: 'link', size: 'auto' })}
+            >Continue reading my bio &rarr;</a
+          >
+        </article>
+      </div>
     </div>
-  </div>
+  </SectionAnimation>
 </section>

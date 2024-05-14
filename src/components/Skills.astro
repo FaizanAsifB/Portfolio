@@ -1,5 +1,6 @@
 ---
 import { Icon } from 'astro-icon/components'
+import SectionAnimation from './ui/section-animation'
 
 const skills = [
   // {title:'HTML5',logoName:'html'},
@@ -22,23 +23,25 @@ const skills = [
 ---
 
 <section id='skills'>
-  <div class='container'>
-    <h2>My Skills</h2>
-    <ul
-      class='mx-auto flex flex-wrap justify-center gap-10 text-center text-foreground lg:max-w-[80%] lg:gap-x-12 lg:gap-y-16'
-    >
-      {
-        skills.map((skill) => (
-          <li>
-            <Icon
-              class='size-16 md:size-20 lg:size-24'
-              title={skill.title}
-              name={`logos/${skill.logoName}`}
-            />
-            {skill.title}
-          </li>
-        ))
-      }
-    </ul>
-  </div>
+  <SectionAnimation client:only='react'>
+    <div class='container'>
+      <h2>My Skills</h2>
+      <ul
+        class='mx-auto flex flex-wrap justify-center gap-10 text-center text-foreground lg:max-w-[80%] lg:gap-x-12 lg:gap-y-16'
+      >
+        {
+          skills.map((skill) => (
+            <li>
+              <Icon
+                class='size-16 md:size-20 lg:size-24'
+                title={skill.title}
+                name={`logos/${skill.logoName}`}
+              />
+              {skill.title}
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </SectionAnimation>
 </section>

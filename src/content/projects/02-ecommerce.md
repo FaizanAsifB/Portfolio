@@ -1,12 +1,11 @@
 ---
-
 title: Tech Trove - Your Ultimate Destination for Electronics
 description: Tech Trove is an e-commerce platform built with Next.js, Tailwind CSS, and PostgreSQL, offering a diverse range of electronic gadgets and appliances, aiming to provide a seamless shopping experience for tech enthusiasts and casual buyers alike.
 thumbnail: src/images/projects/tech-trove.png
 tools:
-Next.js
-Tailwind CSS
-PostgreSQL
+  - Next.js
+  - Tailwind CSS
+  - PostgreSQL
 githubURL: https://github.com/exampleuser/tech-trove.git
 liveURL: https://tech-trove-demo.herokuapp.com/
 ---

@@ -2,9 +2,11 @@
 import ContactForm from '@/components/form/ContactForm.tsx'
 import Socials from './Socials.astro'
 import { Icon } from 'astro-icon/components'
+import SectionAnimation from './ui/section-animation'
 ---
 
-<section id='contact'>
+<!-- <section id='contact'> -->
+<SectionAnimation client:only='react'>
   <div class='container'>
     <h2>Contact Me</h2>
     <div class='divide-y-4 md:flex md:divide-x-4 md:divide-y-0'>
@@ -25,7 +27,7 @@ import { Icon } from 'astro-icon/components'
           </li>
           <!-- <li class="flex gap-4 items-center text-primary">
             <svg
-              xmlns="http://www.w3.org/2000/svg"
+            xmlns="http://www.w3.org/2000/svg"
               width="24"
               height="24"
               viewBox="0 0 24 24"
@@ -36,9 +38,9 @@ import { Icon } from 'astro-icon/components'
               stroke-linejoin="round"
               class="lucide lucide-mail"
               ><rect width="20" height="16" x="2" y="4" rx="2"></rect><path
-                d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg
-            ><span class="text-foreground">FaizanAsif.dev@gmail.com</span>
-          </li> -->
+              d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg
+              ><span class="text-foreground">FaizanAsif.dev@gmail.com</span>
+            </li> -->
         </ul>
         <Socials />
       </article>
@@ -48,4 +50,5 @@ import { Icon } from 'astro-icon/components'
       </article>
     </div>
   </div>
-</section>
+</SectionAnimation>
+<!-- </section> -->
