@@ -9,7 +9,9 @@ import SectionAnimation from './ui/section-animation'
   <SectionAnimation client:only='react'>
     <div class='container'>
       <h2>Contact Me</h2>
-      <div class='divide-y-4 md:flex md:divide-x-4 md:divide-y-0'>
+      <div
+        class='justify-center divide-y-4 md:flex md:divide-x-4 md:divide-y-0'
+      >
         <article class='md:pr-4'>
           <h4>Get in Touch</h4>
           <p class='mb-8 lg:max-w-[45ch]'>
@@ -44,7 +46,7 @@ import SectionAnimation from './ui/section-animation'
           </ul>
           <Socials />
         </article>
-        <article class='w-full pt-8 md:pl-8 md:pt-0'>
+        <article class='w-full pt-8 md:max-w-[500px] md:pl-8 md:pt-0'>
           <h4>Message Me</h4>
           <ContactForm client:visible />
         </article>
