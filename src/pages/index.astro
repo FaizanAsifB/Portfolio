@@ -5,12 +5,11 @@ import Skills from '@/components/Skills.astro'
 import Projects from '@/components/Projects.astro'
 import Contact from '@/components/Contact.astro'
 import BaseLayout from '@/layouts/BaseLayout.astro'
-import SectionAnimation from '@/components/ui/section-animation'
 ---
 
 <BaseLayout title='Faizan Asif' topId='hero'>
   <main
-    class='scroll-smooth lg:[--section-padding-b:7rem] lg:[--section-padding-t:5rem] [&_h2]:text-center [&_section:not(:first-child)]:pb-section-b [&_section:not(:first-child)]:pt-section-t [&_section:nth-child(even)]:bg-secondary [&_section]:scroll-m-20'
+    class='scroll-smooth lg:[--section-padding-b:7rem] lg:[--section-padding-t:5rem] [&_h2]:text-center [&_section:not(:first-child)]:pb-section-b [&_section:not(:first-child)]:pt-section-t [&_section:nth-child(even)]:bg-secondary [&_section]:scroll-m-20 [&_section]:overflow-hidden'
   >
     <Hero />
     <AboutSection />

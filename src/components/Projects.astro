@@ -8,7 +8,13 @@ const projectEntries = await getCollection('projects')
   <div class='container space-y-16'>
     <h2>My Projects</h2>
     <ul class='space-y-20 lg:space-y-24'>
-      {projectEntries?.map((project) => <ProjectCard project={project} />)}
+      {
+        projectEntries?.map((project, index) => (
+          <li>
+            <ProjectCard project={project} isEven={index % 2 !== 0} />
+          </li>
+        ))
+      }
     </ul>
   </div>
 </section>

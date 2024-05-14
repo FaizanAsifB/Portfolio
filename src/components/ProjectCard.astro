@@ -3,68 +3,76 @@ import { Badge } from '@/components/ui/badge'
 import { buttonVariants } from '@/components/ui/button'
 import { Icon } from 'astro-icon/components'
 import type { CollectionEntry } from 'astro:content'
+import ProjectAnimation from './ui/project-animation'
+import { cn } from '@/lib/utils'
 interface Props {
   project: CollectionEntry<'projects'>
+  isEven: boolean
 }
 
-const { project } = Astro.props
+const { project, isEven } = Astro.props
+console.log(isEven)
 ---
 
 <!-- lg:odd:shadow-[inset_4px_0_0_hsl(var(--primary))] lg:even:shadow-[inset_-4px_0_0_hsl(var(--primary))] -->
-<li
-  class='gap-8 space-y-12 rounded-lg
-           bg-background shadow-lg even:flex-row-reverse lg:flex lg:space-y-0'
->
-  <div class='mx-auto min-h-[400px] lg:w-[640px]'>
-    <a href={project.data.liveURL} target='_blank'>
-      <img
-        loading='lazy'
-        src={project.data.thumbnail}
-        alt={`preview image of ${project.data.title}`}
-        class='h-full w-full rounded-t-lg object-cover brightness-90 lg:rounded-lg'
-      />
-    </a>
-  </div>
-  <article
-    class='flex flex-1 flex-col justify-center space-y-8 px-4 pb-6 lg:p-8'
+<ProjectAnimation client:only='react' isEven={isEven}>
+  <div
+    class={cn(
+      'gap-8 space-y-12 rounded-lg bg-background shadow-lg even:flex-row-reverse lg:flex lg:space-y-0',
+      isEven ? 'flex-row-reverse' : ''
+    )}
   >
-    <h3 class='capitalize'>{project.data.title}</h3>
-    <div>
-      <p>
-        {project.data.description}
-      </p>
-      <a
-        href={project.slug}
-        class={buttonVariants({
-          variant: 'link',
-          size: 'auto',
-          className: 'mt-2'
-        })}>Read the case study &rarr;</a
-      >
-    </div>
-    <div class='flex flex-wrap gap-2'>
-      {project.data.tools.map((tool: string) => <Badge>{tool}</Badge>)}
-    </div>
-    <div class='flex items-center gap-4'>
-      <a
-        href={project.data.liveURL}
-        target='_blank'
-        class={buttonVariants({ variant: 'default' }) + ' flex items-center'}
-      >
-        <span class='text-base'> View Website </span>
-        <Icon name='website' />
+    <div class='mx-auto min-h-[400px] lg:w-[640px]'>
+      <a href={project.data.liveURL} target='_blank'>
+        <img
+          loading='lazy'
+          src={project.data.thumbnail}
+          alt={`preview image of ${project.data.title}`}
+          class='h-full w-full rounded-t-lg object-cover brightness-90 lg:rounded-lg'
+        />
       </a>
+    </div>
+    <article
+      class='flex flex-1 flex-col justify-center space-y-8 px-4 pb-6 lg:p-8'
+    >
+      <h3 class='capitalize'>{project.data.title}</h3>
+      <div>
+        <p>
+          {project.data.description}
+        </p>
+        <a
+          href={project.slug}
+          class={buttonVariants({
+            variant: 'link',
+            size: 'auto',
+            className: 'mt-2'
+          })}>Read the case study &rarr;</a
+        >
+      </div>
+      <div class='flex flex-wrap gap-2'>
+        {project.data.tools.map((tool: string) => <Badge>{tool}</Badge>)}
+      </div>
+      <div class='flex items-center gap-4'>
+        <a
+          href={project.data.liveURL}
+          target='_blank'
+          class={buttonVariants({ variant: 'default' }) + ' flex items-center'}
+        >
+          <span class='text-base'> View Website </span>
+          <Icon name='website' />
+        </a>
 
-      <a
-        href={project.data.githubURL}
-        target='_blank'
-        class={buttonVariants({
-          variant: 'outline'
-        }) + ' flex items-center'}
-      >
-        <Icon name='github' size={24} />
-        <span class='text-base'>Source Code</span>
-      </a>
-    </div>
-  </article>
-</li>
+        <a
+          href={project.data.githubURL}
+          target='_blank'
+          class={buttonVariants({
+            variant: 'outline'
+          }) + ' flex items-center'}
+        >
+          <Icon name='github' size={24} />
+          <span class='text-base'>Source Code</span>
+        </a>
+      </div>
+    </article>
+  </div>
+</ProjectAnimation>
