@@ -2,6 +2,7 @@
 import { getEntry } from 'astro:content'
 import { buttonVariants } from '@/components/ui/button.tsx'
 import SectionAnimation from './animations/section-animation'
+import { FloatAnimation } from './animations/float-animation'
 const aboutEntry = await getEntry('about', 'about-me')
 ---
 
@@ -9,14 +10,15 @@ const aboutEntry = await getEntry('about', 'about-me')
   <SectionAnimation client:only='react'>
     <div class='container'>
       <h2>About Me</h2>
-      <div class='gap-6 lg:flex'>
-        <div class='mx-auto w-[80%] lg:h-[400px] lg:w-[400px]'>
-          <img
+      <div class='gap-12 lg:flex'>
+        <!-- <div class='mx-auto w-[80%] lg:h-[400px] lg:w-[400px]'> -->
+        <FloatAnimation src='/images/about/2.jpeg' client:load />
+        <!-- <img
             src='/images/about/2.jpeg'
             alt='Faizan Asif'
             class='h-full w-full object-contain'
-          />
-        </div>
+          /> -->
+        <!-- </div> -->
         <article class='max-w-[65ch] flex-1 text-lg tracking-wider nav:mt-8'>
           <p class='mb-8'>
             {aboutEntry.data.description}
