@@ -15,7 +15,7 @@ const buttonVariants = cva(
         outline:
           'border border-primary bg-none text-primary  hover:bg-primary hover:text-primary-foreground hover:border-primary',
         secondary:
-          'bg-secondary text-secondary-foreground hover:bg-secondary/80',
+          'px-4 py-2 rounded-md border border-neutral-300 bg-neutral-100 text-neutral-500 text-sm hover:-translate-y-1 transform transition duration-200 hover:shadow-md',
         ghost: 'hover:bg-accent hover:text-accent-foreground',
         link: 'text-primary before:left:0 group relative rounded-lg before:absolute before:-bottom-0.5 before:h-0.5 before:w-full before:origin-right before:scale-x-0 before:rounded-sm before:bg-primary before:transition-transform before:duration-300  hover:before:h-0.5 hover:before:origin-left hover:before:scale-x-100 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background'
       },

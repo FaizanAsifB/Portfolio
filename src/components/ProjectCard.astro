@@ -13,7 +13,6 @@ interface Props {
 const { project, isEven } = Astro.props
 ---
 
-<!-- lg:odd:shadow-[inset_4px_0_0_hsl(var(--primary))] lg:even:shadow-[inset_-4px_0_0_hsl(var(--primary))] -->
 <ProjectAnimation client:only='react' isEven={isEven}>
   <div
     class={cn(
@@ -55,7 +54,8 @@ const { project, isEven } = Astro.props
         <a
           href={project.data.liveURL}
           target='_blank'
-          class={buttonVariants({ variant: 'default' }) + ' flex items-center'}
+          class={buttonVariants({ variant: 'link', size: 'auto' }) +
+            ' flex items-center border-b'}
         >
           <span class='text-base'> View Website </span>
           <Icon name='website' />

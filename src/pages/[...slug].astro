@@ -33,7 +33,7 @@ const { Content } = await entry.render()
           alt={entry.data.title}
         />
         <figcaption class='text-center'>
-          Name Place Animal Thing: An Interactive Multiplayer Game
+          {`${entry.data.title}: ${entry.data.caption}`}
         </figcaption>
       </figure>
       <div class='p-4'></div>
@@ -43,7 +43,7 @@ const { Content } = await entry.render()
         {
           entry.data.tools.map((tool) => (
             <li>
-              <Badge className='lg:text-lg'>{tool}</Badge>
+              <Badge className='lg:text-base'>{tool}</Badge>
             </li>
           ))
         }
