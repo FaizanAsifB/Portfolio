@@ -14,5 +14,6 @@ export const skills = [
   { title: 'MongoDB', logoName: 'mongo' },
   { title: 'Node.js', logoName: 'node' },
   { title: 'Express.js', logoName: 'express' },
-  { title: 'Next.js', logoName: 'nextjs' }
+  { title: 'Next.js', logoName: 'nextjs' },
+  { title: 'Prisma', logoName: 'prisma' }
 ]

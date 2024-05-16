@@ -4,9 +4,14 @@ description: Tech Trove is an e-commerce platform built with Next.js, Tailwind C
 thumbnail: src/images/projects/tech-trove.png
 caption: An e-commerce platform for electronics
 tools:
+  - HTML
+  - CSS
+  - TypeScript
+  - React
   - Next.js
   - Tailwind CSS
   - PostgreSQL
+  - Prisma
 githubURL: https://github.com/exampleuser/tech-trove.git
 liveURL: https://tech-trove-demo.herokuapp.com/
 ---
