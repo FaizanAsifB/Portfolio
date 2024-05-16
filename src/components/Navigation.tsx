@@ -1,35 +1,16 @@
+import { navLinks } from '@/data/nav-links.ts'
 import useOnScroll from '@/hooks/useOnScroll'
 import { stagger, useAnimate, type AnimationSequence } from 'framer-motion'
 import { useEffect, useState } from 'react'
 import { twMerge } from 'tailwind-merge'
 import { useWindowSize } from 'usehooks-ts'
 import ThemeSwitch from './ui/ThemeSwitch'
-
-const navLinks = [
-  {
-    title: 'Home',
-    href: '/#hero'
-  },
-  {
-    title: 'About',
-    href: '/about'
-  },
-  {
-    title: 'Skills',
-    href: '/#skills'
-  },
-  {
-    title: 'Projects',
-    href: '/#projects'
-  },
-  {
-    title: 'Contact',
-    href: '/#contact'
-  }
-]
+import HamburgerIcon from './ui/hamburger-icon'
+import HamburgerButton from './ui/hamburger-button'
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false)
+
   const [scope, animate] = useAnimate()
   const { width = 0 } = useWindowSize()
   const [isDesktop, setIsDesktop] = useState(width >= 1024)
@@ -91,32 +72,8 @@ const Navigation = () => {
   return (
     <nav className='flex items-center gap-8 lg:flex-row-reverse'>
       <ThemeSwitch />
+      <HamburgerButton isOpen={isOpen} setIsOpen={setIsOpen} />
 
-      {/* <input
-        type='checkbox'
-        role='button'
-        checked={isOpen}
-        onChange={() => setIsOpen(!isOpen)}
-        aria-label='Display the navigation menu'
-        className='menu relative z-[9999] lg:hidden'
-      /> */}
-      <button
-        className={`mob-menu relative z-[9999] lg:hidden ${isOpen && 'opened'}`}
-        onClick={() => setIsOpen(!isOpen)}
-        aria-label='Main Menu '
-      >
-        <svg width='32' height='32' viewBox='0 0 100 100'>
-          <path
-            className='line line1'
-            d='M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058'
-          />
-          <path className='line line2' d='M 20,50 H 80' />
-          <path
-            className='line line3'
-            d='M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942'
-          />
-        </svg>
-      </button>
       <ul
         ref={scope}
         className='flex gap-8 nav:fixed nav:inset-[0_0_0_30%] nav:ml-auto nav:translate-x-full nav:flex-col nav:gap-16 nav:bg-primary/10 nav:px-16 nav:py-60 nav:opacity-0 nav:backdrop-blur-3xl'
