@@ -11,12 +11,16 @@ const useOnScroll = () => {
   const headerEl = document.querySelector('header') as HTMLElement
   const headerBot = headerEl?.offsetHeight
   const heroTop = heroImg?.offsetTop
+  const topOfPage = window.scrollY
 
   const intersectedHero = () => {
-    if (
-      window.scrollY >= heroTop - headerBot &&
-      headerEl.dataset.scrolled === 'false'
-    )
+    console.log(window.scrollY)
+    // if (
+    //   window.scrollY >= heroTop - headerBot &&
+    //   headerEl.dataset.scrolled === 'false'
+    // )
+    //   headerEl.setAttribute('data-scrolled', 'true')
+    if (window.scrollY > 0 && headerEl.dataset.scrolled === 'false')
       headerEl.setAttribute('data-scrolled', 'true')
     if (
       window.scrollY <= heroTop - headerBot &&

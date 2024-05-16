@@ -5,6 +5,7 @@ import { Icon } from 'astro-icon/components'
 import type { CollectionEntry } from 'astro:content'
 import { cn } from '@/lib/utils'
 import ProjectAnimation from './animations/project-animation'
+import { ExternalLink } from 'lucide-react'
 interface Props {
   project: CollectionEntry<'projects'>
   isEven: boolean
@@ -38,6 +39,22 @@ const { project, isEven } = Astro.props
         <p>
           {project.data.description}
         </p>
+        {
+          project.data.title === 'Forkify' ? (
+            <small class='mt-2 flex items-center gap-1 text-muted-foreground'>
+              This project was possible thanks to
+              <a
+                href='https://codingheroes.io/'
+                target='_blank'
+                class='flex items-center gap-1 text-primary'
+              >
+                codingheros.io
+                <Icon name='external-link' size={12} />
+              </a>
+            </small>
+          ) : null
+        }
+
         <a
           href={project.slug}
           class={buttonVariants({
