@@ -5,7 +5,6 @@ import { useEffect, useState } from 'react'
 import { twMerge } from 'tailwind-merge'
 import { useWindowSize } from 'usehooks-ts'
 import ThemeSwitch from './ui/ThemeSwitch'
-import HamburgerIcon from './ui/hamburger-icon'
 import HamburgerButton from './ui/hamburger-button'
 
 const Navigation = () => {
