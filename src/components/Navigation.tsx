@@ -82,7 +82,6 @@ const Navigation = () => {
             <li key={link.title}>
               <a
                 href={link.href}
-                data-scrolled='false'
                 className={twMerge(
                   'before:left:0 relative rounded-lg before:absolute before:-bottom-1  before:h-1 before:w-full before:origin-right before:scale-x-0 before:rounded-sm before:bg-primary before:transition-transform before:duration-300 data-[scrolled=true]:before:origin-left hover:before:h-1 hover:before:origin-left hover:before:scale-x-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background',
                   currentSection &&

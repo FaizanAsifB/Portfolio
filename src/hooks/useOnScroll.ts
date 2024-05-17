@@ -7,25 +7,12 @@ const useOnScroll = () => {
     'nav>ul>li>a'
   ) as NodeListOf<HTMLAnchorElement>
   const sectionEls = document.querySelectorAll('section')
-  const heroImg = document.getElementById('hero-img') as HTMLImageElement
   const headerEl = document.querySelector('header') as HTMLElement
-  const headerBot = headerEl?.offsetHeight
-  const heroTop = heroImg?.offsetTop
-  const topOfPage = window.scrollY
 
-  const intersectedHero = () => {
-    console.log(window.scrollY)
-    // if (
-    //   window.scrollY >= heroTop - headerBot &&
-    //   headerEl.dataset.scrolled === 'false'
-    // )
-    //   headerEl.setAttribute('data-scrolled', 'true')
+  const setHeaderScrolled = () => {
     if (window.scrollY > 0 && headerEl.dataset.scrolled === 'false')
       headerEl.setAttribute('data-scrolled', 'true')
-    if (
-      window.scrollY <= heroTop - headerBot &&
-      headerEl.dataset.scrolled === 'true'
-    )
+    if (window.scrollY === 0 && headerEl.dataset.scrolled === 'true')
       headerEl.setAttribute('data-scrolled', 'false')
   }
 
@@ -43,32 +30,21 @@ const useOnScroll = () => {
   }
 
   useEffect(() => {
-    intersectedHero()
+    setHeaderScrolled()
     intersectedSections()
     window.addEventListener('scroll', () => {
-      intersectedHero()
+      setHeaderScrolled()
       intersectedSections()
     })
     return () => {
       window.removeEventListener('scroll', () => {
-        intersectedHero()
+        setHeaderScrolled()
         intersectedSections()
       })
     }
   })
 
   return currentSection
-
-  // const handleIntersections = () => {
-  //   intersectedHero();
-  //   intersectedSections();
-  // };
-
-  // (() => handleIntersections())();
-
-  // window.onscroll = () => {
-  //   handleIntersections();
-  // };
 }
 
 export default useOnScroll
