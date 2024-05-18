@@ -24,8 +24,6 @@ const ProjectAnimation = ({
     )
   }, [isInView])
 
-  console.log(isInView)
-
   return <div ref={scope}>{children}</div>
 }
 
