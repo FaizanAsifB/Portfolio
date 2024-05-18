@@ -10,7 +10,8 @@ const ProjectAnimation = ({
 }) => {
   const [scope, animate] = useAnimate()
   const isInView = useInView(scope, {
-    once: true
+    once: true,
+    amount: 0.5
   })
 
   useEffect(() => {
@@ -18,10 +19,12 @@ const ProjectAnimation = ({
       scope.current,
       isInView
         ? { opacity: 1, x: 0 }
-        : { opacity: 0, x: isEven ? '100%' : '-100%' },
+        : { opacity: 0, x: isEven ? '400px' : '-400px' },
       { ease: 'easeInOut', duration: 1 }
     )
-  })
+  }, [isInView])
+
+  console.log(isInView)
 
   return <div ref={scope}>{children}</div>
 }
