@@ -5,6 +5,8 @@ import { Icon } from 'astro-icon/components'
 import type { CollectionEntry } from 'astro:content'
 import { cn } from '@/lib/utils'
 import ProjectAnimation from './animations/project-animation'
+
+import { Image } from 'astro:assets'
 interface Props {
   project: CollectionEntry<'projects'>
   isEven: boolean
@@ -22,8 +24,7 @@ const { project, isEven } = Astro.props
   >
     <div class='mx-auto min-h-[400px] lg:w-[640px]'>
       <a href={project.data.liveURL} target='_blank'>
-        <img
-          loading='lazy'
+        <Image
           src={project.data.thumbnail}
           alt={`preview image of ${project.data.title}`}
           class='h-full w-full rounded-t-lg object-cover brightness-90 lg:rounded-lg'

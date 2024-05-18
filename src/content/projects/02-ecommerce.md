@@ -12,8 +12,8 @@ tools:
   - Tailwind CSS
   - PostgreSQL
   - Prisma
-githubURL: https://github.com/exampleuser/tech-trove.git
-liveURL: https://tech-trove-demo.herokuapp.com/
+githubURL: https://github.com/FaizanAsifB/ecommerce-nextjs
+liveURL: https://tech-trove-store.vercel.app
 ---
 
 ## Project Overview
