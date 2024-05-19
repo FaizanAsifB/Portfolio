@@ -1,5 +1,5 @@
 import { zodResolver } from '@hookform/resolvers/zod'
-import { Send } from 'lucide-react'
+import { CircleCheck, LoaderCircle, Send } from 'lucide-react'
 import { useForm } from 'react-hook-form'
 import { z } from 'zod'
 import { Button } from '../ui/button'
@@ -38,8 +38,6 @@ const ContactForm = () => {
   })
 
   async function onSubmit(formValues: z.infer<typeof ContactFormSchema>) {
-    // Do something with the form values.
-    console.log(formValues)
     try {
       const res = await fetch('/api/sendEmail.json', {
         method: 'POST',
@@ -105,9 +103,29 @@ const ContactForm = () => {
           )}
         />
         <div className='my-8 grid w-full place-items-center'>
-          <Button type='submit'>
-            <Send size={20} />
-            Submit
+          <Button
+            type='submit'
+            disabled={
+              form.formState.isSubmitting || form.formState.isSubmitSuccessful
+            }
+          >
+            {form.formState.isSubmitting && (
+              <>
+                <LoaderCircle className='animate-spin' /> Sending...
+              </>
+            )}
+            {form.formState.isSubmitSuccessful && (
+              <>
+                <CircleCheck className='text-green-600' /> Email Sent
+              </>
+            )}
+            {!form.formState.isSubmitSuccessful &&
+              !form.formState.isSubmitting && (
+                <>
+                  <Send size={20} />
+                  Submit
+                </>
+              )}
           </Button>
         </div>
       </form>
