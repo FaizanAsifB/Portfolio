@@ -1,7 +1,7 @@
 ---
 title: Budget App
 description: This application serves as a comprehensive tool for managing personal finances and budgeting effectively. Users have the ability to create and organize different budget categories based on their financial needs and goals.
-thumbnail: src/images/projects/budget.png
+imgName: budget.png
 caption: Manage personal finances
 tools:
   - HTML
@@ -10,7 +10,7 @@ tools:
   - React
   - SASS
 githubURL: https://github.com/FaizanAsifB/forkify-course-app.git
-liveURL: https://geega-budget.netlify.app/
+websiteURL: https://geega-budget.netlify.app/
 ---
 
 ## Project Overview

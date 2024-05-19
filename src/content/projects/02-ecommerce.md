@@ -1,7 +1,7 @@
 ---
 title: Tech Trove
 description: Tech Trove is an e-commerce platform built with Next.js, Tailwind CSS, and PostgreSQL, offering a diverse range of electronic gadgets and appliances, aiming to provide a seamless shopping experience for tech enthusiasts and casual buyers alike.
-thumbnail: src/images/projects/tech-trove.png
+imgName: tech-trove.png
 caption: An e-commerce platform for electronics
 tools:
   - HTML
@@ -13,7 +13,7 @@ tools:
   - PostgreSQL
   - Prisma
 githubURL: https://github.com/FaizanAsifB/ecommerce-nextjs
-liveURL: https://tech-trove-store.vercel.app
+websiteURL: https://tech-trove-store.vercel.app
 ---
 
 ## Project Overview

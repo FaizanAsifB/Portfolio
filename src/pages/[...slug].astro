@@ -28,7 +28,7 @@ const { Content } = await entry.render()
       <h1>{entry.data.title}</h1>
       <figure class='mx-auto h-[400px]'>
         <img
-          src={entry.data.thumbnail}
+          src={entry.data.imgPath}
           class='h-full w-full object-contain'
           alt={entry.data.title}
         />
@@ -50,7 +50,7 @@ const { Content } = await entry.render()
       </ul>
       <div class='not-prose flex items-center justify-center gap-4 py-24'>
         <a
-          href={entry.data.liveURL}
+          href={entry.data.websiteURL}
           target='_blank'
           class={buttonVariants({ variant: 'default' }) + ' flex items-center'}
         >

@@ -1,14 +1,14 @@
 ---
 title: Forkify
 description: Forkify is a simple yet effective webapp designed to help users find delicious recipes quickly and easily. With a focus on simplicity and convenience, the application allows users to search for recipes based on ingredients, cuisine types, or dietary preferences.
-thumbnail: src/images/projects/forkify.png
+imgName: forkify.png
 caption: Search for recipes online
 tools:
   - HTML
   - JavaScript
   - SASS
 githubURL: https://github.com/FaizanAsifB/forkify-course-app.git
-liveURL: https://geega-forkify.netlify.app/
+websiteURL: https://geega-forkify.netlify.app/
 ---
 
 ## Project Overview

@@ -1,7 +1,7 @@
 ---
 title: Name Place Animal Thing
 description: An interactive multiplayer game with real-time functionality that operates on a simple premise, each round, a random alphabet is chosen, and players must provide answers for various categories starting with that letter.
-thumbnail: src/images/projects/name-place.png
+imgName: name-place.png
 caption: An Interactive Multiplayer Game
 tools:
   - HTML
@@ -11,7 +11,7 @@ tools:
   - Firebase
   - Tailwind
 githubURL: https://github.com/FaizanAsifB/name-place-animal-game.git
-liveURL: https://geega-game.netlify.app/
+websiteURL: https://geega-game.netlify.app/
 ---
 
 ## Project Overview

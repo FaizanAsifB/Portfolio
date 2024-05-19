@@ -1,14 +1,14 @@
 ---
 title: Weather App
 description: The Weather App is a simple yet powerful weather application designed to provide users with up-to-date weather information and stunning visual imagery of their selected locations. With a focus on simplicity and aesthetics, the application offers users a delightful experience while staying informed about the weather conditions.
-thumbnail: src/images/projects/weather.png
+imgName: weather.png
 caption: View current weather with a view.
 tools:
   - HTML
   - CSS
   - JavaScript
 githubURL: https://github.com/FaizanAsifB/weather-app.git
-liveURL: https://geega-weather.netlify.app/
+websiteURL: https://geega-weather.netlify.app/
 ---
 
 ## Project Overview

@@ -1,14 +1,14 @@
 ---
 title: Space tourism website
 description: The Space Tourism Website project was an immersive journey into the realm of advanced CSS and Sass, aimed at creating a visually stunning and interactive platform for aspiring space travelers. Inspired by the burgeoning interest in space exploration, the website sought to captivate users with futuristic design elements and compelling content about the wonders of outer space.
-thumbnail: src/images/projects/space.png
+imgName: space.png
 caption: Visit Space!
 tools:
   - HTML
   - Javascript
   - SASS
 githubURL: https://github.com/FaizanAsifB/frontend-mentor-space-tourism.git
-liveURL: https://geega-space-tourism.netlify.app/
+websiteURL: https://geega-space-tourism.netlify.app/
 ---
 
 ### Background

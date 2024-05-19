@@ -13,11 +13,11 @@ const projectCollection = defineCollection({
   schema: z.object({
     title: z.string(),
     description: z.string(),
-    thumbnail: z.string(),
+    imgName: z.string(),
     caption: z.string(),
     tools: z.array(z.string()),
     githubURL: z.string().url(),
-    liveURL: z.string().url()
+    websiteURL: z.string().url()
   })
 })
 // 3. Export a single `collections` object to register your collection(s)
