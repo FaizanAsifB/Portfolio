@@ -14,7 +14,7 @@ import {
 import { Input } from '../ui/input'
 import { Textarea } from '../ui/textarea'
 
-const formSchema = z.object({
+export const ContactFormSchema = z.object({
   name: z.string().min(2).max(50),
   email: z.string().email().min(2).max(50),
   message: z
@@ -22,14 +22,14 @@ const formSchema = z.object({
     .min(10, {
       message: 'Message must be at least 10 characters.'
     })
-    .max(250, {
-      message: 'Message must not be longer than 250 characters.'
+    .max(500, {
+      message: 'Message must not be longer than 500 characters.'
     })
 })
 
 const ContactForm = () => {
-  const form = useForm<z.infer<typeof formSchema>>({
-    resolver: zodResolver(formSchema),
+  const form = useForm<z.infer<typeof ContactFormSchema>>({
+    resolver: zodResolver(ContactFormSchema),
     defaultValues: {
       name: '',
       email: '',
@@ -37,9 +37,21 @@ const ContactForm = () => {
     }
   })
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
+  async function onSubmit(formValues: z.infer<typeof ContactFormSchema>) {
     // Do something with the form values.
-    console.log(values)
+    console.log(formValues)
+    try {
+      const res = await fetch('/api/sendEmail.json', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(formValues)
+      })
+      const data = await res.json()
+    } catch (error) {
+      console.error(error)
+    }
   }
 
   return (
