@@ -1,6 +1,7 @@
 import node from '@astrojs/node'
 import react from '@astrojs/react'
 import tailwind from '@astrojs/tailwind'
+import vercel from '@astrojs/vercel/serverless'
 import icon from 'astro-icon'
 import { defineConfig } from 'astro/config'
 
@@ -14,7 +15,8 @@ export default defineConfig({
     react(),
     icon()
   ],
-  adapter: node({
-    mode: 'standalone'
-  })
+  // adapter: node({
+  //   mode: 'standalone'
+  // }),
+  adapter: vercel()
 })
