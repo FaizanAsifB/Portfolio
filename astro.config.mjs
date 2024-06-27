@@ -1,3 +1,4 @@
+import node from '@astrojs/node'
 import react from '@astrojs/react'
 import tailwind from '@astrojs/tailwind'
 import vercel from '@astrojs/vercel/serverless'
@@ -14,8 +15,8 @@ export default defineConfig({
     react(),
     icon()
   ],
-  // adapter: node({
-  //   mode: 'standalone'
-  // }),
+  adapter: node({
+    mode: 'standalone'
+  }),
   adapter: vercel()
 })
