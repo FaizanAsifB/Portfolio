@@ -19,7 +19,7 @@ export const ContactFormSchema = z.object({
   email: z.string().email().min(2).max(50),
   message: z
     .string()
-    .min(10, {
+    .min(5, {
       message: 'Message must be at least 10 characters.'
     })
     .max(500, {
@@ -47,6 +47,8 @@ const ContactForm = () => {
         body: JSON.stringify(formValues)
       })
       const data = await res.json()
+
+      console.log(data)
     } catch (error) {
       console.error(error)
     }
@@ -116,7 +118,7 @@ const ContactForm = () => {
             )}
             {form.formState.isSubmitSuccessful && (
               <>
-                <CircleCheck className='text-green-600' /> Email Sent
+                <CircleCheck /> Email Sent
               </>
             )}
             {!form.formState.isSubmitSuccessful &&

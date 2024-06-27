@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import HamburgerIcon from './hamburger-icon'
 
 type HamburgerButtonProps = {
