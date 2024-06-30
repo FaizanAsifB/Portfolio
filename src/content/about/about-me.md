@@ -11,7 +11,7 @@ Looking for my [CV](https://www.dropbox.com/scl/fi/lge99usylkol44drd65nt/Faizan-
 
 Since my first encounter with a computer at the age of 12, I've been endlessly fascinated by its potential. With a deep-rooted curiosity and enthusiasm for innovation, I'm always eager to explore the ways in which technology can enhance our lives.
 
-After pursuing my academic and professional endeavors, which led me to a successful decade-long career in supply chain management, forecasting, and logistics planning, I found immense fulfillment in tackling intricate problems head-on and devising effective solutions to address them. However, amidst this success, I always felt a calling towards programming. In August 2023, I made the decision to pursue my lifelong dream of becoming a programmer. Since then, I've been on a relentless quest to expand my skills and explore the endless possibilities in the digital world
+After pursuing my academic and professional endeavors, which led me to a successful decade-long career in supply chain management, forecasting, and logistics planning, I found immense fulfillment in tackling intricate problems head-on and devising effective solutions to address them. However, amidst this success, I always felt a calling towards programming. In August 2023, I made the decision to pursue my lifelong dream of becoming a programmer. Since then, I've been on a relentless quest to expand my skills and explore the endless possibilities in the digital world.
 
 When I'm not immersed in lines of code, I cherish spending time with my
 incredible wife, whose unwavering support has made this journey
