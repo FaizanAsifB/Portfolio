@@ -20,28 +20,45 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
 
 const imgPath = `/src/assets/${project.data.imgName}`
 
-if (!images[imgPath])
+if (project.data.imgName && !images[imgPath])
   throw new Error(
     `"${imgPath}" does not exist in glob: "src/assets/*.{jpeg,jpg,png,gif}"`
   )
 ---
 
-<ProjectAnimation client:only='react' isEven={isEven}>
+<ProjectAnimation client:load isEven={isEven}>
   <div
     class={cn(
       'gap-8 space-y-12 rounded-lg bg-background shadow-lg even:flex-row-reverse lg:flex lg:space-y-0',
       isEven ? 'flex-row-reverse' : ''
     )}
   >
-    <div class='mx-auto min-h-[400px] lg:w-[640px]'>
-      <a href={project.data.websiteURL} target='_blank'>
-        <Image
-          src={images[imgPath]()}
-          alt={`preview image of ${project.data.title}`}
-          class='h-full w-full rounded-t-lg object-cover brightness-90 lg:rounded-lg'
-        />
-      </a>
-    </div>
+    {
+      project.data.imgName && (
+        <div class='mx-auto min-h-[400px] lg:w-[640px]'>
+          <a href={project.data.websiteURL} target='_blank'>
+            <Image
+              src={images[imgPath]()}
+              alt={`preview image of ${project.data.title}`}
+              class='h-full w-full rounded-t-lg object-cover brightness-90 lg:rounded-lg'
+            />
+          </a>
+        </div>
+      )
+    }
+    <!-- {
+      project.data.videoURL && (
+      <iframe
+      width='560'
+      height='400'
+      src={project.data.videoURL}
+      title='YouTube video player'
+      allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
+      referrerpolicy='strict-origin-when-cross-origin'
+      allowfullscreen
+      />
+      )
+      } -->
     <article
       class='flex flex-1 flex-col justify-center space-y-8 px-4 pb-6 lg:p-8'
     >
@@ -51,7 +68,7 @@ if (!images[imgPath])
           {project.data.description}
         </p>
         {
-          project.data.title === 'Forkify' ? (
+          project.data.title === 'Forkify' && (
             <small class='mt-2 flex items-center gap-1 text-muted-foreground'>
               This project was possible thanks to
               <a
@@ -63,7 +80,7 @@ if (!images[imgPath])
                 <Icon name='external-link' size={12} />
               </a>
             </small>
-          ) : null
+          )
         }
 
         <a

@@ -60,10 +60,9 @@ const { title, topId } = Astro.props
     <title>{title}</title>
     <ViewTransitions transition:animate={'fade'} />
   </head>
-  <body class='scroll-smooth bg-background text-foreground'>
+  <body class='bg-background text-foreground'>
     <Header />
     <slot />
     <Footer topId={topId} />
-    <style></style>
   </body>
 </html>

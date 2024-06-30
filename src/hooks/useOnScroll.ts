@@ -32,10 +32,12 @@ const useOnScroll = () => {
   useEffect(() => {
     setHeaderScrolled()
     intersectedSections()
+
     window.addEventListener('scroll', () => {
       setHeaderScrolled()
       intersectedSections()
     })
+
     return () => {
       window.removeEventListener('scroll', () => {
         setHeaderScrolled()

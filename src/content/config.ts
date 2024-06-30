@@ -17,7 +17,8 @@ const projectCollection = defineCollection({
     caption: z.string(),
     tools: z.array(z.string()),
     githubURL: z.string().url(),
-    websiteURL: z.string().url()
+    websiteURL: z.string().url(),
+    videoURL: z.string().url().optional()
   })
 })
 // 3. Export a single `collections` object to register your collection(s)

@@ -24,7 +24,17 @@ const ProjectAnimation = ({
     )
   }, [isInView])
 
-  return <div ref={scope}>{children}</div>
+  return (
+    <div
+      style={{
+        opacity: 0,
+        transform: `translateX(${isEven ? '400px' : '-400px'})`
+      }}
+      ref={scope}
+    >
+      {children}
+    </div>
+  )
 }
 
 export default ProjectAnimation
