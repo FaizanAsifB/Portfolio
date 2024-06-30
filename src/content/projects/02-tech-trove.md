@@ -1,7 +1,7 @@
 ---
 title: Tech Trove
 description: Tech Trove is an e-commerce platform built with Next.js, Tailwind CSS, and PostgreSQL, offering a diverse range of electronic gadgets and appliances, aiming to provide a seamless shopping experience for tech enthusiasts and casual buyers alike.
-imgName: ''
+imgName: tech-trove.png
 videoURL: https://www.youtube-nocookie.com/embed/on_oXOdLpzw?si=ab42GRDuMr2ntORL&modestbranding=1&autohide=1&&rl=0
 caption: An e-commerce platform for electronics
 tools:

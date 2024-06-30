@@ -116,6 +116,24 @@ if (project.data.imgName && !images[imgPath])
           <Icon name='github' size={24} />
           <span class='text-base'>Source Code</span>
         </a>
+
+        {
+          project.data.videoURL && (
+            <div>
+              <a
+                href={project.data.videoURL}
+                target='_blank'
+                class={buttonVariants({
+                  variant: 'outline',
+                  className: 'flex items-center'
+                })}
+              >
+                <Icon name='watch' size={24} />
+                <span class='text-base'>Watch Video</span>
+              </a>
+            </div>
+          )
+        }
       </div>
     </article>
   </div>
