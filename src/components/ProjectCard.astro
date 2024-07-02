@@ -18,6 +18,9 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
   '/src/assets/*.{jpeg,jpg,png,gif}'
 )
 
+const attribution: { text: string; url: string; urlText: string } =
+  project.data.attribution && Object.assign({}, ...project.data.attribution)
+
 const imgPath = `/src/assets/${project.data.imgName}`
 
 if (project.data.imgName && !images[imgPath])
@@ -55,15 +58,16 @@ if (project.data.imgName && !images[imgPath])
           {project.data.description}
         </p>
         {
-          project.data.title === 'Forkify' && (
+          project.data.attribution && (
             <small class='mt-2 flex items-center gap-1 text-muted-foreground'>
-              This project was possible thanks to
+              {attribution.text}
+
               <a
-                href='https://codingheroes.io/'
+                href={attribution.url}
                 target='_blank'
                 class='flex items-center gap-1 text-primary'
               >
-                codingheros.io
+                {attribution.urlText}
                 <Icon name='external-link' size={12} />
               </a>
             </small>
