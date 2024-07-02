@@ -3,6 +3,9 @@ import { getEntry } from 'astro:content'
 import { buttonVariants } from '@/components/ui/button.tsx'
 import SectionAnimation from './animations/section-animation'
 import { FloatAnimation } from './animations/float-animation'
+import aboutMeImg from '../assets/about-me2.jpg'
+import { Image } from 'astro:assets'
+
 const aboutEntry = await getEntry('about', 'about-me')
 ---
 
@@ -10,15 +13,17 @@ const aboutEntry = await getEntry('about', 'about-me')
   <SectionAnimation client:only='react'>
     <div class='container'>
       <h2>About Me</h2>
-      <div class='gap-12 lg:flex'>
-        <!-- <div class='mx-auto w-[80%] lg:h-[400px] lg:w-[400px]'> -->
-        <FloatAnimation src='/images/about/about-me.jpeg' client:load />
-        <!-- <img
-            src='/images/about/2.jpeg'
-            alt='Faizan Asif'
-            class='h-full w-full object-contain'
-          /> -->
-        <!-- </div> -->
+      <div class='justify-center gap-12 lg:flex'>
+        <FloatAnimation client:load>
+          <Image
+            src={aboutMeImg}
+            height='376'
+            width='350'
+            class='rounded-xl object-contain group-hover/card:shadow-xl'
+            alt='A picture of Faizan Asif'
+          />
+        </FloatAnimation>
+
         <article class='max-w-[65ch] flex-1 text-lg tracking-wider nav:mt-8'>
           <p class='mb-8'>
             {aboutEntry.data.description}
