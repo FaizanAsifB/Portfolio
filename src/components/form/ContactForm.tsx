@@ -20,7 +20,7 @@ export const ContactFormSchema = z.object({
   message: z
     .string()
     .min(5, {
-      message: 'Message must be at least 10 characters.'
+      message: 'Message must be at least 5 characters.'
     })
     .max(500, {
       message: 'Message must not be longer than 500 characters.'
@@ -46,9 +46,10 @@ const ContactForm = () => {
         },
         body: JSON.stringify(formValues)
       })
-      const data = await res.json()
 
-      console.log(data)
+      if (!res.ok) {
+        throw new Error('Failed to send email')
+      }
     } catch (error) {
       console.error(error)
     }
