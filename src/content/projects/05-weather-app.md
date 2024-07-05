@@ -1,6 +1,6 @@
 ---
 title: Weather App
-description: The Weather App is a simple yet powerful weather application designed to provide users with up-to-date weather information and stunning visual imagery of their selected locations. With a focus on simplicity and aesthetics, the application offers users a delightful experience while staying informed about the weather conditions.
+description: The Weather App is a user-friendly application that offers up-to-date weather information and captivating visual imagery of user-selected locations. With a focus on simplicity, it ensures a delightful user experience while keeping users informed about accurate weather conditions.
 imgName: weather
 caption: View current weather with a view.
 tools:

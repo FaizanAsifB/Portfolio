@@ -102,7 +102,7 @@
     @apply scroll-m-20 text-2xl font-semibold tracking-tight;
   }
   p {
-    @apply text-lg leading-7 lg:text-xl [&:not(:first-child)]:mt-6;
+    @apply text-base leading-7 lg:text-lg xl:text-xl [&:not(:first-child)]:mt-6;
   }
 }
 
@@ -303,14 +303,5 @@
     stroke-dasharray: 90 207;
     stroke-dashoffset: -134;
     stroke-width: 10;
-  }
-}
-
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
   }
 }

@@ -15,35 +15,37 @@ interface Props {
 
 const { project, isEven } = Astro.props
 const images = import.meta.glob<{ default: ImageMetadata }>(
-  '/src/assets/*.{jpeg,jpg,png,gif}'
+  '/src/assets/project-images/*.{jpeg,jpg,png,gif}'
 )
 
 const attribution: { text: string; url: string; urlText: string } =
   project.data.attribution && Object.assign({}, ...project.data.attribution)
 
-const imgPath = `/src/assets/${project.data.imgName}.jpg`
+const imgPath = `/src/assets/project-images/${project.data.imgName}.jpg`
 
 if (project.data.imgName && !images[imgPath])
   throw new Error(
-    `"${imgPath}" does not exist in glob: "src/assets/*.{jpeg,jpg,png,gif}"`
+    `"${imgPath}" does not exist in glob: "src/assets/project-images/*.{jpeg,jpg,png,gif}"`
   )
 ---
 
 <ProjectAnimation client:load isEven={isEven}>
   <div
     class={cn(
-      'gap-8 space-y-12 rounded-lg bg-background shadow-lg even:flex-row-reverse lg:flex lg:space-y-0',
+      'gap-8 space-y-12 rounded-lg bg-background shadow-lg even:flex-row-reverse lg:flex lg:space-y-0 ',
       isEven ? 'flex-row-reverse' : ''
     )}
   >
     {
       project.data.imgName && (
-        <div class='mx-auto min-h-[400px] lg:w-[640px]'>
+        <div class='mx-auto aspect-[4/3] lg:aspect-[4/3] lg:w-[500px] xl:w-[600px]'>
           <a href={project.data.websiteURL} target='_blank'>
             <Image
-              src={images[imgPath]()}
+              src={images[`${imgPath}`]()}
+              widths={[500, 600]}
+              sizes={`(min-width: 240px) 1080px, (min-width: 1024px) 500px,  (min-width: 1175px) 540px, (min-width: 1280px) 600px`}
               alt={`preview image of ${project.data.title}`}
-              class='h-full w-full rounded-t-lg object-cover brightness-90 lg:rounded-lg'
+              class='h-full w-full rounded-t-lg object-cover object-top brightness-90 lg:rounded-lg lg:object-center'
             />
           </a>
         </div>
@@ -52,14 +54,23 @@ if (project.data.imgName && !images[imgPath])
     <article
       class='flex flex-1 flex-col justify-center space-y-8 px-4 pb-6 lg:p-8'
     >
-      <h3 class='capitalize'>{project.data.title}</h3>
+      <h3 class='text-nowrap capitalize'>{project.data.title}</h3>
       <div>
-        <p>
+        <p class='h-[196px]'>
           {project.data.description}
         </p>
+
+        <a
+          href={project.slug}
+          class={buttonVariants({
+            variant: 'link',
+            size: 'auto',
+            className: 'mt-2'
+          })}>Read the case study &rarr;</a
+        >
         {
           project.data.attribution && (
-            <small class='mt-2 flex items-center gap-1 text-muted-foreground'>
+            <small class='absolute mt-1 flex items-center gap-1 text-muted-foreground'>
               {attribution.text}
 
               <a
@@ -73,15 +84,6 @@ if (project.data.imgName && !images[imgPath])
             </small>
           )
         }
-
-        <a
-          href={project.slug}
-          class={buttonVariants({
-            variant: 'link',
-            size: 'auto',
-            className: 'mt-2'
-          })}>Read the case study &rarr;</a
-        >
       </div>
       <div class='flex flex-wrap gap-2'>
         {project.data.tools.map((tool: string) => <Badge>{tool}</Badge>)}
