@@ -46,7 +46,6 @@ const { title, topId } = Astro.props
     })
   }
 </script>
-
 <html
   lang='en'
   class='dark overflow-x-hidden scroll-smooth font-mada scrollbar-thin scrollbar-track-primary/40 scrollbar-thumb-primary scrollbar-track-rounded-full scrollbar-thumb-rounded-full'
@@ -59,6 +58,20 @@ const { title, topId } = Astro.props
 
     <title>{title}</title>
     <ViewTransitions transition:animate={'fade'} />
+    <!-- <script is:inline>
+      document.addEventListener('astro:before-preparation', async (ev) => {
+        const originalLoader = ev.loader
+        ev.loader = async function () {
+          const { startSpinner } = await import('./spinner.ts')
+          const stop = startSpinner()
+          await originalLoader()
+
+          setTimeout(() => {
+            stop()
+          }, 3000)
+        }
+      })
+    </script> -->
   </head>
   <body class='bg-background text-foreground'>
     <Header />

@@ -21,7 +21,7 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
 const attribution: { text: string; url: string; urlText: string } =
   project.data.attribution && Object.assign({}, ...project.data.attribution)
 
-const imgPath = `/src/assets/${project.data.imgName}`
+const imgPath = `/src/assets/${project.data.imgName}.jpg`
 
 if (project.data.imgName && !images[imgPath])
   throw new Error(

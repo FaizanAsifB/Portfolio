@@ -11,7 +11,7 @@ const ProjectAnimation = ({
   const [scope, animate] = useAnimate()
   const isInView = useInView(scope, {
     once: true,
-    amount: 0.5
+    amount: 0.4
   })
 
   useEffect(() => {
@@ -19,8 +19,8 @@ const ProjectAnimation = ({
       scope.current,
       isInView
         ? { opacity: 1, x: 0 }
-        : { opacity: 0, x: isEven ? '400px' : '-400px' },
-      { ease: 'easeInOut', duration: 1 }
+        : { opacity: 0, x: isEven ? '200px' : '-200px' },
+      { ease: 'easeInOut', duration: 0.8 }
     )
   }, [isInView])
 
@@ -28,7 +28,7 @@ const ProjectAnimation = ({
     <div
       style={{
         opacity: 0,
-        transform: `translateX(${isEven ? '400px' : '-400px'})`
+        transform: `translateX(${isEven ? '200px' : '-200px'})`
       }}
       ref={scope}
     >

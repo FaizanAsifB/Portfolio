@@ -1,7 +1,7 @@
 ---
 title: Forkify
 description: Forkify is a simple yet effective webapp designed to help users find delicious recipes quickly and easily. With a focus on simplicity and convenience, the application allows users to search for recipes based on ingredients, cuisine types, or dietary preferences.
-imgName: forkify.png
+imgName: forkify
 caption: Search for recipes online
 attribution:
   - text: 'This project was possible thanks to'
@@ -26,7 +26,6 @@ _This project was possible thanks to [codingheros.io](https://codingheroes.io/)_
 The primary goal of the Recipe Search WebApp project was to provide users with a hassle-free way to discover new recipes and meal ideas. The application aimed to offer a user-friendly interface and intuitive search functionality, allowing users to find recipes that match their preferences and dietary needs.
 
 - Recipe Search: Users can search for recipes by entering keywords, ingredients, or specific dietary requirements.
-<!-- - Filter Options: The application offers filter options to refine search results based on cuisine type, meal category, cooking time, and more. -->
 - Recipe Details: Users can view detailed information for each recipe, including ingredients, preparation steps, cooking instructions, and nutritional information.
 - Bookmarking: Users have the option to bookmark their favorite recipes for easy access later.
 - **User-Generated Recipes:** Empower users to contribute their own recipes to the platform, fostering a sense of community and diversity in culinary exploration.

@@ -1,7 +1,7 @@
 ---
 title: Space tourism website
 description: The Space Tourism Website project was an immersive journey into the realm of advanced CSS and Sass, aimed at creating a visually stunning and interactive platform for aspiring space travelers. Inspired by the burgeoning interest in space exploration, the website sought to captivate users with futuristic design elements and compelling content about the wonders of outer space.
-imgName: space.png
+imgName: space
 caption: Visit Space!
 tools:
   - HTML

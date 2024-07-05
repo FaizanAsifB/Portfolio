@@ -16,6 +16,29 @@ const Navigation = () => {
   const currentSection = useOnScroll()
 
   useEffect(() => {
+    if (isDesktop && width >= 1024) {
+      const listItems: NodeListOf<HTMLElement> =
+        document.querySelectorAll('#nav-link')
+
+      listItems.forEach((li) => {
+        li.style.transform = 'scale(0.5)'
+        li.style.opacity = '0'
+        li.style.filter = 'blur(10px)'
+      })
+      animate([
+        [
+          'li',
+          {
+            transform: 'scale(1)',
+            opacity: 1,
+            filter: 'blur(0px)',
+            display: 'block'
+          },
+          { duration: 0.3, delay: stagger(0.05), at: '-0.1' }
+        ]
+      ])
+    }
+
     if (isDesktop && width < 1024) {
       setIsDesktop(false)
     }
@@ -79,7 +102,7 @@ const Navigation = () => {
       >
         {navLinks.map((link) => {
           return (
-            <li key={link.title}>
+            <li id='nav-link' key={link.title}>
               <a
                 href={link.href}
                 className={twMerge(
