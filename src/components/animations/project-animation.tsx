@@ -1,5 +1,5 @@
 import { useAnimate, useInView } from 'framer-motion'
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 
 const ProjectAnimation = ({
   children,
@@ -9,12 +9,14 @@ const ProjectAnimation = ({
   isEven: boolean
 }) => {
   const [scope, animate] = useAnimate()
+  const [inViewAmount, setInViewAmount] = useState(0.2)
   const isInView = useInView(scope, {
     once: true,
-    amount: 0.4
+    amount: 0.2
   })
 
   useEffect(() => {
+    setInViewAmount(window.innerWidth >= 1024 ? 0.4 : 0.2)
     animate(
       scope.current,
       isInView

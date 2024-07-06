@@ -48,7 +48,7 @@ const { title, topId } = Astro.props
 </script>
 <html
   lang='en'
-  class='dark overflow-x-hidden scroll-smooth font-mada scrollbar-thin scrollbar-track-primary/40 scrollbar-thumb-primary scrollbar-track-rounded-full scrollbar-thumb-rounded-full'
+  class='dark overflow-x-clip scroll-smooth font-mada scrollbar-thin scrollbar-track-primary/40 scrollbar-thumb-primary scrollbar-track-rounded-full scrollbar-thumb-rounded-full'
 >
   <head>
     <meta charset='utf-8' />
@@ -59,7 +59,7 @@ const { title, topId } = Astro.props
     <title>{title}</title>
     <ViewTransitions transition:animate={'fade'} />
   </head>
-  <body class='w-screen bg-background text-foreground'>
+  <body class='overflow-x-hidden bg-background text-foreground'>
     <Header />
     <slot />
     <Footer topId={topId} />
