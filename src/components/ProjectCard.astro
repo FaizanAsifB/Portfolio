@@ -32,18 +32,18 @@ if (project.data.imgName && !images[imgPath])
 <ProjectAnimation client:load isEven={isEven}>
   <div
     class={cn(
-      'gap-8 space-y-12 rounded-lg bg-background shadow-lg even:flex-row-reverse lg:flex lg:space-y-0 h-full',
-      isEven ? 'flex-row-reverse' : ''
+      'gap-8 space-y-12 rounded-lg bg-background shadow-lg  lg:flex lg:space-y-0 h-full flex flex-col lg:flex-row',
+      isEven ? 'lg:flex-row-reverse' : ''
     )}
   >
     {
       project.data.imgName && (
-        <div class='aspect-video lg:aspect-[4/3] lg:w-[500px] xl:w-[600px]'>
+        <div class='aspect-video lg:aspect-[4/3] lg:w-[440px] xl:w-[600px] [@media(min-width:1160px)]:w-[500px]'>
           <a href={project.data.websiteURL} target='_blank'>
             <Image
               src={images[imgPath]()}
-              widths={[500, 600, 700]}
-              sizes={`(min-width: 240px) 700px, (min-width: 1024px) 500px,  (min-width: 1175px) 540px, (min-width: 1280px) 600px`}
+              widths={[420, 500, 600, 700]}
+              sizes={`(min-width: 240px) 700px, (min-width: 1024px) 420px,  (min-width: 1160px) 500px, (min-width: 1280px) 600px`}
               alt={`preview image of ${project.data.title}`}
               class='h-full w-full rounded-t-lg object-cover object-top brightness-90 lg:rounded-lg lg:object-center'
             />
@@ -51,9 +51,7 @@ if (project.data.imgName && !images[imgPath])
         </div>
       )
     }
-    <article
-      class='flex flex-1 flex-col justify-center space-y-8 px-4 pb-6 lg:p-8'
-    >
+    <article class='flex flex-1 flex-col space-y-8 px-4 pb-6 lg:p-8'>
       <h3 class='text-nowrap capitalize'>{project.data.title}</h3>
       <div>
         <div class='relative'>
@@ -87,50 +85,54 @@ if (project.data.imgName && !images[imgPath])
           })}>Read the case study &rarr;</a
         >
       </div>
-      <div class='flex flex-wrap gap-2'>
+      <div class='flex flex-wrap items-center gap-2'>
         {project.data.tools.map((tool: string) => <Badge>{tool}</Badge>)}
       </div>
-      <div class='flex flex-wrap items-center justify-center gap-4'>
-        <a
-          href={project.data.websiteURL}
-          target='_blank'
-          class={buttonVariants({
-            variant: 'link',
-            size: 'auto'
-          })}
+      <div class='flex flex-1 flex-col'>
+        <div
+          class='mt-auto flex flex-wrap items-center justify-center gap-4 lg:flex-nowrap lg:justify-start'
         >
-          <span class='text-base'> View Website </span>
-          <Icon name='website' />
-        </a>
+          <a
+            href={project.data.websiteURL}
+            target='_blank'
+            class={buttonVariants({
+              variant: 'link',
+              size: 'auto'
+            })}
+          >
+            <span class='text-base'> View Website </span>
+            <Icon name='website' />
+          </a>
 
-        <a
-          href={project.data.githubURL}
-          target='_blank'
-          class={buttonVariants({
-            variant: 'outline'
-          })}
-        >
-          <Icon name='github' size={24} />
-          <span class='text-base'>Source Code</span>
-        </a>
+          <a
+            href={project.data.githubURL}
+            target='_blank'
+            class={buttonVariants({
+              variant: 'outline'
+            })}
+          >
+            <Icon name='github' size={24} />
+            <span class='text-base'>Source Code</span>
+          </a>
 
-        {
-          project.data.videoURL && (
-            <>
-              <a
-                href={project.data.videoURL}
-                target='_blank'
-                class={buttonVariants({
-                  variant: 'outline',
-                  className: 'w-full'
-                })}
-              >
-                <Icon name='watch' size={24} />
-                <span class='text-base'>Watch Video</span>
-              </a>
-            </>
-          )
-        }
+          {
+            project.data.videoURL && (
+              <>
+                <a
+                  href={project.data.videoURL}
+                  target='_blank'
+                  class={buttonVariants({
+                    variant: 'outline',
+                    className: 'w-full lg:w-auto'
+                  })}
+                >
+                  <Icon name='watch' size={24} />
+                  <span class='text-base'>Watch Video</span>
+                </a>
+              </>
+            )
+          }
+        </div>
       </div>
     </article>
   </div>

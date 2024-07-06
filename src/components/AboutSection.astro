@@ -24,7 +24,9 @@ const aboutEntry = await getEntry('about', 'about-me')
           />
         </FloatAnimation>
 
-        <article class='max-w-[65ch] flex-1 text-lg tracking-wider nav:mt-8'>
+        <article
+          class='mx-auto max-w-[65ch] flex-1 tracking-wider lg:mx-0 nav:mt-8'
+        >
           <p class='mb-8'>
             {aboutEntry.data.description}
           </p>
