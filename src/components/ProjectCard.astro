@@ -38,11 +38,11 @@ if (project.data.imgName && !images[imgPath])
   >
     {
       project.data.imgName && (
-        <div class='aspect-video lg:aspect-[4/3] lg:w-[440px] xl:w-[600px] [@media(min-width:1160px)]:w-[500px]'>
+        <div class='lgx:w-[500px] aspect-video lg:aspect-[4/3] lg:w-[400px] xl:w-[600px]'>
           <a href={project.data.websiteURL} target='_blank'>
             <Image
               src={images[imgPath]()}
-              widths={[420, 500, 600, 700]}
+              widths={[400, 500, 600, 700]}
               sizes={`(min-width: 240px) 700px, (min-width: 1024px) 420px,  (min-width: 1160px) 500px, (min-width: 1280px) 600px`}
               alt={`preview image of ${project.data.title}`}
               class='h-full w-full rounded-t-lg object-cover object-top brightness-90 lg:rounded-lg lg:object-center'
@@ -55,7 +55,7 @@ if (project.data.imgName && !images[imgPath])
       <h3 class='text-nowrap capitalize'>{project.data.title}</h3>
       <div>
         <div class='relative'>
-          <p class='md:h-[196px] lg:h-auto'>
+          <p class='md:max-lg:h-[196px]'>
             {project.data.description}
           </p>
           {
@@ -122,8 +122,8 @@ if (project.data.imgName && !images[imgPath])
                   href={project.data.videoURL}
                   target='_blank'
                   class={buttonVariants({
-                    variant: 'outline',
-                    className: 'w-full lg:w-auto'
+                    variant: 'outline'
+                    // className: 'w-full xl:w-auto'
                   })}
                 >
                   <Icon name='watch' size={24} />
