@@ -27,6 +27,7 @@ const ProjectAnimation = ({
   return (
     <div
       style={{
+        height: '100%',
         opacity: 0,
         transform: `translateX(${isEven ? '200px' : '-200px'})`
       }}
