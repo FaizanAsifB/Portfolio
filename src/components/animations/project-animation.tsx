@@ -12,11 +12,11 @@ const ProjectAnimation = ({
   const [inViewAmount, setInViewAmount] = useState(0.2)
   const isInView = useInView(scope, {
     once: true,
-    amount: 0.2
+    amount: inViewAmount
   })
 
   useEffect(() => {
-    setInViewAmount(window.innerWidth >= 1024 ? 0.4 : 0.2)
+    setInViewAmount(window.innerWidth >= 1024 ? 0.6 : 0.2)
     animate(
       scope.current,
       isInView

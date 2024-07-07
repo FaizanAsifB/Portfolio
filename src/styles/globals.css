@@ -79,10 +79,6 @@
     @apply border-border;
   }
 
-  html {
-    overflow-x: hidden;
-  }
-
   h1,
   h2 {
     @apply font-poppins;

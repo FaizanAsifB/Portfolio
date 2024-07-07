@@ -5,7 +5,6 @@ import { Icon } from 'astro-icon/components'
 import type { CollectionEntry } from 'astro:content'
 import { cn } from '@/lib/utils'
 import ProjectAnimation from './animations/project-animation'
-
 import { Image } from 'astro:assets'
 import type { ImageMetadata } from 'astro'
 interface Props {
@@ -23,6 +22,8 @@ const attribution: { text: string; url: string; urlText: string } =
 
 const imgPath = `/src/assets/project-images/${project.data.imgName}.jpg`
 
+const imgPathSquare = `/src/assets/project-images/name-place1.jpg`
+
 if (project.data.imgName && !images[imgPath])
   throw new Error(
     `"${imgPath}" does not exist in glob: "src/assets/project-images/*.{jpeg,jpg,png,gif}"`
@@ -38,15 +39,22 @@ if (project.data.imgName && !images[imgPath])
   >
     {
       project.data.imgName && (
-        <div class='lgx:w-[500px] aspect-video lg:aspect-[4/3] lg:w-[400px] xl:w-[600px]'>
+        <div class='aspect-video lg:w-[450px] lgx:aspect-[4/3] lgx:w-[500px] xl:w-[600px]'>
           <a href={project.data.websiteURL} target='_blank'>
             <Image
               src={images[imgPath]()}
-              widths={[400, 500, 600, 700]}
-              sizes={`(min-width: 240px) 700px, (min-width: 1024px) 420px,  (min-width: 1160px) 500px, (min-width: 1280px) 600px`}
+              widths={[450, 500, 600, 700]}
+              sizes={`(min-width: 240px) 700px, (min-width: 1024px) 450px,  (min-width: 1160px) 500px, (min-width: 1280px) 600px`}
               alt={`preview image of ${project.data.title}`}
-              class='h-full w-full rounded-t-lg object-cover object-top brightness-90 lg:rounded-lg lg:object-center'
+              class='h-full w-full rounded-t-lg object-cover object-top brightness-90 lg:hidden lg:rounded-lg lg:object-center lgx:block'
             />
+            {/* <Image
+              src={images[imgPathSquare]()}
+              widths={[450]}
+              sizes={`(min-width: 1024px) 450px `}
+              alt={`preview image of ${project.data.title}`}
+              class='hidden h-full w-full rounded-t-lg object-cover object-top brightness-90 lg:block lg:rounded-lg lg:object-center lgx:hidden'
+            /> */}
           </a>
         </div>
       )
