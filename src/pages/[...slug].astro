@@ -28,7 +28,7 @@ const { Content } = await entry.render()
       <h1>{entry.data.title}</h1>
       <figure class='mx-auto h-[400px]'>
         <img
-          src={`src/assets/${entry.data.imgName}`}
+          src={entry.data.defaultImage.src}
           class='h-full w-full object-contain'
           alt={entry.data.title}
         />
