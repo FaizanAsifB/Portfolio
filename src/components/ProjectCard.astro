@@ -22,7 +22,9 @@ const attribution: { text: string; url: string; urlText: string } =
 
 const imgPath = `/src/assets/project-images/${project.data.imgName}.jpg`
 
-const imgPathSquare = `/src/assets/project-images/${project.data.imgName}-square.jpg`
+const imgPathSquare = `/src/assets/project-images/${project.data.imgName}-square.webp`
+
+const imgPathWide = `/src/assets/project-images/${project.data.imgName}-wide.webp`
 
 if (project.data.imgName && !images[imgPath])
   throw new Error(
@@ -33,7 +35,7 @@ if (project.data.imgName && !images[imgPath])
 <ProjectAnimation client:load isEven={isEven}>
   <div
     class={cn(
-      'gap-8 space-y-12 rounded-lg bg-background shadow-lg  lg:flex lg:space-y-0 h-full flex flex-col lg:flex-row hover:scale-[1.02] ',
+      'gap-8 space-y-12 rounded-lg bg-background shadow-lg lg:flex lg:space-y-0 h-full lg:h-auto flex flex-col lg:flex-row hover:scale-[1.02] ',
       isEven ? 'lg:flex-row-reverse' : ''
     )}
   >
@@ -44,31 +46,34 @@ if (project.data.imgName && !images[imgPath])
             <picture>
               <source
                 srcset={imgPathSquare}
-                media='(min-width: 1024px) and (max-width: 1160px)'
-                sizes='450px'
+                media='(min-width: 1024px) and (max-width: 1159px)'
                 width={450}
-                type='image/jpeg'
+                type='image/webp'
+              />
+              <source
+                srcset={imgPathWide}
+                media='(max-width: 767px)'
+                width={700}
+                type='image/webp'
               />
               <Image
                 src={images[imgPath]()}
                 widths={[450, 500, 600, 700]}
-                sizes={`(min-width: 240px) 700px, (min-width: 1024px) 450px,  (min-width: 1160px) 500px, (min-width: 1280px) 600px`}
+                sizes={`(min-width: 120px) 700px, (min-width: 1024px) 450px,  (min-width: 1160px) 500px, (min-width: 1280px) 600px`}
                 alt={`preview image of ${project.data.title}`}
-                class='block aspect-video h-full w-full rounded-t-lg object-cover object-top brightness-90 md:aspect-[4/3] lg:rounded-lg lg:object-center'
+                class='block aspect-video h-full w-full rounded-t-lg object-cover object-top brightness-90 md:aspect-[4/3] lg:aspect-square lg:rounded-lg lg:object-center lgx:aspect-[4/3]'
               />
             </picture>
-            {/* <Image
-              src={images[imgPathSquare]()}
-              widths={[450]}
-              sizes={`(min-width: 1024px) 450px `}
-              alt={`preview image of ${project.data.title}`}
-              class='hidden h-full w-full rounded-t-lg object-cover object-top brightness-90 lg:block lg:rounded-lg lg:object-center lgx:hidden'
-            /> */}
           </a>
         </div>
       )
     }
-    <article class='flex flex-1 flex-col space-y-8 px-4 pb-6 lg:p-8'>
+    <article
+      class={cn(
+        'flex flex-1 flex-col space-y-8 px-4 pb-6 lg:py-8',
+        isEven ? 'lg:pr-0 pl-8' : 'lg:pl-0 pr-8'
+      )}
+    >
       <h3 class='text-nowrap capitalize'>{project.data.title}</h3>
       <div>
         <div class='relative'>
@@ -139,8 +144,8 @@ if (project.data.imgName && !images[imgPath])
                   href={project.data.videoURL}
                   target='_blank'
                   class={buttonVariants({
-                    variant: 'outline'
-                    // className: 'w-full xl:w-auto'
+                    variant: 'outline',
+                    className: 'w-full lg:w-auto'
                   })}
                 >
                   <Icon name='watch' size={24} />
