@@ -46,50 +46,47 @@ const attribution: { text: string; url: string; urlText: string } =
 <ProjectAnimation client:load isEven={isEven}>
   <div
     class={cn(
-      'gap-8 space-y-12 rounded-lg bg-background shadow-lg lg:flex lg:space-y-0 h-full lg:h-auto flex flex-col lg:flex-row hover:scale-[1.02] ',
+      'gap-8 md:gap-10 rounded-lg bg-background shadow-lg lg:flex lg:space-y-0 md:h-full lg:h-auto flex flex-col lg:flex-row hover:scale-[1.02] xl:gap-12',
       isEven ? 'lg:flex-row-reverse' : ''
     )}
   >
-    {
-      project.data.defaultImage.src && (
-        <div class='lg:w-[450px] lgx:w-[500px] xl:w-[600px]'>
-          <a href={project.data.websiteURL} target='_blank'>
-            <picture>
-              <source
-                srcset={project.data.squareImage.src}
-                media='(min-width: 1024px) and (max-width: 1159px)'
-              />
-              <source
-                srcset={project.data.wideImage.src}
-                media='(max-width: 767px)'
-              />
-              <Image
-                src={project.data.defaultImage}
-                widths={[450, 500, 600, 700]}
-                sizes={`(min-width: 120px) 700px, (min-width: 1024px) 450px,  (min-width: 1160px) 500px, (min-width: 1280px) 600px`}
-                alt={`preview image of ${project.data.title}`}
-                class='block aspect-video h-full w-full rounded-t-lg object-cover object-top brightness-90 md:aspect-[4/3] lg:aspect-square lg:rounded-lg lg:object-center lgx:aspect-[4/3]'
-              />
-            </picture>
-          </a>
-        </div>
-      )
-    }
+    <div class='lg:w-[450px] lgx:w-[500px] xl:w-[600px]'>
+      <a href={project.data.websiteURL} target='_blank'>
+        <picture>
+          <source
+            srcset={project.data.squareImage.src}
+            media='(min-width: 1024px) and (max-width: 1159px)'
+          />
+          <source
+            srcset={project.data.wideImage.src}
+            media='(max-width: 767px)'
+          />
+          <Image
+            src={project.data.defaultImage}
+            widths={[450, 500, 600, 700]}
+            sizes={`(min-width: 120px) 700px, (min-width: 1024px) 450px,  (min-width: 1160px) 500px, (min-width: 1280px) 600px`}
+            alt={`preview image of ${project.data.title}`}
+            class='block aspect-video h-full w-full rounded-t-lg object-cover object-top brightness-90 md:aspect-[4/3] lg:aspect-square lg:rounded-lg lg:object-center lgx:aspect-[4/3]'
+          />
+        </picture>
+      </a>
+    </div>
+
     <article
       class={cn(
-        'flex flex-1 flex-col space-y-8 px-4 pb-6 lg:py-8',
-        isEven ? 'lg:pr-0 pl-8' : 'lg:pl-0 pr-8'
+        'flex flex-1 flex-col  px-4 pb-6 md:px-6 md:pb-8 lg:p-10  xl:p-12',
+        isEven ? 'lg:pr-0 xl:pr-0' : 'lg:pl-0 xl:pl-0'
       )}
     >
       <h3 class='text-nowrap capitalize'>{project.data.title}</h3>
-      <div>
+      <div class='mt-6'>
         <div class='relative'>
-          <p class='md:h-[196px] lg:h-auto'>
+          <p>
             {project.data.description}
           </p>
           {
             project.data.attribution && (
-              <small class='mt-1 flex items-center gap-1 text-muted-foreground md:absolute md:bottom-0 lg:static'>
+              <small class='mt-1 flex items-center gap-1 text-muted-foreground'>
                 {attribution.text}
 
                 <a
@@ -114,12 +111,14 @@ const attribution: { text: string; url: string; urlText: string } =
           })}>Read the case study &rarr;</a
         >
       </div>
-      <div class='flex flex-wrap items-center gap-2'>
-        {project.data.tools.map((tool: string) => <Badge>{tool}</Badge>)}
+      <div class='mt-8 flex md:flex-1'>
+        <div class='mt-auto flex flex-wrap gap-2'>
+          {project.data.tools.map((tool: string) => <Badge>{tool}</Badge>)}
+        </div>
       </div>
-      <div class='flex flex-1 flex-col'>
+      <div class='mt-8 flex flex-col'>
         <div
-          class='mt-auto flex flex-wrap items-center justify-center gap-4 lg:flex-nowrap lg:justify-start'
+          class='flex flex-wrap items-center justify-center gap-4 md:mt-auto lg:flex-nowrap lg:justify-start'
         >
           <a
             href={project.data.websiteURL}
