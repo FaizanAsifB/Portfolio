@@ -14,9 +14,9 @@ interface Props {
 }
 
 const { project, isEven } = Astro.props
-const images = import.meta.glob<{ default: ImageMetadata }>(
-  '/src/assets/project-images/*.{jpeg,jpg,png,gif}'
-)
+// const images = import.meta.glob<{ default: ImageMetadata }>(
+//   '/src/assets/project-images/*.{jpeg,jpg,png,gif}'
+// )
 
 const attribution: { text: string; url: string; urlText: string } =
   project.data.attribution && Object.assign({}, ...project.data.attribution)
@@ -51,7 +51,7 @@ const attribution: { text: string; url: string; urlText: string } =
     )}
   >
     {
-      project.data.defaultImage && (
+      project.data.defaultImage.src && (
         <div class='lg:w-[450px] lgx:w-[500px] xl:w-[600px]'>
           <a href={project.data.websiteURL} target='_blank'>
             <picture>
