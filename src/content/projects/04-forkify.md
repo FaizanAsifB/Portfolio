@@ -1,7 +1,9 @@
 ---
 title: Forkify
 description: A simple yet effective webapp designed to help users find delicious recipes quickly and easily. With an intuitive design the application allows users to search for recipes based on ingredients, cuisine types, or dietary preferences.
-imgName: forkify
+defaultImage: ./project-images/forkify.jpg
+squareImage: ./project-images/forkify-square.webp
+wideImage: ./project-images/forkify-wide.webp
 caption: Search for recipes online
 attribution:
   - text: 'This project was possible thanks to'

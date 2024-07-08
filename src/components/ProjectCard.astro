@@ -21,26 +21,26 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
 const attribution: { text: string; url: string; urlText: string } =
   project.data.attribution && Object.assign({}, ...project.data.attribution)
 
-const defaultImgPath = `/src/assets/project-images/${project.data.imgName}.jpg`
+// const defaultImgPath = `/src/assets/project-images/${project.data.imgName}.jpg`
 
-const imgSquare = await getImage({
-  src: `/src/assets/project-images/${project.data.imgName}-square.webp`,
-  format: 'webp',
-  width: 450,
-  height: 450
-})
+// const imgSquare = await getImage({
+//   src: `/src/assets/project-images/${project.data.imgName}-square.webp`,
+//   format: 'webp',
+//   width: 450,
+//   height: 450
+// })
 
-const imgWide = await getImage({
-  src: `/src/assets/project-images/${project.data.imgName}-wide.webp`,
-  format: 'webp',
-  width: 700,
-  height: 394
-})
+// const imgWide = await getImage({
+//   src: `/src/assets/project-images/${project.data.imgName}-wide.webp`,
+//   format: 'webp',
+//   width: 700,
+//   height: 394
+// })
 
-if (project.data.imgName && !images[defaultImgPath])
-  throw new Error(
-    `"${defaultImgPath}" does not exist in glob: "src/assets/project-images/*.{jpeg,jpg,png,gif}"`
-  )
+// if (project.data.imgName && !images[defaultImgPath])
+//   throw new Error(
+//     `"${defaultImgPath}" does not exist in glob: "src/assets/project-images/*.{jpeg,jpg,png,gif}"`
+//   )
 ---
 
 <ProjectAnimation client:load isEven={isEven}>
@@ -51,17 +51,20 @@ if (project.data.imgName && !images[defaultImgPath])
     )}
   >
     {
-      project.data.imgName && (
+      project.data.defaultImage && (
         <div class='lg:w-[450px] lgx:w-[500px] xl:w-[600px]'>
           <a href={project.data.websiteURL} target='_blank'>
             <picture>
               <source
-                srcset={imgSquare.src}
+                srcset={project.data.squareImage.src}
                 media='(min-width: 1024px) and (max-width: 1159px)'
               />
-              <source srcset={imgWide.src} media='(max-width: 767px)' />
+              <source
+                srcset={project.data.wideImage.src}
+                media='(max-width: 767px)'
+              />
               <Image
-                src={images[defaultImgPath]()}
+                src={project.data.defaultImage}
                 widths={[450, 500, 600, 700]}
                 sizes={`(min-width: 120px) 700px, (min-width: 1024px) 450px,  (min-width: 1160px) 500px, (min-width: 1280px) 600px`}
                 alt={`preview image of ${project.data.title}`}

@@ -17,18 +17,21 @@ const aboutCollection = defineCollection({
 
 const projectCollection = defineCollection({
   type: 'content',
-  schema: z.object({
-    title: z.string(),
-    description: z.string(),
-    imgName: z.string(),
-    caption: z.string(),
-    footnote: z.string().optional(),
-    attribution: z.record(z.string(), z.string()).array().optional(),
-    tools: z.array(z.string()),
-    githubURL: z.string().url(),
-    websiteURL: z.string().url(),
-    videoURL: z.string().url().optional()
-  })
+  schema: ({ image }) =>
+    z.object({
+      title: z.string(),
+      description: z.string(),
+      defaultImage: image(),
+      squareImage: image(),
+      wideImage: image(),
+      caption: z.string(),
+      footnote: z.string().optional(),
+      attribution: z.record(z.string(), z.string()).array().optional(),
+      tools: z.array(z.string()),
+      githubURL: z.string().url(),
+      websiteURL: z.string().url(),
+      videoURL: z.string().url().optional()
+    })
 })
 
 // 3. Export a single `collections` object to register your collection(s)
