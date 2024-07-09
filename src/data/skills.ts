@@ -13,7 +13,7 @@ export const skills = [
   { title: 'GitHub', logoName: 'github' },
   { title: 'MongoDB', logoName: 'mongo' },
   { title: 'Node.js', logoName: 'node' },
-  { title: 'Express.js', logoName: 'express' },
+  // { title: 'Express.js', logoName: 'express' },
   { title: 'Next.js', logoName: 'nextjs' },
   { title: 'Prisma', logoName: 'prisma' }
 ]
