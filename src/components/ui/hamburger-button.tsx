@@ -10,7 +10,7 @@ const HamburgerButton = ({ isOpen, setIsOpen }: HamburgerButtonProps) => {
     <button
       className={`mob-menu relative z-[9999] lg:hidden ${isOpen && 'opened'}`}
       onClick={() => setIsOpen(!isOpen)}
-      aria-label='Main Menu '
+      aria-label='Navigation Menu'
     >
       <HamburgerIcon />
     </button>

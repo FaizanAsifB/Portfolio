@@ -1,5 +1,6 @@
 import { navLinks } from '@/data/nav-links.ts'
 import useOnScroll from '@/hooks/useOnScroll'
+import { cn } from '@/lib/utils'
 import { stagger, useAnimate, type AnimationSequence } from 'framer-motion'
 import { useEffect, useState } from 'react'
 import { twMerge } from 'tailwind-merge'
@@ -45,6 +46,8 @@ const Navigation = () => {
     if (!isDesktop && width >= 1024) {
       setIsDesktop(true)
 
+      if (isOpen) setIsOpen(false)
+
       animate([
         [scope.current, { transform: 'translateX(0)' }],
         [
@@ -89,36 +92,61 @@ const Navigation = () => {
 
       animate(menuAnimations)
     }
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        setIsOpen(false)
+      }
+    })
+
+    return () => {
+      document.removeEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+          setIsOpen(false)
+        }
+      })
+    }
   }, [isOpen, width, isDesktop])
 
   return (
-    <nav className='flex items-center gap-8 lg:flex-row-reverse'>
-      <ThemeSwitch />
-      <HamburgerButton isOpen={isOpen} setIsOpen={setIsOpen} />
+    <>
+      <div
+        className={cn(
+          'pointer-events-none fixed inset-0 z-10 hidden bg-background/70',
+          isOpen ? 'pointer-events-auto block' : ''
+        )}
+        onClick={() => setIsOpen(false)}
+        id='overlay'
+      ></div>
+      <nav className='flex items-center gap-8 lg:flex-row-reverse'>
+        <ThemeSwitch />
+        <HamburgerButton isOpen={isOpen} setIsOpen={setIsOpen} />
 
-      <ul
-        ref={scope}
-        className='flex gap-8 nav:fixed nav:inset-[0_0_0_30%] nav:ml-auto nav:translate-x-full nav:flex-col nav:gap-16 nav:bg-primary/10 nav:px-16 nav:py-60 nav:opacity-0 nav:backdrop-blur-3xl'
-      >
-        {navLinks.map((link) => {
-          return (
-            <li id='nav-link' key={link.title}>
-              <a
-                href={link.href}
-                className={twMerge(
-                  'before:left:0 relative rounded-lg before:absolute before:-bottom-1 before:h-1 before:w-full before:origin-right before:scale-x-0 before:rounded-sm before:bg-primary before:transition-transform before:duration-300 data-[scrolled=true]:before:origin-left hover:before:h-1 hover:before:origin-left hover:before:scale-x-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background',
-                  currentSection &&
-                    link.href.includes(currentSection) &&
-                    'before:origin-left before:scale-x-100'
-                )}
-              >
-                {link.title}
-              </a>
-            </li>
-          )
-        })}
-      </ul>
-    </nav>
+        <ul
+          ref={scope}
+          className='z-20 flex gap-8 nav:fixed nav:inset-0 nav:ml-auto nav:w-3/4 nav:max-w-sm nav:translate-x-full nav:flex-col nav:gap-16 nav:bg-secondary nav:px-16 nav:py-60 nav:opacity-0 nav:shadow-lg'
+          tabIndex={-1}
+        >
+          {navLinks.map((link) => {
+            return (
+              <li id='nav-link' key={link.title}>
+                <a
+                  href={link.href}
+                  className={twMerge(
+                    'before:left:0 relative rounded-lg before:absolute before:-bottom-1 before:h-1 before:w-full before:origin-right before:scale-x-0 before:rounded-sm before:bg-primary before:transition-transform before:duration-300 data-[scrolled=true]:before:origin-left hover:before:h-1 hover:before:origin-left hover:before:scale-x-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background',
+                    currentSection &&
+                      link.href.includes(currentSection) &&
+                      'before:origin-left before:scale-x-100'
+                  )}
+                >
+                  {link.title}
+                </a>
+              </li>
+            )
+          })}
+        </ul>
+      </nav>
+    </>
   )
 }
 export default Navigation
