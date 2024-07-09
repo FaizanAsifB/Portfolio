@@ -6,7 +6,7 @@ squareImage: ./project-images/budget-square.webp
 wideImage: ./project-images/budget-wide.jpg
 caption: Manage personal finances
 tools:
-  - HTML
+  - **HTML**
   - CSS
   - TypeScript
   - React

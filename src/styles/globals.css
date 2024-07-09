@@ -193,8 +193,8 @@
 
 @layer components {
   .menu {
-    --s: 24px; /* control the size */
-    --c: hsl(var(--foreground)); /* the color */
+    --s: 24px;
+    --c: hsl(var(--foreground));
 
     height: var(--s);
     aspect-ratio: 1;
