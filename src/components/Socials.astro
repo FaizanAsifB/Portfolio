@@ -3,14 +3,14 @@ import { socials } from '@/data/socials'
 import { Icon } from 'astro-icon/components'
 ---
 
-<ul class='my-4 flex items-center gap-8 lg:my-8'>
+<ul class='my-6 flex items-center gap-3 lg:my-8 lg:gap-4'>
   {
     socials.map((social) => (
       <li class='group'>
         <a
           href={social.url}
           target='_blank'
-          class='inline-block text-4xl text-foreground group-hover:animate-bounce group-hover:text-primary'
+          class='inline-block text-3xl text-foreground group-hover:animate-bounce group-hover:text-primary lg:text-4xl'
         >
           <Icon
             name={social.title.toLowerCase()}

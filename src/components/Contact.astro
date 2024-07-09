@@ -18,7 +18,7 @@ import SectionAnimation from './animations/section-animation'
             Reach out today to explore how I can be an asset to your team as a
             dedicated web developer!
           </p>
-          <ul class='space-y-6 text-xl'>
+          <ul class='space-y-2 text-base md:text-lg lg:space-y-3 xl:text-xl'>
             <li class='flex items-center gap-4 text-primary'>
               <Icon name='location' />
               <span class='text-foreground'>Stockholm, Sweden</span>
@@ -27,28 +27,12 @@ import SectionAnimation from './animations/section-animation'
               <Icon name='phone' />
               <span class='text-foreground'>+46 72 786 10 96</span>
             </li>
-            <!-- <li class="flex gap-4 items-center text-primary">
-            <svg
-            xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              class="lucide lucide-mail"
-              ><rect width="20" height="16" x="2" y="4" rx="2"></rect><path
-              d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg
-              ><span class="text-foreground">FaizanAsif.dev@gmail.com</span>
-            </li> -->
           </ul>
           <Socials />
         </article>
         <article class='w-full pt-8 md:max-w-[500px] md:pl-8 md:pt-0'>
           <h4>Message Me</h4>
-          <ContactForm client:visible />
+          <ContactForm client:only='react' />
         </article>
       </div>
     </div>
