@@ -9,7 +9,7 @@ import Lottie from 'react-lottie-player/dist/LottiePlayerLight'
 
 <section id='hero'>
   <div
-    class='container relative mt-24 flex min-h-screen flex-col items-center justify-center gap-12 lg:mt-0 lg:flex-row-reverse lg:justify-end lg:gap-24'
+    class='container relative flex min-h-svh flex-col items-center justify-center gap-12 pt-24 lg:flex-row-reverse lg:justify-end lg:gap-24 lg:pt-0'
   >
     <div id='hero-img' class='w-full max-w-[500px] rounded-xl bg-white'>
       <Lottie
@@ -25,7 +25,7 @@ import Lottie from 'react-lottie-player/dist/LottiePlayerLight'
     <article>
       <h1 class='text-4xl font-bold tracking-tight md:text-5xl lg:text-6xl'>
         Hello, I'm <br />
-        <span class='inline-block pt-2 text-primary'>Faizan Asif</span>
+        <span class='inline-block text-primary lg:pt-2'>Faizan Asif</span>
       </h1>
       <div
         class='mt-4 text-xl text-cyan-600 dark:text-cyan-400 md:text-2xl'
@@ -47,17 +47,14 @@ import Lottie from 'react-lottie-player/dist/LottiePlayerLight'
         />
       </div>
 
-      <p class='max-w-[65ch]'>
+      <p class='mt-2 max-w-[65ch]'>
         Dedicated to building responsive and streamlined websites and web
         applications that enhance overall user experience
         and&nbsp;functionality.
       </p>
       <Socials />
 
-      <a
-        href='#contact'
-        class={buttonVariants({ variant: 'default' }) + ' mt-2'}
-      >
+      <a href='#contact' class={buttonVariants({ variant: 'default' })}>
         <Icon name='message' />
 
         Contact Me</a
