@@ -6,6 +6,9 @@ import type { CollectionEntry } from 'astro:content'
 import { Badge } from '@/components/ui/badge'
 import { buttonVariants } from '@/components/ui/button'
 import { Icon } from 'astro-icon/components'
+import { Image } from 'astro:assets'
+import type { ActionError } from 'astro:actions'
+
 interface Props {
   entry: CollectionEntry<'projects'>
 }
@@ -23,20 +26,24 @@ const { Content } = await entry.render()
 ---
 
 <BaseLayout title={entry.data.title} topId={`project-${entry.slug}`}>
-  <section class='prose-: container py-48' id={`project-${entry.slug}`}>
+  <section
+    class='prose-: container pb-24 pt-32 lg:py-36'
+    id={`project-${entry.slug}`}
+  >
     <Prose>
       <h1>{entry.data.title}</h1>
-      <figure class='mx-auto h-[400px]'>
-        <img
-          src={entry.data.defaultImage.src}
-          class='h-full w-full object-contain'
-          alt={entry.data.title}
+      <figure>
+        <Image
+          src={entry.data.wideImage}
+          widths={[640, 800]}
+          sizes={`(min-width: 120px) 640px, (min-width: 1024px) 800px`}
+          alt={`preview image of ${entry.data.title}`}
+          class='aspect-video h-full w-full object-cover'
         />
         <figcaption class='text-center'>
           {`${entry.data.title}: ${entry.data.caption}`}
         </figcaption>
       </figure>
-      <div class='p-4'></div>
       <Content />
       <h3>Tools Used</h3>
       <ul class='not-prose flex flex-wrap gap-2'>
@@ -48,7 +55,9 @@ const { Content } = await entry.render()
           ))
         }
       </ul>
-      <div class='not-prose flex items-center justify-center gap-4 py-24'>
+      <div
+        class='not-prose flex flex-wrap items-center justify-center gap-4 pt-16 md:pt-24 lg:flex-nowrap'
+      >
         <a
           href={entry.data.websiteURL}
           target='_blank'
@@ -68,6 +77,20 @@ const { Content } = await entry.render()
           <Icon name='github' />
           <span class='text-base'>Source Code</span>
         </a>
+        {
+          entry.data.videoURL && (
+            <a
+              href={entry.data.videoURL}
+              target='_blank'
+              class={buttonVariants({
+                variant: 'outline'
+              })}
+            >
+              <Icon name='watch' size={24} />
+              <span class='text-base'>Watch Video</span>
+            </a>
+          )
+        }
       </div>
     </Prose>
   </section>

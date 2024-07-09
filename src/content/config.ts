@@ -21,7 +21,7 @@ const projectCollection = defineCollection({
     z.object({
       title: z.string(),
       description: z.string(),
-      defaultImage: image(),
+      narrowImage: image(),
       squareImage: image(),
       wideImage: image(),
       caption: z.string(),

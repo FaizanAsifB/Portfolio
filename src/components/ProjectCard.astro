@@ -6,41 +6,15 @@ import type { CollectionEntry } from 'astro:content'
 import { cn } from '@/lib/utils'
 import ProjectAnimation from './animations/project-animation'
 import { Image } from 'astro:assets'
-import type { ImageMetadata } from 'astro'
-import { getImage } from 'astro:assets'
 interface Props {
   project: CollectionEntry<'projects'>
   isEven: boolean
 }
 
 const { project, isEven } = Astro.props
-// const images = import.meta.glob<{ default: ImageMetadata }>(
-//   '/src/assets/project-images/*.{jpeg,jpg,png,gif}'
-// )
 
 const attribution: { text: string; url: string; urlText: string } =
   project.data.attribution && Object.assign({}, ...project.data.attribution)
-
-// const defaultImgPath = `/src/assets/project-images/${project.data.imgName}.jpg`
-
-// const imgSquare = await getImage({
-//   src: `/src/assets/project-images/${project.data.imgName}-square.webp`,
-//   format: 'webp',
-//   width: 450,
-//   height: 450
-// })
-
-// const imgWide = await getImage({
-//   src: `/src/assets/project-images/${project.data.imgName}-wide.webp`,
-//   format: 'webp',
-//   width: 700,
-//   height: 394
-// })
-
-// if (project.data.imgName && !images[defaultImgPath])
-//   throw new Error(
-//     `"${defaultImgPath}" does not exist in glob: "src/assets/project-images/*.{jpeg,jpg,png,gif}"`
-//   )
 ---
 
 <ProjectAnimation client:load isEven={isEven}>
@@ -58,11 +32,11 @@ const attribution: { text: string; url: string; urlText: string } =
             media='(min-width: 1024px) and (max-width: 1159px)'
           />
           <source
-            srcset={project.data.wideImage.src}
-            media='(max-width: 767px)'
+            srcset={project.data.narrowImage.src}
+            media='(min-width: 1280px)'
           />
           <Image
-            src={project.data.defaultImage}
+            src={project.data.wideImage}
             widths={[450, 500, 600, 700]}
             sizes={`(min-width: 120px) 700px, (min-width: 1024px) 450px,  (min-width: 1160px) 500px, (min-width: 1280px) 600px`}
             alt={`preview image of ${project.data.title}`}
@@ -145,19 +119,17 @@ const attribution: { text: string; url: string; urlText: string } =
 
           {
             project.data.videoURL && (
-              <>
-                <a
-                  href={project.data.videoURL}
-                  target='_blank'
-                  class={buttonVariants({
-                    variant: 'outline',
-                    className: 'w-full lg:w-auto'
-                  })}
-                >
-                  <Icon name='watch' size={24} />
-                  <span class='text-base'>Watch Video</span>
-                </a>
-              </>
+              <a
+                href={project.data.videoURL}
+                target='_blank'
+                class={buttonVariants({
+                  variant: 'outline',
+                  className: 'w-full lg:w-auto'
+                })}
+              >
+                <Icon name='watch' size={24} />
+                <span class='text-base'>Watch Video</span>
+              </a>
             )
           }
         </div>

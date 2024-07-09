@@ -1,9 +1,9 @@
 ---
 title: Budget App
 description: This application serves as a comprehensive tool for managing personal finances and budgeting effectively. Users have the ability to create and organize different budget categories based on their financial needs and goals.
-defaultImage: ./project-images/budget.jpg
+narrowImage: ./project-images/budget-narrow.webp
 squareImage: ./project-images/budget-square.webp
-wideImage: ./project-images/budget-wide.webp
+wideImage: ./project-images/budget-wide.jpg
 caption: Manage personal finances
 tools:
   - HTML
