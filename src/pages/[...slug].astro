@@ -35,7 +35,7 @@ const { Content } = await entry.render()
         <Image
           src={entry.data.wideImage}
           widths={[640, 800]}
-          sizes={`(min-width: 120px) 640px, (min-width: 1024px) 800px`}
+          sizes={`(max-width: 1279px) 640px, (min-width: 1280px) 800px`}
           alt={`preview image of ${entry.data.title}`}
           class='aspect-video h-full w-full object-cover'
         />
