@@ -8,7 +8,7 @@ caption: Manage personal finances
 tools:
   - HTML
   - CSS
-  - TypeScript
+  - JavaScript
   - React
   - SASS
 githubURL: https://github.com/FaizanAsifB/forkify-course-app.git
