@@ -124,7 +124,7 @@ const Navigation = () => {
 
         <ul
           ref={scope}
-          className='z-20 flex gap-8 nav:fixed nav:inset-0 nav:ml-auto nav:w-3/4 nav:max-w-sm nav:translate-x-full nav:flex-col nav:gap-16 nav:bg-secondary nav:px-16 nav:py-60 nav:opacity-0 nav:shadow-lg'
+          className='z-20 flex gap-8 nav:fixed nav:inset-0 nav:ml-auto nav:w-3/4 nav:max-w-sm nav:translate-x-full nav:flex-col nav:justify-center nav:gap-6 nav:bg-secondary nav:pl-12 nav:opacity-0 nav:shadow-lg'
           tabIndex={-1}
         >
           {navLinks.map((link) => {
