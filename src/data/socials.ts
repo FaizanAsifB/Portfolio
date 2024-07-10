@@ -6,7 +6,7 @@ export const socials = [
   },
   {
     title: 'Linkedin',
-    url: 'https://linkedin.com/in/faizan-butt-41ab051b2',
+    url: 'https://linkedin.com/in/faizan-asif-butt',
     icon: 'fa-brands fa-linkedin'
   },
   {
