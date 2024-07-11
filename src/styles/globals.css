@@ -106,6 +106,7 @@
   font-family: 'Poppins';
   font-weight: 400;
   font-style: normal;
+  font-display: swap;
   src:
     local(''),
     url('/fonts/poppins/Poppins-Regular.woff2') format('woff2'),
@@ -116,6 +117,7 @@
   font-family: 'Poppins';
   font-weight: 500;
   font-style: normal;
+  font-display: swap;
   src:
     local(''),
     url('/fonts/poppins/Poppins-Medium.woff2') format('woff2'),
@@ -126,6 +128,7 @@
   font-family: 'Poppins';
   font-weight: 600;
   font-style: normal;
+  font-display: swap;
   src:
     local(''),
     url('/fonts/poppins/Poppins-SemiBold.woff2') format('woff2'),
@@ -136,6 +139,7 @@
   font-family: 'Poppins';
   font-weight: 700;
   font-style: normal;
+  font-display: swap;
   src:
     local(''),
     url('/fonts/poppins/Poppins-Bold.woff2') format('woff2'),
@@ -146,6 +150,7 @@
   font-family: 'Poppins';
   font-weight: 800;
   font-style: normal;
+  font-display: swap;
   src:
     local(''),
     url('/fonts/poppins/Poppins-ExtraBold.woff2') format('woff2'),
@@ -156,6 +161,7 @@
   font-family: 'Poppins';
   font-weight: 900;
   font-style: normal;
+  font-display: swap;
   src:
     local(''),
     url('/fonts/poppins/Poppins-Black.woff2') format('woff2'),
@@ -166,6 +172,7 @@
   font-family: 'Mada';
   font-weight: 400;
   font-style: normal;
+  font-display: swap;
   src:
     local(''),
     url('/fonts/mada/Mada-Regular.woff2') format('woff2'),
@@ -176,6 +183,7 @@
   font-family: 'CrimsonText';
   font-weight: 400;
   font-style: normal;
+  font-display: swap;
   src:
     local(''),
     url('/fonts/crimson-text/CrimsonText-Regular.woff2') format('woff2'),
@@ -185,6 +193,7 @@
   font-family: 'CrimsonText';
   font-weight: 600;
   font-style: normal;
+  font-display: swap;
   src:
     local(''),
     url('/fonts/crimson-text/CrimsonText-SemiBold.woff2') format('woff2'),
