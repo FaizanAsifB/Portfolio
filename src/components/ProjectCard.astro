@@ -74,6 +74,13 @@ const attribution: { text: string; url: string; urlText: string } =
               </small>
             )
           }
+          {
+            project.data.demoAccount && (
+              <p class='mt-1 text-sm lg:text-base'>
+                {project.data.demoAccount}
+              </p>
+            )
+          }
         </div>
 
         <a

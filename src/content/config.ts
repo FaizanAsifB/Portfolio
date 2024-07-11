@@ -26,6 +26,7 @@ const projectCollection = defineCollection({
       wideImage: image(),
       caption: z.string(),
       footnote: z.string().optional(),
+      demoAccount: z.string().optional(),
       attribution: z.record(z.string(), z.string()).array().optional(),
       tools: z.array(z.string()),
       githubURL: z.string().url(),
