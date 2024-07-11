@@ -54,6 +54,7 @@ const { Content } = await entry.render()
           ))
         }
       </ul>
+
       <div
         class='not-prose flex flex-wrap items-center justify-center gap-4 pt-16 md:pt-24 lg:flex-nowrap'
       >
@@ -91,6 +92,13 @@ const { Content } = await entry.render()
           )
         }
       </div>
+      {
+        entry.data.demoAccount && (
+          <p class='text-center text-sm lg:text-base'>
+            {entry.data.demoAccount}
+          </p>
+        )
+      }
     </Prose>
   </section>
 </BaseLayout>
