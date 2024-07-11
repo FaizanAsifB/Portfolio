@@ -17,7 +17,7 @@ const attribution: { text: string; url: string; urlText: string } =
   project.data.attribution && Object.assign({}, ...project.data.attribution)
 ---
 
-<ProjectAnimation client:load isEven={isEven}>
+<ProjectAnimation client:load isEven={isEven} client:load>
   <div
     class={cn(
       'gap-8 md:gap-10 rounded-lg bg-background shadow-lg lg:flex lg:space-y-0 md:h-full lg:h-auto flex flex-col lg:flex-row hover:scale-[1.02] xl:gap-12',

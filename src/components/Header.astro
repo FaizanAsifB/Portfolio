@@ -3,19 +3,23 @@ import Navigation from '@/components/Navigation'
 import { Icon } from 'astro-icon/components'
 ---
 
-<header
-  data-scrolled='false'
-  class='fixed inset-[0_0_auto] z-50 bg-transparent py-4 data-[scrolled=true]:bg-background/90 data-[scrolled=true]:shadow lg:py-6'
-  transition:persist
->
-  <div
-    class='container flex items-center justify-between text-2xl font-semibold'
+<section id='header'>
+  <header
+    data-scrolled='false'
+    class='fixed inset-[0_0_auto] z-50 bg-transparent py-4 data-[scrolled=true]:bg-background/90 data-[scrolled=true]:shadow lg:py-6'
   >
-    <Icon
-      title="logo for Faizan's portfolio"
-      name='faizan-logo'
-      class='text-primary'
-    />
-    <Navigation client:only='react' />
-  </div>
-</header>
+    <div
+      class='container flex items-center justify-between text-2xl font-semibold'
+    >
+      <a href='#header'>
+        <Icon
+          title="logo for Faizan's portfolio"
+          name='faizan-logo'
+          class='text-primary'
+        />
+      </a>
+
+      <Navigation client:only='react' />
+    </div>
+  </header>
+</section>

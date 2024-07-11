@@ -6,8 +6,8 @@ const entry = await getEntry('about', 'about-me')
 const { Content } = await entry.render()
 ---
 
-<RootLayout title={entry.data.title} topId='about'>
-  <section class='container py-48' id='about'>
+<RootLayout title={entry.data.title}>
+  <section class='container py-48' id='about-me'>
     <Prose>
       <Content />
     </Prose>

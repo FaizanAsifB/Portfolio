@@ -24,7 +24,7 @@ const { entry } = Astro.props
 const { Content } = await entry.render()
 ---
 
-<BaseLayout title={entry.data.title} topId={`project-${entry.slug}`}>
+<BaseLayout title={entry.data.title} >
   <section
     class='prose-: container pb-24 pt-32 lg:py-36'
     id={`project-${entry.slug}`}

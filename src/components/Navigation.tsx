@@ -2,7 +2,7 @@ import { navLinks } from '@/data/nav-links.ts'
 import useOnScroll from '@/hooks/useOnScroll'
 import { cn } from '@/lib/utils'
 import { stagger, useAnimate, type AnimationSequence } from 'framer-motion'
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { twMerge } from 'tailwind-merge'
 import { useWindowSize } from 'usehooks-ts'
 import ThemeSwitch from './ui/ThemeSwitch'
@@ -10,35 +10,34 @@ import HamburgerButton from './ui/hamburger-button'
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false)
-
   const [scope, animate] = useAnimate()
   const { width = 0 } = useWindowSize()
   const [isDesktop, setIsDesktop] = useState(width >= 1024)
   const currentSection = useOnScroll()
 
   useEffect(() => {
-    if (isDesktop && width >= 1024) {
-      const listItems: NodeListOf<HTMLElement> =
-        document.querySelectorAll('#nav-link')
+    // if (isDesktop && width >= 1024) {
+    //   const listItems: NodeListOf<HTMLElement> =
+    //     document.querySelectorAll('#nav-link')
 
-      listItems.forEach((li) => {
-        li.style.transform = 'scale(0.5)'
-        li.style.opacity = '0'
-        li.style.filter = 'blur(10px)'
-      })
-      animate([
-        [
-          'li',
-          {
-            transform: 'scale(1)',
-            opacity: 1,
-            filter: 'blur(0px)',
-            display: 'block'
-          },
-          { duration: 0.3, delay: stagger(0.05), at: '-0.1' }
-        ]
-      ])
-    }
+    //   listItems.forEach((li) => {
+    //     li.style.transform = 'scale(0.5)'
+    //     li.style.opacity = '0'
+    //     li.style.filter = 'blur(10px)'
+    //   })
+    //   animate([
+    //     [
+    //       'li',
+    //       {
+    //         transform: 'scale(1)',
+    //         opacity: 1,
+    //         filter: 'blur(0px)',
+    //         display: 'block'
+    //       },
+    //       { duration: 0.3, delay: stagger(0.05), at: '-0.1' }
+    //     ]
+    //   ])
+    // }
 
     if (isDesktop && width < 1024) {
       setIsDesktop(false)
@@ -133,7 +132,7 @@ const Navigation = () => {
                 <a
                   href={link.href}
                   className={twMerge(
-                    'before:left:0 relative rounded-lg before:absolute before:-bottom-1 before:h-1 before:w-full before:origin-right before:scale-x-0 before:rounded-sm before:bg-primary before:transition-transform before:duration-300 data-[scrolled=true]:before:origin-left hover:before:h-1 hover:before:origin-left hover:before:scale-x-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background',
+                    'before:left:0 relative rounded-lg before:absolute before:-bottom-1 before:h-1 before:w-full before:origin-right before:scale-x-0 before:rounded-sm before:bg-primary before:transition-transform before:duration-300 hover:before:h-1 hover:before:origin-left hover:before:scale-x-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background',
                     currentSection &&
                       link.href.includes(currentSection) &&
                       'before:origin-left before:scale-x-100'
