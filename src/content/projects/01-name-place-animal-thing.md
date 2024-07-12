@@ -12,7 +12,7 @@ tools:
   - TypeScript
   - React
   - Firebase
-  - Tailwind
+  - Tailwind CSS
 githubURL: https://github.com/FaizanAsifB/name-place-animal-game.git
 websiteURL: https://geega-game.netlify.app/
 ---
