@@ -7,10 +7,9 @@ wideImage: ./project-images/budget-wide.jpg
 caption: Manage personal finances
 tools:
   - HTML
-  - CSS
   - JavaScript
   - React
-  - SASS
+  - Tailwind
 githubURL: https://github.com/FaizanAsifB/forkify-course-app.git
 websiteURL: https://geega-budget.netlify.app/
 ---
