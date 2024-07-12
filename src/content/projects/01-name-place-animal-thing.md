@@ -4,7 +4,7 @@ description: An interactive multiplayer game with real-time functionality that o
 narrowImage: ./project-images/name-place-narrow.webp
 squareImage: ./project-images/name-place-square.webp
 wideImage: ./project-images/name-place-wide.jpg
-videoURL: https://www.youtube.com/watch?v=on_oXOdLpzw
+videoURL: https://www.youtube.com/watch?v=wouT7cCO4CE
 caption: An Interactive Multiplayer Game
 tools:
   - HTML
