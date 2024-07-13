@@ -1,6 +1,6 @@
 ---
 title: About:Faizan Asif
-description: I am a self-taught web developer with a passion for solving problems and creating immersive digital experiences. I am constantly seeking new challenges and opportunities for personal growth, always striving to push boundaries and expand my horizons. As I embark on my journey in web development, I am eager to apply my passion for innovation and dedication to excellence to contribute meaningfully to the tech industry.
+description: I am a self-taught web developer with a passion for solving problems and creating immersive digital experiences. I am constantly seeking new challenges and opportunities for personal growth, always striving to push boundaries and expand my horizons. As I embark on my journey in web development, I am eager to apply my passion for innovation and dedication to excellence and contribute meaningfully to the tech industry.
 ---
 
 # My Journey and Passions
