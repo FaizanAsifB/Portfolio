@@ -2,10 +2,10 @@
 import { defineCollection, z } from 'astro:content'
 // 2. Define your collection(s)
 
-const javascriptDataSchema = z.object({
-  key1: z.string(),
-  key2: z.string()
-})
+// const javascriptDataSchema = z.object({
+//   key1: z.string(),
+//   key2: z.string()
+// })
 
 const aboutCollection = defineCollection({
   type: 'content',
