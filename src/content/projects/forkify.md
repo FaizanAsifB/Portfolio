@@ -15,6 +15,7 @@ tools:
   - SASS
 githubURL: https://github.com/FaizanAsifB/forkify-course-app.git
 websiteURL: https://geega-forkify.netlify.app/
+gridPosition: 5
 ---
 
 ## Project Overview

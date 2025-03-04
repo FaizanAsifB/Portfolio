@@ -112,9 +112,10 @@ const attribution: { text: string; url: string; urlText: string } =
             <span class='text-base'> View Website </span>
             <Icon name='website' />
           </a>
-
+          {
+          project.data?.githubUrl &&
           <a
-            href={project.data.githubURL}
+            href={project.data?.githubURL}
             target='_blank'
             class={buttonVariants({
               variant: 'outline'
@@ -124,6 +125,7 @@ const attribution: { text: string; url: string; urlText: string } =
             <span class='text-base'>Source Code</span>
           </a>
 
+          }
           {
             project.data.videoURL && (
               <a

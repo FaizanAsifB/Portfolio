@@ -29,9 +29,10 @@ const projectCollection = defineCollection({
       demoAccount: z.string().optional(),
       attribution: z.record(z.string(), z.string()).array().optional(),
       tools: z.array(z.string()),
-      githubURL: z.string().url(),
+      githubURL: z.string().url().optional(),
       websiteURL: z.string().url(),
-      videoURL: z.string().url().optional()
+      videoURL: z.string().url().optional(),
+      gridPosition: z.number()
     })
 })
 

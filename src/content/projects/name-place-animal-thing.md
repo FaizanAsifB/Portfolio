@@ -15,6 +15,7 @@ tools:
   - Tailwind CSS
 githubURL: https://github.com/FaizanAsifB/name-place-animal-game.git
 websiteURL: https://geega-game.netlify.app/
+gridPosition: 2
 ---
 
 ## Project Overview

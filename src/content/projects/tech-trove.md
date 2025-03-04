@@ -18,6 +18,7 @@ tools:
   - Prisma
 githubURL: https://github.com/FaizanAsifB/ecommerce-nextjs
 websiteURL: https://tech-trove-store.vercel.app
+gridPosition: 3
 ---
 
 ## Project Overview

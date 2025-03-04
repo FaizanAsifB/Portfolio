@@ -12,6 +12,7 @@ tools:
   - Tailwind CSS
 githubURL: https://github.com/FaizanAsifB/forkify-course-app.git
 websiteURL: https://geega-budget.netlify.app/
+gridPosition: 4
 ---
 
 ## Project Overview

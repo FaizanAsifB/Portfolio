@@ -11,6 +11,7 @@ tools:
   - JavaScript
 githubURL: https://github.com/FaizanAsifB/weather-app.git
 websiteURL: https://geega-weather.netlify.app/
+gridPosition: 6
 ---
 
 ## Project Overview
