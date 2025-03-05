@@ -1,9 +1,9 @@
 ---
 title: Marianco
 description: Marianco is a global nonprofit organization dedicated to protecting children from the horrors of trafficking, exploitation and abuse. Marianco is committed to safeguarding the rights of children and ensuring they have a future full of hope and opportunities.
-narrowImage: ./project-images/budget-narrow.webp
-squareImage: ./project-images/budget-square.webp
-wideImage: ./project-images/budget-wide.jpg
+narrowImage: ./project-images/marianco-narrow.webp
+squareImage: ./project-images/marianco-square.webp
+wideImage: ./project-images/marianco-wide.jpg
 caption: Nonprofit organization dedicated to protecting children
 tools:
   - Next.js
@@ -17,26 +17,34 @@ gridPosition: 1
 
 ## Project Overview
 
-The Personal Budget App serves as a comprehensive tool designed to empower users in managing their personal finances effectively. With a focus on budgeting and expense tracking, the application offers users the ability to create and organize different budget categories based on their financial needs and goals.
+The Marianco website serves as a comprehensive platform dedicated to informing visitors about the organization's mission to combat child trafficking, exploitation, and abuse. It provides educational resources, articles, and blog posts to raise awareness and engage the community. Additionally, the website facilitates financial support through one-time and monthly donations, and features a web shop where all proceeds contribute to the NGO's cause.
 
 ## Goals
 
-- **Budget Categories:** Enable users to create and organize diverse budget categories tailored to their financial priorities, allowing for clear categorization of expenses.
-- **Expense Tracking:** Provide a seamless mechanism for users to input and monitor their expenses within each budget category, offering a comprehensive overview of their spending habits over time.
-- **Financial Health Assessment:** Offer users the ability to assess their financial well-being by providing insights into their expenses, including any predefined limits for each budget category. This feature allows users to track their progress towards staying within their budgetary constraints and promotes responsible financial management.
-- **Learn Tailwind CSS and Design Practices:** Gain proficiency in utilizing Tailwind CSS for efficient and scalable UI development, incorporating best design practices to enhance the visual appeal and usability of the application.
+- **Inform and Educate:** Offer detailed information about Marianco's mission, vision, and focus areas to educate visitors on the critical issues of child exploitation and the organization's efforts to address them.
+- **Engage the Community:** Publish articles and blog posts that highlight Marianco's initiatives, share success stories, and provide insights into the ongoing fight against child trafficking and exploitation.
+- **Facilitate Donations:** Provide secure and user-friendly options for supporters to make one-time or recurring donations, ensuring that contributing to the cause is straightforward and accessible.
+- **Generate Additional Funding:** Operate a web shop offering products whose sales directly support Marianco's mission, providing supporters with another avenue to contribute financially.
 
 ## Challenges
 
-- **Designing an Intuitive User Interface:** Designing an intuitive and user-friendly interface that caters to users of varying levels of financial literacy was a significant challenge.
-- **Implementing Robust Expense Tracking:** Implementing robust expense tracking functionality while ensuring data accuracy posed a significant challenge.
+- **Developing a Comprehensive Content Strategy:** Creating informative and engaging content that effectively communicates Marianco's mission and resonates with a diverse audience required careful planning and execution.
+- **Ensuring Secure and Seamless Donation Processing:** Implementing secure payment gateways to handle both one-time and recurring donations while maintaining a user-friendly experience was a critical challenge.
+- **Establishing an Effective E-commerce Platform:** Developing a web shop that not only offers appealing products but also integrates smoothly with the website and ensures that all proceeds are directed towards the NGO's cause presented unique challenges.
 
 ## Solutions
 
-- **Research and Best Practices Analysis:** Thorough research and analysis of industry best practices and successful projects provided valuable insights for enhancing the functionality and user experience of the Personal Budget App.
-- **User Testing and Feedback Gathering:** User testing and feedback gathering were conducted to iteratively refine the application's design and user experience.
-- **Careful Development and Testing:** The expense tracking functionality was carefully developed and tested to ensure data accuracy and security, with robust measures implemented to safeguard users' financial information.
+- **Content Development and Community Engagement:** Collaborated with subject matter experts to produce high-quality articles and blog posts, and utilized social media platforms to engage with the community and amplify Marianco's message.
+- **Secure Donation Integration:** Integrated trusted payment processors and implemented SSL encryption to ensure that donors' information is protected, thereby building trust and encouraging financial support.
+- **Robust E-commerce Implementation:** Developed a user-friendly web shop with clear product descriptions and secure checkout processes, ensuring that supporters can confidently make purchases knowing that their contributions support Marianco's mission.
 
 ## Future Enhancements
 
-Moving forward, I plan to continue refining and expanding the application. Future enhancements will focus on introducing new features such as goal setting, financial analysis tools, and integration with a database. Additionally, I will make efforts to further optimize performance and address any feedback or suggestions from users..
+- **Expanding Educational Content:** Develop multimedia content such as videos and podcasts to further educate the public on issues related to child exploitation and Marianco's efforts.
+
+- **Enhancing User Engagement:** Implement interactive features such as forums or live chat support to foster a community of supporters and provide real-time assistance.
+
+- **Optimizing the Web Shop:** Introduce new products and limited-time offers to keep the web shop dynamic and appealing, thereby increasing its contribution to fundraising efforts.
+
+- **Improving Accessibility:** Ensure the website meets all accessibility standards to accommodate users with disabilities, making information and donation options available to a broader audience.
+
