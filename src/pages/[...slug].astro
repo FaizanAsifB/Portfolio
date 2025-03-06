@@ -59,7 +59,7 @@ const { Content } = await entry.render()
         class='not-prose flex flex-wrap items-center justify-center gap-4 pt-16 md:pt-24 lg:flex-nowrap'
       >
         <a
-          href={entry.data.websiteURL}
+          href={entry.data.websiteUrl}
           target='_blank'
           class={buttonVariants({ variant: 'default' }) + ' flex items-center'}
         >
@@ -68,7 +68,7 @@ const { Content } = await entry.render()
         </a>
 
         <a
-          href={entry.data.githubURL}
+          href={entry.data.githubUrl}
           target='_blank'
           class={buttonVariants({
             variant: 'outline'
@@ -78,9 +78,9 @@ const { Content } = await entry.render()
           <span class='text-base'>Source Code</span>
         </a>
         {
-          entry.data.videoURL && (
+          entry.data.videoUrl && (
             <a
-              href={entry.data.videoURL}
+              href={entry.data.videoUrl}
               target='_blank'
               class={buttonVariants({
                 variant: 'outline'

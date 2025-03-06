@@ -25,7 +25,7 @@ const attribution: { text: string; url: string; urlText: string } =
     )}
   >
     <div class='lg:w-[450px] lgx:w-[500px] xl:w-[600px]'>
-      <a href={project.data.websiteURL} target='_blank'>
+      <a href={project.data.websiteUrl} target='_blank'>
         <picture>
           <source
             srcset={project.data.squareImage.src}
@@ -102,7 +102,7 @@ const attribution: { text: string; url: string; urlText: string } =
           class='flex flex-wrap items-center justify-center gap-4 md:mt-auto lg:flex-nowrap lg:justify-start'
         >
           <a
-            href={project.data.websiteURL}
+            href={project.data.websiteUrl}
             target='_blank'
             class={buttonVariants({
               variant: 'link',
@@ -115,7 +115,7 @@ const attribution: { text: string; url: string; urlText: string } =
           {
           project.data?.githubUrl &&
           <a
-            href={project.data?.githubURL}
+            href={project.data?.githubUrl}
             target='_blank'
             class={buttonVariants({
               variant: 'outline'
@@ -127,9 +127,9 @@ const attribution: { text: string; url: string; urlText: string } =
 
           }
           {
-            project.data.videoURL && (
+            project.data.videoUrl && (
               <a
-                href={project.data.videoURL}
+                href={project.data.videoUrl}
                 target='_blank'
                 class={buttonVariants({
                   variant: 'outline',

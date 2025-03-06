@@ -13,8 +13,8 @@ tools:
   - HTML
   - JavaScript
   - SASS
-githubURL: https://github.com/FaizanAsifB/forkify-course-app.git
-websiteURL: https://geega-forkify.netlify.app/
+githubUrl: https://github.com/FaizanAsifB/forkify-course-app.git
+websiteUrl: https://geega-forkify.netlify.app/
 gridPosition: 5
 ---
 

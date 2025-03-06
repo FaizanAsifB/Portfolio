@@ -11,7 +11,7 @@ tools:
   - React
   - Tailwind CSS
   - Strapi CMS
-websiteURL: https://marianco.org
+websiteUrl: https://marianco.org
 gridPosition: 1
 ---
 

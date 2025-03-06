@@ -9,8 +9,8 @@ tools:
   - HTML
   - CSS
   - JavaScript
-githubURL: https://github.com/FaizanAsifB/weather-app.git
-websiteURL: https://geega-weather.netlify.app/
+githubUrl: https://github.com/FaizanAsifB/weather-app.git
+websiteUrl: https://geega-weather.netlify.app/
 gridPosition: 6
 ---
 

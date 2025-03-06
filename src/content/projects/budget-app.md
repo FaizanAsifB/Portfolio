@@ -10,8 +10,8 @@ tools:
   - JavaScript
   - React
   - Tailwind CSS
-githubURL: https://github.com/FaizanAsifB/forkify-course-app.git
-websiteURL: https://geega-budget.netlify.app/
+githubUrl: https://github.com/FaizanAsifB/forkify-course-app.git
+websiteUrl: https://geega-budget.netlify.app/
 gridPosition: 4
 ---
 

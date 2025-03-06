@@ -5,7 +5,7 @@ demoAccount: 'Username: john@doe.com Password: demo123'
 narrowImage: ./project-images/tech-trove-narrow.webp
 squareImage: ./project-images/tech-trove-square.webp
 wideImage: ./project-images/tech-trove-wide.jpg
-videoURL: https://www.youtube.com/watch?v=on_oXOdLpzw
+videoUrl: https://www.youtube.com/watch?v=on_oXOdLpzw
 caption: An e-commerce platform for electronics
 tools:
   - HTML
@@ -16,8 +16,8 @@ tools:
   - Tailwind CSS
   - PostgreSQL
   - Prisma
-githubURL: https://github.com/FaizanAsifB/ecommerce-nextjs
-websiteURL: https://tech-trove-store.vercel.app
+githubUrl: https://github.com/FaizanAsifB/ecommerce-nextjs
+websiteUrl: https://tech-trove-store.vercel.app
 gridPosition: 3
 ---
 

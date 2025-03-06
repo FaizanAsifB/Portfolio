@@ -4,7 +4,7 @@ description: An interactive multiplayer game with real-time functionality that o
 narrowImage: ./project-images/name-place-narrow.webp
 squareImage: ./project-images/name-place-square.webp
 wideImage: ./project-images/name-place-wide.jpg
-videoURL: https://www.youtube.com/watch?v=wouT7cCO4CE
+videoUrl: https://www.youtube.com/watch?v=wouT7cCO4CE
 caption: An Interactive Multiplayer Game
 tools:
   - HTML
@@ -13,8 +13,8 @@ tools:
   - React
   - Firebase
   - Tailwind CSS
-githubURL: https://github.com/FaizanAsifB/name-place-animal-game.git
-websiteURL: https://geega-game.netlify.app/
+githubUrl: https://github.com/FaizanAsifB/name-place-animal-game.git
+websiteUrl: https://geega-game.netlify.app/
 gridPosition: 2
 ---
 
