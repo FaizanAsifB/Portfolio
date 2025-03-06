@@ -7,7 +7,7 @@ wideImage: ./project-images/marianco-wide.jpg
 caption: Nonprofit organization dedicated to protecting children
 tools:
   - Next.js
-  - typeScript
+  - TypeScript
   - React
   - Tailwind CSS
   - Strapi CMS
