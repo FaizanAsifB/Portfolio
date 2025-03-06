@@ -3,7 +3,6 @@ import ProjectCard from '@/components/ProjectCard.astro'
 import { getCollection } from 'astro:content'
 const projectEntries = await getCollection('projects')
 const sortedProjects = [...projectEntries].sort((a,b)=>a.data.gridPosition - b.data.gridPosition)
-console.log(sortedProjects[0].data.gridPosition)
 ---
 
 <section id='projects'>
